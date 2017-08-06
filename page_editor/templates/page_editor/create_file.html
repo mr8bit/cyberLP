@@ -1,0 +1,80 @@
+{% extends "admin/base_site.html" %}
+
+<!-- LOADING -->
+{% load admin_static i18n fb_tags fb_versions fb_compat %}
+
+<!-- STYLESHEETS -->
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />
+    <style>
+    .html-editor{
+        width: 100%;
+        height: 350px;
+        margin-top: 30px;
+    }
+    </style>
+{% endblock %}
+
+<!-- JAVASCRIPTS -->
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static_jquery %}"></script>
+    <script type="text/javascript" src="{% static "admin/js/jquery.init.js" %}"></script>
+    <script type="text/javascript">
+    (function($) {
+        $(document).ready(function() {
+            // remove edit module if no actions are given
+            if ($("select#id_custom_action").find("option").length <= 1) {
+                $("fieldset#fieldset_edit").hide();
+            }
+        });
+    })(django.jQuery);
+    </script>
+{% endblock %}
+
+<!-- COLTYPE/BODYCLASS -->
+{% block bodyclass %}change-form filebrowser{% if query.pop %} popup{% endif %}{% endblock %}
+{% block coltype %}colM{% endblock %}
+
+<!-- BREADCRBUMBS -->
+{% block breadcrumbs %}{% include "page_editor/include/breadcrumbs.html" %}{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+<div id="content-main">
+    <!-- POP-UP BREADCRUMBS -->
+    {% if query.pop %}
+        {% include "page_editor/include/breadcrumbs.html" %}
+    {% endif %}
+    <form action="{% query_string "" "filter_date,filter_type,q,p" %}" method="post">{% csrf_token %}
+        <div>
+            {% if form.errors %}<p class="errornote">{% trans 'Please correct the following errors.' %}</p>{% endif %}
+            <fieldset class="module aligned">
+                <div class="form-row field-{{ form.name.name }}{% if form.name.errors %} errors{% endif %}">
+                    {% if form.name.errors %}{{ form.name.errors }}{% endif %}
+                    <div>
+                        <label class="required" for="id_name">{{ form.name.label }}</label>
+                        {{ form.name }}
+                        {% if form.name.help_text %}<p class="help">{{ form.name.help_text|safe }}</p>{% endif %}
+                    </div>
+                <div>
+
+                         {{ form.text }}
+
+                </div>
+
+
+                </div>
+            </fieldset>
+            <div class="submit-row">
+                <p class="deletelink-box">
+                    <a href="{% url 'page_editor:fb_delete_confirm' %}{% query_string %}" class="deletelink">{% trans "Delete" %}</a>
+                </p>
+                <input type="submit" value="{% trans 'Save' %}" class="default" />
+                <input type="submit" value="{% trans 'Save and continue editing' %}" class="" name="_continue" />
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

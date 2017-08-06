@@ -1,0 +1,10 @@
+Django==1.11.4
+django-constance==2.0.0
+django-jet==1.0.6
+django-mptt==0.8.7
+django-picklefield==1.0.0
+django-rest-framework==0.1.0
+djangorestframework==3.6.3
+olefile==0.44
+Pillow==4.2.1
+pytz==2017.2

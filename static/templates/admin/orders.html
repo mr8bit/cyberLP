@@ -1,0 +1,331 @@
+{% extends "admin/base_site.html" %}
+{% block title %}Cyber LP | CRM{% endblock %}
+{% load static  i18n %}
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/ngDialog/ngDialog.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ngDialog/ngDialog-theme-default.css' %}">
+    <style>
+
+        .simpleDemo ul[dnd-list] {
+            min-height: 42px;
+            padding-left: 0px;
+        }
+
+        .simpleDemo ul[dnd-list] .dndDraggingSource {
+            display: none;
+        }
+
+        .simpleDemo ul[dnd-list] .dndPlaceholder {
+            background-color: #ddd;
+            display: block;
+            min-height: 42px;
+        }
+
+        .simpleDemo ul[dnd-list] li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            border-radius: 5px;
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: -1px;
+            margin: 10px 0;
+        }
+
+        .simpleDemo ul[dnd-list] li .item {
+            display: flex;
+            justify-content: space-between;
+            color: #6f7e95;
+        }
+
+        .simpleDemo ul[dnd-list] li .item .date {
+            color: #6f7e95;
+
+            font-size: 12px;
+        }
+
+        .simpleDemo ul[dnd-list] li .item .phone {
+            color: #6f7e95;
+
+            margin-top: 10px;
+        }
+
+        .simpleDemo ul[dnd-list] li.selected {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+
+        .object-tools {
+            margin-bottom: 0;
+        }
+
+        #content {
+            padding: 5px 1.42857rem;
+        }
+
+        .ngdialog.ngdialog-theme-default {
+            padding-top: 5%;
+            padding-bottom: 10px;
+        }
+
+        .ngdialog.ngdialog-theme-default .ngdialog-content {
+            background-color: white;
+            color: #6f7e95;
+            font-size: 94%;
+        }
+    </style>
+{% endblock %}
+
+{% block extrahead %}
+    <script type="text/javascript" src="{% static 'js/angular/angular.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/angular/angular-drag-and-drop-lists.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/ngDialog/ngDialog.min.js' %}"></script>
+{% endblock %}
+<!-- CONTENT -->
+
+
+{% block breadcrumbs %}
+        <div class="breadcrumbs">
+            <a href="{% url 'admin:index' %}">{% trans "Home" %}</a> &rsaquo;
+             {% trans "CRM" %}
+
+
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <!-- OBJECT-TOOLS -->
+    {% block object-tools %}
+        <ul class="object-tools">
+            <li>
+
+                <a href="/admin/order/order/add/" class="addlink">
+                    Добавить Заказ
+                </a>
+            </li>
+        </ul>
+    {% endblock %}
+    {% verbatim %}
+    <div ng-app="App">
+
+
+        <div class="simpleDemo row" ng-controller="SimpleDemoController">
+            <div class="col-md-8">
+                <div class="row" style="display: flex;justify-content: space-between">
+                    <div ng-repeat="list in models.list" style="padding: 0 15px;width: 25%; ">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 style="text-align: center" class="panel-title">{{list.name}}</h3>
+                                <div style="text-align: center">Заказов: {{list.orders.length}}</div>
+                            </div>
+                            <div class="panel-body" style="overflow-y: auto; height: 75vh;margin-top: 10px">
+                                <ul dnd-list="list.orders"
+                                    dnd-drop="callback({targetList: list.orders, targetIndex: list.id})">
+                                    <!-- The dnd-draggable directive makes an element draggable and will
+                                         transfer the object that was assigned to it. If an element was
+                                         dragged away, you have to remove it from the original list
+                                         yourself using the dnd-moved attribute -->
+                                    <li ng-repeat="item in list.orders"
+                                        dnd-draggable="item"
+                                        dnd-effect-allowed="move"
+                                        dnd-selected="models.selected = item"
+                                        dnd-dragend="logEvent(this)"
+                                        dnd-callback="onDrop(list.orders, $index, targetList, targetIndex)"
+                                        ng-click="clickToOpen(item, list.orders, $index, targetList, targetIndex)"
+
+                                    >
+
+                                        <div class="item">
+                                            <div class="name">{{item.name}}</div>
+                                            <div class="date">{{item.creation_date| date:'MM.dd.yyyy h:mm'}}</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="phone">
+                                                <a href="tel:{{item.phone}}">{{item.phone}}</a>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <script type="text/ng-template" id="ngEditOrder">
+
+            <fieldset class="module aligned  module_0 initialized">
+                <h2 style="font-size: 18px;text-transform: none">Заказ #{{ ngDialogData.item.id }}</h2>
+                <div class="form-row">
+                    <div>
+                        <label>Имя:</label>
+                        <input class="vTextField" ng-model="ngDialogData.item.name" id="id_name" maxlength="300"
+                               name="name"
+                               type="text"
+                               value="{{ ngDialogData.item.name }}" required="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label>Телефон:</label>
+                        <input class="vTextField" ng-model="ngDialogData.item.phone" id="id_name" maxlength="300"
+                               name="name"
+                               type="text"
+                               value="{{ ngDialogData.item.phone }}" required="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label>Email:</label>
+                        <input class="vTextField" ng-model="ngDialogData.item.email" id="id_name" maxlength="300"
+                               name="name"
+                               type="text"
+                               value="{{ ngDialogData.item.email }}" required="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label>Цена:</label>
+                        <input class="vIntegerField" ng-model="ngDialogData.item.price" id="id_name" maxlength="300"
+                               name="name" type="text"
+                               value="{{ ngDialogData.item.price }}" required="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label>Комментарий:</label>
+                        <textarea class="vLargeTextField" ng-model="ngDialogData.item.comment"
+                                  style="width: 70%;font-size: 14px" rows="6" id="id_name"
+                                  maxlength="300" name="name" type="text"
+                                  required="">{{ ngDialogData.item.comment }}</textarea>
+                    </div>
+                </div>
+                <div class="submit-row">
+                    <input type="submit" value="Сохранить" ng-click="SaveItem(ngDialogData.item)" class="default">
+                    {{ ngDialogData.targetList }}
+
+                    <p class="deletelink-box"><a href="#"
+                                                 ng-click="DeleteItem(ngDialogData.item, ngDialogData.srcList, ngDialogData.srcIndex, ngDialogData.targetList, ngDialogData.targetIndex )"
+                                                 class="deletelink">Удалить</a></p>
+
+                </div>
+            </fieldset>
+        </script>
+    </div>
+    <!-- The dnd-list directive allows to drop elements into it.
+    The dropped data will be added to the referenced list -->
+
+
+
+    {% endverbatim %}
+    <script>
+        var phonecatApp = angular.module('App', ['dndLists', 'ngDialog',]);
+        phonecatApp.config(function ($httpProvider) {
+            $httpProvider.defaults.headers.common['X-CSRFToken'] = '{{ csrf_token }}';
+            $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+        });
+
+        phonecatApp.controller('EditOrderController', function ($scope, $http, ngDialog) {
+            $scope.SaveItem = function (item) {
+                var url = "/api/orders/" + item.id + '/';
+                var data = {
+                    "name": item.name,
+                    "phone": item.phone,
+                    "email": item.email,
+                    "price": item.price,
+                    "comment": item.comment,
+                    "status": item.status
+                };
+                $http.put(url, data).then(function (success) {
+                    ngDialog.close();
+                }, function (error) {
+                    alert("Ошибка сервера");
+                });
+            };
+            $scope.DeleteItem = function (item, srcList, srcIndex, targetList) {
+                var url = "/api/orders/" + item.id + '/';
+                var data = {
+                    "id": item.id,
+                };
+                $http.delete(url, data).then(function (success) {
+                    ngDialog.close();
+
+                }, function (error) {
+                    alert("Ошибка сервера");
+                });
+
+                srcList.splice(srcIndex, 1);
+
+
+            }
+
+        });
+
+        phonecatApp.controller("SimpleDemoController", function ($scope, $http, ngDialog) {
+
+                $scope.clickToOpen = function (item, srcList, srcIndex, targetList, targetIndex) {
+                    ngDialog.open({
+                        template: 'ngEditOrder',
+                        className: 'ngdialog-theme-default',
+                        controller: 'EditOrderController',
+                        width: 660,
+                        data: {
+                            item: item,
+                            srcList: srcList,
+                            srcIndex: srcIndex,
+                            targetList: targetList,
+                            targetIndex: targetIndex
+                        }
+                    });
+                    console.log(targetList);
+                };
+
+                $http({
+                    method: 'GET',
+                    url: '/api/statusboard/?format=json'
+                }).then(function (success) {
+                    $scope.models = {
+                        list: success.data
+                    };
+                }, function (error) {
+                    alert("Ошибка сервера");
+                });
+
+                $scope.onDrop = function (srcList, srcIndex, targetList, targetIndex) {
+                    var url = "/api/orders/" + srcList[srcIndex].id + '/';
+                    var data = {
+                        "name": srcList[srcIndex].name,
+                        "phone": srcList[srcIndex].phone,
+                        "email": srcList[srcIndex].email,
+                        "price": srcList[srcIndex].price,
+                        "comment": srcList[srcIndex].comment,
+                        "status": targetIndex
+                    };
+                    $http.put(url, data).then(function (success) {
+                    }, function (error) {
+                        alert("Ошибка сервера");
+                    });
+                    console.log(targetList);
+                    targetList.splice(targetIndex, 0, srcList[srcIndex]);
+                    // Remove the item from the source, possibly correcting the index first.
+                    // We must do this immediately, otherwise ng-repeat complains about duplicates.
+                    if (srcList == targetList && targetIndex <= srcIndex) srcIndex++;
+                    srcList.splice(srcIndex, 1);
+                    // By returning true from dnd-drop we signalize we already inserted the item.
+                    return true;
+                };
+
+
+            }
+        );
+
+
+    </script>
+{% endblock %}
