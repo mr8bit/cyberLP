@@ -1,0 +1,106 @@
+{% load i18n static %}
+
+{% if module.error %}
+    <ul>
+        <li>
+            {{ module.error }}
+        </li>
+    </ul>
+{% elif module.children %}
+
+    <!-- JAVASCRIPTS -->
+    {% block extrahead %}
+        <script src="{% static 'js/Chart.BarFunnel.js' %}"></script>
+    {% endblock %}
+
+    <div class="padding center" style="background-color: white;">
+        <canvas id="chart_{{ module.model.pk }}" style="width: 100%;">
+            <div class="chart-fillColor"></div>
+            <div class="chart-strokeColor"></div>
+            <div class="chart-pointColor"></div>
+            <div class="chart-pointHighlightFill"></div>
+            <div class="chart-scaleGridLineColor"></div>
+            <div class="chart-scaleLineColor"></div>
+            <div class="chart-scaleFontColor"></div>
+            <div class="chart-data">
+                {% for data in module.children %}
+                    <div class="chart-data-item" data-title="{{ data.title }}" data-value="{{ data.value }}"></div>
+                {% endfor %}
+            </div>
+        </canvas>
+    </div>
+
+    <script>
+        (function ($) {
+            $.fn.extend({
+                funnelbarAnalyticsChart: function () {
+                    var $chart = $(this);
+                    var ctx = $chart.get(0).getContext("2d");
+                    var $data = $chart.find('.chart-data');
+                    var $dataItems = $data.find('.chart-data-item');
+                    var labels = [];
+                    var data = [];
+                    $dataItems.each(function () {
+                        labels.push($(this).data('title'));
+                        data.push($(this).data('value'));
+                    });
+
+
+                    var barChartData = {
+                        labels: labels,
+                        datasets: [{
+                            data: data
+                        }]
+                    };
+                    window.myBar = new Chart(ctx, {
+                        type: 'barFunnel',
+                        data: barChartData,
+                        options: {
+                            legend: {
+                                display: false,
+                                labels: {
+                                    fontColor: 'black'
+                                }
+                            },
+                            elements: {
+                                rectangle: {
+                                    borderWidth: 1,
+                                    borderColor: '#0B84A5',
+                                    stepLabel: {
+                                        display: true,
+                                        fontSize: 12,
+
+                                    }
+                                }
+                            },
+                            region: {
+                                display: true
+                            },
+                            responsive: true,
+                            title: {
+                                display: false,
+                            },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            },
+                        }
+                    });
+
+
+                }
+            });
+        })
+        (jet.jQuery);
+    </script>
+    <script>jet.jQuery('#chart_{{ module.model.pk }}').funnelbarAnalyticsChart();</script>
+{% else %}
+    <ul>
+        <li>
+            {% trans "Nothing to show" %}
+        </li>
+    </ul>
+{% endif %}

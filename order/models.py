@@ -1,8 +1,10 @@
 from django.db import models
+from colorfield.fields import ColorField
 
 
 class Status(models.Model):
     name = models.CharField(verbose_name="Имя", max_length=300)
+    color = ColorField(default='#FF0000', verbose_name="Цвет")
 
     class Meta:
         verbose_name = "Cтатус"

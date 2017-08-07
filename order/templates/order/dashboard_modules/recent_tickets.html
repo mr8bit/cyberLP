@@ -1,0 +1,42 @@
+<style>
+    ul li .item {
+        display: flex;
+        justify-content: space-between;
+        color: #6f7e95;
+    }
+
+    ul li .item .date {
+        color: #6f7e95;
+
+        font-size: 12px;
+    }
+
+    ul li .item .phone {
+        color: #6f7e95;
+
+        margin-top: 10px;
+    }
+</style>
+
+<ul>
+
+    {% for ticket in module.children %}
+        <li>
+
+            <div class="item">
+                <div class="name">{{ ticket.name }}</div>
+                <div class="date">{{ ticket.creation_date }}</div>
+            </div>
+            <div class="item">
+                <div class="phone">
+                    <a href="tel:{{ ticket.phone }}">{{ ticket.phone }}</a>
+                </div>
+            </div>
+
+        </li>
+    {% empty %}
+        <li>
+            Nothing to show
+        </li>
+    {% endfor %}
+</ul>

@@ -25,6 +25,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'jet.dashboard',
     'jet',
     'rest_framework',
     'page_editor',
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'constance',
     'constance.backends.database',
     'order',
+    'colorfield',
     'mptt',
 ]
 
@@ -244,6 +246,7 @@ PATH_TEMPLATES = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+#STATIC_ROOT = (os.path.join(BASE_DIR, 'static'))
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -251,3 +254,8 @@ MEDIA_URL = '/media/'
 FILEBROWSER_SHOW_IN_DASHBOARD = True
 FILEBROWSER_DIRECTORY = ''
 DIRECTORY = ''
+
+JET_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
+
+
+JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')

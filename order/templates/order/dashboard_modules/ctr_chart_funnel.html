@@ -1,0 +1,92 @@
+{% load i18n static %}
+
+{% if module.error %}
+    <ul>
+        <li>
+            {{ module.error }}
+        </li>
+    </ul>
+{% elif module.children %}
+
+    <!-- JAVASCRIPTS -->
+    {% block extrahead %}
+        <script src="{% static 'js/chart.funnel.min.js' %}"></script>
+    {% endblock %}
+
+    <div class="padding center" style="background-color: white;">
+        <canvas id="chart_{{ module.model.pk }}" style="width: 100%">
+            <div class="chart-fillColor"></div>
+            <div class="chart-strokeColor"></div>
+            <div class="chart-pointColor"></div>
+            <div class="chart-pointHighlightFill"></div>
+            <div class="chart-scaleGridLineColor"></div>
+            <div class="chart-scaleLineColor"></div>
+            <div class="chart-scaleFontColor"></div>
+            <div class="chart-data">
+                {% for data in module.children %}
+                    <div class="chart-data-item" data-title="{{ data.title }}" data-color="{{ data.color }}"
+                         data-value="{{ data.value }}"></div>
+                {% endfor %}
+            </div>
+        </canvas>
+    </div>
+
+    <script>
+        (function ($) {
+            $.fn.extend({
+                funnelAnalyticsChart: function () {
+                    var $chart = $(this);
+                    var ctx = $chart.get(0).getContext("2d");
+                    var $data = $chart.find('.chart-data');
+                    var $dataItems = $data.find('.chart-data-item');
+                    var labels = [];
+                    var data = [];
+                    var colors = []
+                    $dataItems.each(function () {
+                        labels.push($(this).data('title'));
+                        data.push($(this).data('value'));
+                        colors.push($(this).data('color'));
+
+                    });
+
+
+                    var config = {
+                        type: 'funnel',
+                        data: {
+                            datasets: [{
+                                data: data,
+                                backgroundColor: colors,
+                                hoverBackgroundColor: colors,
+                            }],
+                            labels: labels
+                        },
+                        options: {
+                            keep: 'left',
+                            sort: false,
+                            responsive: true,
+                            legend: {
+                                display: true,
+                                position: 'right'
+                            },
+                            animation: {
+                                animateScale: true,
+                                animateRotate: true
+                            }
+                        }
+                    };
+                    window.myDoughnut = new Chart(ctx, config);
+
+
+                }
+            });
+        })
+        (jet.jQuery);
+    </script>
+    <script>jet.jQuery('#chart_{{ module.model.pk }}').funnelAnalyticsChart();</script>
+{% else %}
+    <ul>
+        <li>
+            {% trans "Nothing to show" %}
+        </li>
+    </ul>
+{% endif %}
