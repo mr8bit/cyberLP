@@ -1,6 +1,6 @@
 .idea
 db.sqlite3
-.client_secrets.json
 .DS_Store
 media
 __pycache__/
+client_secrets.json
