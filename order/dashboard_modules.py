@@ -89,7 +89,7 @@ class CTR_Num(GoogleAnalyticsBase):
                 if ( float(result['totalsForAllResults']['ga:users'])):
 
                     self.children.append(
-                        {'value': round(float(ctr_object / float(result['totalsForAllResults']['ga:users'])), 3)})
+                        {'value': round(float(ctr_object / float(result['totalsForAllResults']['ga:users']))*100, 2)})
                 else:
                     self.children.append(
                         {'value': "Нет данных"})

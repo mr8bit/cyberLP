@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 """
 Django settings for cyberLP project.
 
@@ -16,6 +17,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '@tj$v_e7b&%gt9!$h#709tol*v77#@et3iv1x6k1&1ta_g%(6@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django_inlinecss',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -40,6 +43,8 @@ INSTALLED_APPS = [
     'order',
     'colorfield',
     'mptt',
+    'landing',
+    'notifications'
 ]
 
 THUMBNAIL_PROCESSORS = (
@@ -148,10 +153,8 @@ CONSTANCE_ADDITIONAL_FIELDS = {
 CONSTANCE_CONFIG = {
     'EMAIL': (' ', 'Почта для связи', 'email'),
     'EMAIL_NOTIFICATION': (' ', 'Почта для отправки уведомлений', 'email'),
-
     'PHONE': (None, 'Телефон', 'input'),
     'PHONE_ADDITION': (None, 'Дополнительный телефон ', 'input'),
-
     'PHONE_NOTIFICATION': (None, 'Номер для отправки уведомлений ', 'input'),
     'SEND_TO_PHONE': (False, 'Уведомить на телефон', bool),
     'SEND_TO_EMAIL': (False, 'Уведомить на Email', bool),
@@ -161,7 +164,7 @@ CONSTANCE_CONFIG = {
 CONSTANCE_CONFIG_FIELDSETS = {
     'Главные настройки': ('EMAIL', 'PHONE', 'PHONE_ADDITION',),
     'Настройки уведомлений': (
-    'EMAIL_NOTIFICATION', 'PHONE_NOTIFICATION', 'SEND_TO_PHONE', 'SEND_TO_EMAIL', 'SEND_TO_TELEGRAM'),
+        'EMAIL_NOTIFICATION', 'PHONE_NOTIFICATION', 'SEND_TO_PHONE', 'SEND_TO_EMAIL', 'SEND_TO_TELEGRAM'),
 }
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 
@@ -246,7 +249,7 @@ PATH_TEMPLATES = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-#STATIC_ROOT = (os.path.join(BASE_DIR, 'static'))
+# STATIC_ROOT = (os.path.join(BASE_DIR, 'static'))
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -256,6 +259,29 @@ FILEBROWSER_DIRECTORY = ''
 DIRECTORY = ''
 
 JET_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
-
-
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
+
+# Mail Template
+EMAIL_TEMPLATE_NAME = 'default_email.html'
+PATH_EMAIL_TEMPLATE = os.path.join(PATH_TEMPLATES, 'templates/email')
+
+# Email settting
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST_USER = 'notification@cyber-technology.net'
+EMAIL_HOST_PASSWORD = 'support'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+# SMS setting
+SMS_USERNAME = 'cybertech'
+SMS_PASSWORD = 'cyber-technology'
+
+# TEMPLATE SETTINGS
+DEFAULT_TEMPLATE = 'front/default.html'
+TEMPLATE_CSS = (
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+    'https://www.w3schools.com/w3css/4/w3.css',
+    'https://fonts.googleapis.com/css?family=Lato',
+)
+TEMPLATE_JS = (
+    )

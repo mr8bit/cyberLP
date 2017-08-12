@@ -1,5 +1,6 @@
 from django.db import models
 from colorfield.fields import ColorField
+from notifications.mail import sendEmailViaTemplate
 
 
 class Status(models.Model):
@@ -14,7 +15,6 @@ class Status(models.Model):
         return self.name
 
 
-# Create your models here.
 class Order(models.Model):
     name = models.CharField(verbose_name="Имя", max_length=300)
     phone = models.CharField(verbose_name="Телефон", max_length=100)
@@ -29,4 +29,8 @@ class Order(models.Model):
         verbose_name_plural = "Заказы"
 
     def __str__(self):
-        return "Закз " + str(self.id)
+        return "Заказ " + str(self.id)
+
+    def save(self, *args, **kwargs):
+        sendEmailViaTemplate(self.name, self.phone, self.comment)
+        models.Model.save(self, *args, **kwargs)

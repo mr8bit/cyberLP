@@ -30,13 +30,18 @@ class PageBrowserAdmin(admin.ModelAdmin):
 admin.site.register(PageBrowser, PageBrowserAdmin)
 from django.utils.html import format_html
 
-class MyDraggableMPTTAdmin(DraggableMPTTAdmin):
 
+class MyDraggableMPTTAdmin(DraggableMPTTAdmin):
     def something(self, instance):
         return format_html(
             '<div style="text-indent:{}px">{}</div>',
             instance._mpttfield('level') * self.mptt_level_indent,
             instance.title,  # Or whatever you want to put here
         )
+
     something.short_description = ('something nice')
+
+    search_fields = ('url', 'title')
+
+
 admin.site.register(Page, MyDraggableMPTTAdmin)

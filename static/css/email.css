@@ -1,0 +1,46 @@
+.navigation {
+    display: flex;
+    height: 70px;
+    position: relative;
+    z-index: 100;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container {
+    width: 930px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.title {
+    font-size: 18px;
+    color: #2a2a2a;
+}
+
+.name {
+    font-size: 14px;
+    color: #2a2a2a;
+}
+
+.phone {
+    font-size: 14px;
+    color: #2a2a2a;
+}
+
+.phone a {
+    font-size: 14px;
+    color: #1AA3FF;
+}
+
+.text {
+    font-size: 14px;
+    color: #2a2a2a;
+}
+
+.cls-2trust2 {
+    fill: #161616;
+}

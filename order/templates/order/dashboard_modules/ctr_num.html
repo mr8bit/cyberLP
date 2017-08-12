@@ -1,5 +1,21 @@
-<div class="padding center">
-    {% for data in module.children %}
-        <h2 style="font-size: 35px;padding: 0;margin: 0">{{ data.value }}%</h2>
-    {% endfor %}
-</div>
+{% load i18n %}
+
+{% if module.error %}
+    <ul>
+        <li>
+            {{ module.error }}
+        </li>
+    </ul>
+{% elif module.children %}
+    <div class="padding center">
+        {% for data in module.children %}
+            <h2 style="font-size: 35px;padding: 0;margin: 0">{{ data.value }}%</h2>
+        {% endfor %}
+    </div>
+{% else %}
+    <ul>
+        <li>
+            {% trans "Nothing to show" %}
+        </li>
+    </ul>
+{% endif %}

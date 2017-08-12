@@ -7,10 +7,12 @@ from rest_framework import routers
 from order.api import views as api
 from django.views.generic import TemplateView
 from jet.dashboard.dashboard_modules import google_analytics_views
+from landing import views
 
 router = routers.DefaultRouter()
 router.register(r'statusboard', api.StatusViewSet)
 router.register(r'orders', api.OrderViewSet)
+
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
@@ -20,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^admin/order_pages/', TemplateView.as_view(template_name='admin/orders.html')),
     url(r'^admin/page_editor/', include(page_site.urls)),
+    url(r'^', include('page_editor.urls')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
