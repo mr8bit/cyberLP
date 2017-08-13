@@ -8,7 +8,7 @@ install:
 test:
   before_script:
     - export DJANGO_ENV='test'
-    - export SECRET_KEY=$SECRET_KEY
+    - export SECRET_KEY='@tj$v_e7b&%gt9!$h#709tol*v77#@et3iv1x6k1&1ta_g%(6@'
   script:
     - python manage.py migrate
 after_success: coveralls
