@@ -14,3 +14,4 @@ before_script:
   - export EMAIL_HOST_PASSWORD==$EMAIL_HOST_PASSWORD
 script:
   - python manage.py migrate
+  - python manage.py test

@@ -4,3 +4,4 @@ db.sqlite3
 media
 __pycache__/
 client_secrets.json
+/cyberLP/local_settings.py
