@@ -6,8 +6,6 @@ python:
 install:
   - pip install -r requirements.txt
 
-before_script:
-  - export SECRET_KEY=$SECRET_KEY
-
 script:
+  - export SECRET_KEY=$SECRET_KEY
   - python manage.py migrate
