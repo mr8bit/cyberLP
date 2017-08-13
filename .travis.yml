@@ -7,5 +7,9 @@ install:
   - pip install -r requirements.txt
 before_script:
   - export SECRET_KEY==$SECRET_KEY
+  - export SMS_USERNAME==$SMS_USERNAME
+  - export SMS_PASSWORD==$SMS_PASSWORD
+  - export EMAIL_HOST_USER==$EMAIL_HOST_USER
+  - export EMAIL_HOST_PASSWORD==$EMAIL_HOST_PASSWORD
 script:
   - python manage.py migrate

@@ -22,7 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -266,14 +268,16 @@ PATH_EMAIL_TEMPLATE = os.path.join(PATH_TEMPLATES, 'templates/email')
 
 # Email settting
 EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_HOST_USER = 'notification@cyber-technology.net'
-EMAIL_HOST_PASSWORD = 'support'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+
 # SMS setting
-SMS_USERNAME = 'cybertech'
-SMS_PASSWORD = 'cyber-technology'
+SMS_USERNAME = os.environ.get('SMS_USERNAME', '')
+SMS_PASSWORD = os.environ.get('SMS_PASSWORD', '')
+
 
 # TEMPLATE SETTINGS
 DEFAULT_TEMPLATE = 'front/default.html'
@@ -283,4 +287,4 @@ TEMPLATE_CSS = (
     'https://fonts.googleapis.com/css?family=Lato',
 )
 TEMPLATE_JS = (
-    )
+)
