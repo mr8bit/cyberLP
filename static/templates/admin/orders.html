@@ -85,75 +85,82 @@
 
 
 {% block breadcrumbs %}
-        <div class="breadcrumbs">
-            <a href="{% url 'admin:index' %}">{% trans "Home" %}</a> &rsaquo;
-             {% trans "CRM" %}
+    <style>
+        .breadcrumbs > div > .object-tools > li > a {
+            color: #6f7e95;
+        }
 
+        .breadcrumbs > div > .object-tools > li > a:hover {
+            color: #fff;
+        }
+    </style>
+    <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">{% trans "Home" %}</a> &rsaquo;
+        {% trans "CRM" %}
 
+        <div style="float: right">
+            <ul class="object-tools">
+                <li>
+
+                    <a href="/admin/order/order/add/" style="text-transform: none;;" class="addlink">
+                        Добавить Заказ
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 {% endblock %}
 
 {% block content %}
 
-    <!-- OBJECT-TOOLS -->
-    {% block object-tools %}
-        <ul class="object-tools">
-            <li>
 
-                <a href="/admin/order/order/add/" class="addlink">
-                    Добавить Заказ
-                </a>
-            </li>
-        </ul>
-    {% endblock %}
     {% verbatim %}
     <div ng-app="App">
 
 
-        <div class="simpleDemo row" ng-controller="SimpleDemoController">
-            <div class="col-md-8">
-                <div class="row" style="display: flex;justify-content: space-between">
-                    <div ng-repeat="list in models.list" style="padding: 0 15px;width: 25%; ">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 style="text-align: center" class="panel-title">{{list.name}}</h3>
-                                <div style="text-align: center">Заказов: {{list.orders.length}}</div>
-                            </div>
-                            <div class="panel-body" style="overflow-y: auto; height: 75vh;margin-top: 10px">
-                                <ul dnd-list="list.orders"
-                                    dnd-drop="callback({targetList: list.orders, targetIndex: list.id})">
-                                    <!-- The dnd-draggable directive makes an element draggable and will
-                                         transfer the object that was assigned to it. If an element was
-                                         dragged away, you have to remove it from the original list
-                                         yourself using the dnd-moved attribute -->
-                                    <li ng-repeat="item in list.orders"
-                                        dnd-draggable="item"
-                                        dnd-effect-allowed="move"
-                                        dnd-selected="models.selected = item"
-                                        dnd-dragend="logEvent(this)"
-                                        dnd-callback="onDrop(list.orders, $index, targetList, targetIndex)"
-                                        ng-click="clickToOpen(item, list.orders, $index, targetList, targetIndex)"
+        <div class="simpleDemo" ng-controller="SimpleDemoController" >
 
-                                    >
+            <div style="overflow-x: auto;width: 100%;white-space:nowrap; display: table;">
+                <div ng-repeat="list in models.list"
+                     style="padding: 0 8px;width: 270px;white-space:normal;position: relative;vertical-align:top;display: table-cell;height: 50%">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 style="text-align: center" class="panel-title">{{list.name}}</h3>
+                            <div style="text-align: center">Заказов: {{list.orders.length}}</div>
+                        </div>
+                        <div class="panel-body"
+                             style="overflow-y: auto;height: 120vh; position: relative;display: block;margin-top: 10px">
+                            <ul dnd-list="list.orders"
+                                dnd-drop="callback({targetList: list.orders, targetIndex: list.id})">
+                                <!-- The dnd-draggable directive makes an element draggable and will
+                                     transfer the object that was assigned to it. If an element was
+                                     dragged away, you have to remove it from the original list
+                                     yourself using the dnd-moved attribute -->
+                                <li ng-repeat="item in list.orders"
+                                    dnd-draggable="item"
+                                    dnd-effect-allowed="move"
+                                    dnd-selected="models.selected = item"
+                                    dnd-dragend="logEvent(this)"
+                                    dnd-callback="onDrop(list.orders, $index, targetList, targetIndex)"
+                                    ng-click="clickToOpen(item, list.orders, $index, targetList, targetIndex)"
 
-                                        <div class="item">
-                                            <div class="name">{{item.name}}</div>
-                                            <div class="date">{{item.creation_date| date:'MM.dd.yyyy h:mm'}}</div>
+                                >
+
+                                    <div class="item">
+                                        <div class="name">{{item.name}}</div>
+                                        <div class="date">{{item.creation_date| date:'MM.dd.yyyy h:mm'}}</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="phone">
+                                            <a href="tel:{{item.phone}}">{{item.phone}}</a>
                                         </div>
-                                        <div class="item">
-                                            <div class="phone">
-                                                <a href="tel:{{item.phone}}">{{item.phone}}</a>
-                                            </div>
-                                        </div>
+                                    </div>
 
-                                    </li>
-                                </ul>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
 
@@ -240,7 +247,7 @@
                     "phone": item.phone,
                     "email": item.email,
                     "price": item.price,
-                    "comment": item.comment,
+                    "text_comment": item.comment,
                     "status": item.status
                 };
                 $http.put(url, data).then(function (success) {

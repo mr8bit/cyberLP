@@ -493,7 +493,7 @@ class FileBrowserSite(object):
             form = FileForm(request.POST, path=path_file_open, filebrowser_site=self)
             if form.is_valid():
                 new_name = form.cleaned_data['name']
-                new_text = form.cleaned_data['text']
+                new_text = form.cleaned_data["text_comment"]
                 path_file_open = path_file_open + "/" + new_name
                 F = open(path_file_open, 'w')
                 F.write(new_text)
@@ -541,7 +541,7 @@ class FileBrowserSite(object):
             form = ChangeForm(request.POST, path=path, fileobject=fileobject, filebrowser_site=self)
             if form.is_valid():
                 new_name = form.cleaned_data['name']
-                new_text = form.cleaned_data['text']
+                new_text = form.cleaned_data["text_comment"]
                 action_name = form.cleaned_data['custom_action']
                 try:
                     action_response = None
