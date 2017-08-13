@@ -16,14 +16,20 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY WARNING: keep the secret key used in production secret!
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+if 'TRAVIS' in os.environ:
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+    SECRET_KEY = os.environ.get('SECRET_KEY', '')
+    SMS_USERNAME = os.environ.get('SMS_USERNAME', '')
+    SMS_PASSWORD = os.environ.get('SMS_PASSWORD', '')
+    DEBUG = os.environ.get('DEBUG', '')
+else:
+    DEBUG = True
+    from .local_settings import *
 
 ALLOWED_HOSTS = ["*"]
-
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # Application definition
 
@@ -268,16 +274,9 @@ PATH_EMAIL_TEMPLATE = os.path.join(PATH_TEMPLATES, 'templates/email')
 
 # Email settting
 EMAIL_HOST = 'smtp.yandex.ru'
+
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
-
-# SMS setting
-SMS_USERNAME = os.environ.get('SMS_USERNAME', '')
-SMS_PASSWORD = os.environ.get('SMS_PASSWORD', '')
-
 
 # TEMPLATE SETTINGS
 DEFAULT_TEMPLATE = 'front/default.html'
@@ -286,5 +285,4 @@ TEMPLATE_CSS = (
     'https://www.w3schools.com/w3css/4/w3.css',
     'https://fonts.googleapis.com/css?family=Lato',
 )
-TEMPLATE_JS = (
-)
+TEMPLATE_JS = ()

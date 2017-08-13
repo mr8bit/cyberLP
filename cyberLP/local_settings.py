@@ -1,0 +1,5 @@
+SECRET_KEY = '@tj$v_e7b&%gt9!$h#709tol*v77#@et3iv1x6k1&1ta_g%(6@'
+SMS_USERNAME = 'cybertech'
+SMS_PASSWORD = 'cyber-technology'
+EMAIL_HOST_USER = 'notification@cyber-technology.net'
+EMAIL_HOST_PASSWORD = 'support'
