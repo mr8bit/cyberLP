@@ -5,7 +5,8 @@ python:
       - 3.5
 install:
   - pip install -r requirements.txt
-
+before_script:
+  - echo "DEBUG=False" >> .env
+  - echo "SECRET_KEY=$SECRET_KEY" >> .env
 script:
-  - export SECRET_KEY=$SECRET_KEY
   - python manage.py migrate
