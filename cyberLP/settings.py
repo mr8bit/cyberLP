@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # Application definition
 
 INSTALLED_APPS = [
