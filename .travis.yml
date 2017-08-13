@@ -1,12 +1,13 @@
 language: python
 
-
+repo_token: $TOKEN
 python:
       - 3.5
       - 3.6
 install:
   - pip install -r requirements.txt
   - pip install coverage
+  - pip install codecov
 before_script:
   - export SECRET_KEY==$SECRET_KEY
   - export DEBUG==$DEBUG
@@ -19,4 +20,5 @@ script:
   - python manage.py test
   - coverage run manage.py test
 after_success:
+  - codecov
   - coverage report
