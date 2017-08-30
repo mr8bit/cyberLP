@@ -32,11 +32,13 @@ class TaskSerializer(serializers.ModelSerializer):
 class OrderSerializer(serializers.ModelSerializer):
     tasks = TaskSerializer(many=True, read_only=True)
     comment = CommentSerializer(many=True, read_only=True)
+    status_name = serializers.ReadOnlyField(source='get_status_name')
 
     class Meta:
         model = Order
         fields = (
-        'id', 'name', 'phone', 'email', 'price', 'text_comment', 'status', 'creation_date', 'tasks', 'comment')
+            'id', 'name', 'phone', 'email', 'price', 'text_comment', 'status', 'status_name', 'creation_date', 'tasks',
+            'comment')
 
 
 class StatusSerializer(serializers.ModelSerializer):

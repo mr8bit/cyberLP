@@ -1,7 +1,7 @@
 from django.db import models
 from colorfield.fields import ColorField
 from notifications.mail import sendEmailViaTemplate
-from django.contrib  import auth
+from django.contrib import auth
 
 
 class Status(models.Model):
@@ -25,7 +25,11 @@ class Order(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     status = models.ForeignKey('Status', related_name='orders')
 
+    def get_status_name(self):
+        return self.status.name
+
     class Meta:
+        ordering = ['-creation_date']
         verbose_name = "Заказ"
         verbose_name_plural = "Заказы"
 
@@ -56,7 +60,7 @@ class Todo(models.Model):
     done = models.BooleanField(verbose_name="Завершено")
     updated = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey('auth.User')
-    task = models.ForeignKey('order.Task',related_name='todos',default='')
+    task = models.ForeignKey('order.Task', related_name='todos', default='')
 
     class Meta:
         verbose_name = "Список"
@@ -70,7 +74,7 @@ class Text(models.Model):
     description = models.TextField(verbose_name="Описание")
     updated = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey('auth.User')
-    task = models.ForeignKey('order.Task',related_name='texts',default='')
+    task = models.ForeignKey('order.Task', related_name='texts', default='')
 
     class Meta:
         verbose_name = "Текст"

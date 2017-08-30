@@ -1,0 +1,107 @@
+<style>
+    .board-main-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        transition: margin .1s ease-in;
+    }
+
+    .board-canvas {
+        position: relative;
+        flex-grow: 1;
+    }
+
+    .board {
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0
+    }
+
+    .list-wrapper {
+        width: 270px;
+        margin: 0 5px;
+        height: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+        white-space: nowrap;
+    }
+
+    .list {
+        background: #E2E4E6;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        position: relative;
+        white-space: normal;
+    }
+
+</style>
+<div class="simpleDemo animated fadeIn" ng-show="typeList == 'funnel'"
+     style="position: relative;left: 0;right: 0;top: 0;bottom: 0; transition: all 0.3s">
+    <div class="board-main-content">
+        <div class="board-canvas">
+            <div class="board">
+                <div class="list-wrapper" ng-repeat="list in models.list">
+                    <div class="list">
+
+                        <div class="panel-heading" style="padding-bottom: 5px;padding-top: 5px">
+                            <h3 style="text-align: center" class="panel-title">{{ list.name }}</h3>
+                            <div style="text-align: center">Заказов: {{ list.orders.length }}</div>
+                        </div>
+
+                        <div dnd-list="list.orders" class="list-items"
+                             dnd-drop="callback({targetList: list.orders, targetIndex: list.id})"
+                             style="flex: 1 1 auto;overflow-y: auto;margin: 0 4px;padding: 0 4px;height: calc(100vh - 165px);z-index: 1;min-height: 0">
+                            <div ng-repeat="item in list.orders"
+                                 dnd-draggable="item"
+                                 class="list-item"
+                                 style="background-color: #fff;border-bottom: 1px solid #ccc;border-radius: 3px;cursor: pointer;margin-bottom: 6px;max-width: 300px;min-height: 20px;position: relative;z-index: 0"
+                                 dnd-effect-allowed="move"
+                                 dnd-selected="models.selected = item"
+                                 dnd-dragend="logEvent(this)"
+                                 dnd-callback="onDrop(list.orders, $index, targetList, targetIndex)"
+                                 >
+
+                                <div class="item">
+                                    <div class="name">{{ item.name }}</div>
+                                    <div class="date">{{ item.creation_date| date:'MM.dd.yyyy h:mm' }}</div>
+                                </div>
+                                <div class="item">
+                                    <div class="phone">
+                                        <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="typeList == 'list'" class="animated fadeIn">
+
+   <ap-mesa
+      columns="my_table_columns"
+      rows="my_table_data"
+      track-by="id"
+      selected="my_selected_rows"
+      options="my_table_options_paginate"
+      table-class="table">
+    </ap-mesa>
+
+
+
+</div>

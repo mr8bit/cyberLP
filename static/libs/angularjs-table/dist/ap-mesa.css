@@ -1,0 +1,341 @@
+/* main root element */
+
+.ap-mesa-wrapper {
+  position: relative;
+}
+
+/* styles for both header- and rows- tables */
+
+.ap-mesa {
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* the visible table header */
+
+.mesa-header-table {
+  border-bottom: none;
+}
+
+.mesa-header-table thead > tr > th {
+  border-width: 1px;
+}
+
+/* the invisible table header; used for correct column widths */
+
+.mesa-rows-table thead {
+  height: 0;
+  visibility: hidden;
+}
+
+.mesa-rows-table > thead > tr > th {
+  border-width: 0;
+  padding: 0 !important;
+}
+
+.mesa-rows-table-wrapper {
+  overflow: auto;
+}
+
+.mesa-rows-table > tbody + tbody {
+  border-top: none;
+}
+
+/* general styles for all cells in both tables */
+
+.ap-mesa th {
+  white-space: nowrap;
+  position: relative;
+}
+
+.ap-mesa td {
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* this type of cell is used to show messages like "loading" */
+
+.ap-mesa td.space-holder-row-cell {
+  text-align: center;
+}
+
+/* search input */
+
+.ap-mesa tr.ap-mesa-filter-row td input {
+  width: 100%;
+  border-radius: 2em;
+  border: 1px solid #CCC;
+  outline: none;
+  text-indent: 0.3em;
+  font-size: 90%;
+}
+
+.ap-mesa tr.ap-mesa-filter-row td {
+  position: relative;
+}
+
+/* button to clear search */
+
+.ap-mesa tr.ap-mesa-filter-row td .clear-search-btn {
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  right: 1em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 12px;
+  opacity: 0.2;
+  color: white;
+  background-color: black;
+  padding: 0;
+  width: 15px;
+  line-height: 15px;
+}
+
+/* activated search input, as in when there is text in it */
+
+.ap-mesa tr.ap-mesa-filter-row td input.active {
+  background-color: #3D82C2;
+  color: #FFF;
+  border-color: #747474;
+}
+
+/* placeholder object for when columns are being sorted */
+
+.ap-mesa .ap-mesa-column-placeholder {
+  background-color: #DDD;
+}
+
+/* handle to grab in order to resize a column */
+
+.ap-mesa th .column-resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  border-width: 0 1px;
+  cursor: col-resize;
+  border-color: #DDD;
+  border-style: solid;
+}
+
+/* this class is applied to a .column-resizer 
+when a discreet width has been set on it */
+
+.ap-mesa th .column-resizer.discreet-width {
+  background-color: #DDD;
+}
+
+/* wrapper for text in a th */
+
+.ap-mesa th .column-text {
+  max-width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+/* the element showing what the new width will be */
+
+.ap-mesa th .column-resizer-marquee {
+  left: 0;
+  top: 0;
+  height: 100%;
+  border: 1px dotted #DEDEDE;
+  position: absolute;
+}
+
+/* sorting icons */
+
+.ap-mesa th span.sorting-icon {
+  font-size: 10px;
+}
+
+.ap-mesa th span.sort-priority {
+  background-color: black;
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  vertical-align: top;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.ap-mesa th span.glyphicon-sort {
+  opacity: 0.2;
+}
+
+.ap-mesa th.sortable-column {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* dummy row */
+
+.ap-mesa-dummy-row {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAlCAYAAACDKIOpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiuHv37n+G////MzAxAMHQIQACDAC7twbaN2nkgwAAAABJRU5ErkJggg==');
+  background-repeat: repeat;
+}
+
+table tbody .ap-mesa-dummy-row td {
+  border-top: none;
+  padding: 0;
+}
+
+.ap-mesa-pagination {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.ap-mesa-pagination .rows-per-page-ctrl {
+  float: right;
+}
+
+.ap-mesa-pagination .rows-per-page-ctrl .pagination {
+  vertical-align: middle;
+}
+
+.ap-mesa-pagination .rows-per-page-msg {
+  vertical-align: middle;
+}
+
+.ap-mesa-pagination ul.pagination li a {
+  cursor: pointer;
+}
+
+/* async loader styles */
+
+.ap-mesa-status-display-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.ap-mesa-status-display {
+  background: rgba(0,0,0,0.3);
+  border-radius: 1rem;
+  width: 20%;
+  max-width: 130px;
+  min-width: 100px;
+  height: auto;
+  padding: 0.5rem 1rem;
+  position: relative;
+  display: inline-block;
+  margin-top: 0.7rem;
+}
+
+.ap-mesa-loading-display.ng-enter {
+  -webkit-transition: opacity cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition: opacity cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.paging-strategy-scroll .ap-mesa-loading-display.ng-enter {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.paging-strategy-paginate .ap-mesa-loading-display.ng-enter {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.ap-mesa-loading-display.ng-enter,
+.ap-mesa-loading-display.ng-enter.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.ap-mesa-loading-display.ng-enter.ng-leave,
+.ap-mesa-loading-display.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.ap-mesa-status-display-wrapper.has-rows .ap-mesa-status-display {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.ap-mesa-error-display-inner {
+  color: red;
+  display: inline-block;
+}
+
+/* credit to: https://projects.lukehaas.me/css-loaders/ */
+
+.ap-mesa-status-display-inner,
+.ap-mesa-status-display-inner:before,
+.ap-mesa-status-display-inner:after {
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+
+.ap-mesa-status-display-inner {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 0 auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0) translateY(-100%);
+  -ms-transform: translateZ(0) translateY(-100%);
+  transform: translateZ(0) translateY(-100%);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.ap-mesa-status-display-inner:before,
+.ap-mesa-status-display-inner:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.ap-mesa-status-display-inner:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.ap-mesa-status-display-inner:after {
+  left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+  0%, 80%, 100% {
+    -webkit-box-shadow: 0 1.5em 0 -1.3em;
+    box-shadow: 0 1.5em 0 -1.3em;
+  }
+
+  40% {
+    -webkit-box-shadow: 0 1.5em 0 0;
+    box-shadow: 0 1.5em 0 0;
+  }
+}
+
+@keyframes load7 {
+  0%, 80%, 100% {
+    -webkit-box-shadow: 0 1.5em 0 -1.3em;
+    box-shadow: 0 1.5em 0 -1.3em;
+  }
+
+  40% {
+    -webkit-box-shadow: 0 1.5em 0 0;
+    box-shadow: 0 1.5em 0 0;
+  }
+}

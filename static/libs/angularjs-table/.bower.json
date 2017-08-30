@@ -1,0 +1,44 @@
+{
+  "name": "angularjs-table",
+  "version": "2.21.1",
+  "main": [
+    "./dist/ap-mesa.js",
+    "./dist/ap-mesa.css"
+  ],
+  "dependencies": {
+    "angular": "^1.6",
+    "jquery": "~2.0.3",
+    "angular-sanitize": "^1.6",
+    "angular-ui-sortable": "~0.13",
+    "jquery-ui": ">=1.11.0"
+  },
+  "devDependencies": {
+    "angular-route": "^1.6",
+    "bootstrap": "~3.0.3",
+    "angular-mocks": "^1.6",
+    "angular-animate": "^1.6",
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1",
+    "sinon": "~1.9.0",
+    "sinon-chai": "~2.5.0"
+  },
+  "ignore": [
+    "src",
+    "vendor",
+    "app",
+    "node_modules",
+    "test",
+    "**/.*"
+  ],
+  "homepage": "https://github.com/andyperlitch/angularjs-table",
+  "_release": "2.21.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.21.1",
+    "commit": "650e876b209ca9bd63d0c745bda281a0f8862b0d"
+  },
+  "_source": "https://github.com/andyperlitch/angularjs-table.git",
+  "_target": "^2.21.1",
+  "_originalSource": "angularjs-table",
+  "_direct": true
+}
