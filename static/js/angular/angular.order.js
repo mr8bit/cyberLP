@@ -23,7 +23,7 @@ App.controller('BreadcrumbsController',
             $scope.selectRow = [];
             $scope.$watchCollection(function () {
                 return Data.getData();
-            }, function (newValue, oldValue) {
+            }, function (newValue) {
                 $scope.selectRow = newValue;
             });
 
@@ -42,7 +42,6 @@ App.controller('BreadcrumbsController',
 App.controller('SimpleDemoController', ['$scope', '$http',
     '$activityIndicator', '$timeout', '$cookies', '$q', 'Data', 'RemoveData',
     function ($scope, $http, $activityIndicator, $timeout, $cookies, $q, Data, RemoveData) {
-
         $scope.onDrop = function (srcList, srcIndex, targetList, targetIndex) {
             var url = "/api/orders/" + srcList[srcIndex].id + '/';
             var data = {
@@ -55,17 +54,16 @@ App.controller('SimpleDemoController', ['$scope', '$http',
             };
             $http.put(url, data).then(function (success) {
             }, function (error) {
-                alert("Ошибка сервера");
+                alert("Ошибка сервера", error);
             });
             targetList.splice(targetIndex, 0, srcList[srcIndex]);
             // Remove the item from the source, possibly correcting the index first.
             // We must do this immediately, otherwise ng-repeat complains about duplicates.
-            if (srcList == targetList && targetIndex <= srcIndex) srcIndex++;
+            if (srcList === targetList && targetIndex <= srcIndex) srcIndex++;
             srcList.splice(srcIndex, 1);
             // By returning true from dnd-drop we signalize we already inserted the item.
             return true;
         };
-
         $scope.$watch(
             function () {
                 return $cookies.get('listOrderType');
@@ -100,8 +98,6 @@ App.controller('SimpleDemoController', ['$scope', '$http',
                 }
             }
         );
-
-
         $scope.my_table_columns = [
             {id: 'selected', key: 'id', label: '', width: 30, lockWidth: true, selector: true},
             {id: 'id', key: 'id', label: 'ID', sort: 'number', width:50},
@@ -110,7 +106,7 @@ App.controller('SimpleDemoController', ['$scope', '$http',
                 key: 'name',
                 label: 'Имя',
                 sort: 'string',
-                filter: 'like',
+                filter: 'like'
 
             }, {
                 id: 'phone',
@@ -130,7 +126,7 @@ App.controller('SimpleDemoController', ['$scope', '$http',
                 label: 'Статус',
                 sort: 'string',
                 filter: 'like'
-            },
+            }
         ];
         $scope.my_selected_rows = [];
         $scope.my_table_options_paginate = angular.extend({}, $scope.my_table_options, {
@@ -174,8 +170,6 @@ App.controller('SimpleDemoController', ['$scope', '$http',
                     RemoveData.removeData(newd);
                 }
             }
-
-
         }, true);
         $scope.$watch('my_selected_rows', function (newValue) {
             Data.setData(newValue);
