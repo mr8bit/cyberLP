@@ -43,16 +43,3 @@ class TodoModelTest(TestCase):
         self.assertEqual(str(todo.name), todo.name)
         self.assertEqual(task, todo.task)
 
-
-class TextModelTest(TestCase):
-    def test_string_representation(self):
-        user = User.objects.create_user(
-            username='jacob', email='jacob@…', password='top_secret')
-        task = Task(name='Разработка тестов',
-                    order=Order(name='Василий', phone='88005553535', email='69kissmysausage@gmail.com', price=3999,
-                                text_comment='test',
-                                status=Status(name='Выполнено')), user=user)
-        text = Text(description="Купить хлеб", user=user, task=task)
-        self.assertEqual(text.description, text.description)
-        self.assertEqual(user, text.user)
-        self.assertEqual(task, text.task)
