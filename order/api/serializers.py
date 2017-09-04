@@ -1,5 +1,6 @@
-from order.models import *
 from rest_framework import serializers
+
+from order.models import *
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -8,25 +9,18 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = ('id', 'description', 'updated', 'user')
 
 
-class TextSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Text
-        fields = ('id', 'description', 'updated', 'user')
-
-
 class TodoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Todo
-        fields = ('id', 'name', 'done', 'updated')
+        fields = ('id', 'name', 'done', 'task', 'updated')
 
 
 class TaskSerializer(serializers.ModelSerializer):
     todos = TodoSerializer(many=True, read_only=True)
-    texts = TextSerializer(many=True, read_only=True)
 
     class Meta:
         model = Task
-        fields = ('id', 'name', 'order', 'creation_date', 'user', 'todos', 'texts')
+        fields = ('id', 'name', 'order', 'creation_date', 'todos', 'description')
 
 
 class OrderSerializer(serializers.ModelSerializer):
@@ -47,3 +41,9 @@ class StatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = Status
         fields = ('id', 'name', 'orders',)
+
+
+class StatusNameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Status
+        fields = ('id', 'name',)

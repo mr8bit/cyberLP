@@ -70,18 +70,18 @@
                                  dnd-selected="models.selected = item"
                                  dnd-dragend="logEvent(this)"
                                  dnd-callback="onDrop(list.orders, $index, targetList, targetIndex)"
-                                 >
-
-                                <div class="item">
-                                    <div class="name">{{ item.name }}</div>
-                                    <div class="date">{{ item.creation_date| date:'MM.dd.yyyy h:mm' }}</div>
-                                </div>
-                                <div class="item">
-                                    <div class="phone">
-                                        <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
+                            >
+                                <a href="#!/order/{{ item.id }}">
+                                    <div class="item">
+                                        <div class="name">{{ item.name }}</div>
+                                        <div class="date">{{ item.creation_date| date:'MM.dd.yyyy h:mm' }}</div>
                                     </div>
-                                </div>
-
+                                    <div class="item">
+                                        <div class="phone">
+                                            <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -93,15 +93,14 @@
 </div>
 <div ng-show="typeList == 'list'" class="animated fadeIn">
 
-   <ap-mesa
-      columns="my_table_columns"
-      rows="my_table_data"
-      track-by="id"
-      selected="my_selected_rows"
-      options="my_table_options_paginate"
-      table-class="table">
+    <ap-mesa
+            columns="my_table_columns"
+            rows="my_table_data"
+            track-by="id"
+            selected="my_selected_rows"
+            options="my_table_options_paginate"
+            table-class="table">
     </ap-mesa>
-
 
 
 </div>

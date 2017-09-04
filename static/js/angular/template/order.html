@@ -1,10 +1,642 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<style>
+    .content-body {
+        display: flex;
+        width: 100%;
+        margin: 0px -20px -20px;
 
-</body>
-</html>
+        justify-content: flex-start;
+    }
+
+    .left-bar {
+        min-width: 280px;
+        background: #E2E4E6;
+        height: calc(100vh - 101px);
+        padding: 20px;
+
+    }
+
+    .left-bar > .title {
+        font-size: 24px;
+        line-height: 26px;
+        color: #6f7e95;
+    }
+
+    .side-bar-middle {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .side-bar-middle > .identification {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #6f7e95;
+        color: #6f7e95;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        width: 100%
+    }
+
+    .dropdown .dropbtn {
+        background-color: transparent;
+        font-weight: 600;
+        padding: 5px;
+        padding-left: 0px;
+        display: flex;
+        margin-top: 10px;
+        color: #6f7e95;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dropdown .dropbtn i {
+        margin-left: 5px
+    }
+
+    .dropdown .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100%;
+        overflow: auto;
+        -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+        z-index: 1;
+        padding: 0
+    }
+
+    .dropdown .dropdown-content li {
+        display: block;
+        padding: 0
+    }
+
+    .dropdown .dropdown-content li span {
+        color: #000;
+        padding: 10px 16px;
+        font-size: 14px;
+        text-decoration: none;
+        display: block
+    }
+
+    .dropdown .dropdown-content li span:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown .show {
+        display: block;
+    }
+
+    .contacts ul {
+        padding: 0px;
+    }
+
+    .contacts ul li {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .main-bar {
+
+        display: flex;
+        padding: 0px 15px;
+    }
+
+    .main-bar .title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #6f7e95;
+    }
+
+    .task-list {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        position: relative;
+    }
+
+    .task-list .task-card {
+        width: 180px;
+        height: 180px;
+        margin: 0 5px;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #F2C91D;
+        white-space: nowrap;
+    }
+
+    .task-card .card-content {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .card-content .content-bottom .date-title {
+        margin-bottom: 10px;
+    }
+
+    .card-content .content-bottom {
+        margin-bottom: 10px;
+    }
+
+    .card-content .content-bottom .bottom-title {
+        font-size: 17px;
+        color: white;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        white-space: pre-wrap;
+    }
+
+    .card-content .content-head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ngdialog.ngdialog-theme-default .ngdialog-close:before {
+        color: white;
+    }
+
+    fieldset.module {
+        background-color: #F2C91D;
+    }
+
+    .ngdialog.ngdialog-theme-default .ngdialog-content {
+        background-color: #F2C91D;
+        color: white;
+    }
+
+    .task-list .green-card {
+        background-color: #81C926;
+    }
+</style>
+<div class="content-body animated fadeIn">
+    <div class="left-bar">
+        <div class="title">
+            <a onclick="window.history.back()"><i class="fa fa-chevron-left"
+                                                  aria-hidden="true"></i></a> {{ order.name }}
+        </div>
+        <div class="side-bar-middle">
+            <span class="identification">#{{ order.id }}</span>
+            <div class="dropdown">
+                <button ng-click="myFunction()" class="dropbtn">
+                    {{ order.status_name }}
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <ul id="myDropdown" class="dropdown-content">
+                    <li ng-repeat="item in status"><span ng-click="setStatus(item)">{{ item.name }}</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contacts">
+            <ul>
+                <li>Телефон: <a href="tel:{{ order.phone }}">{{ order.phone | tel }}</a></li>
+                <li>Email: <a href="email:{{ order.email }}">{{ order.email }}</a></li>
+            </ul>
+        </div>
+        <div class="text-comment">
+            <span>Комментарий: </span><br/>
+            {{ order.text_comment }}
+        </div>
+
+    </div>
+    <dvi class="main-bar">
+        <div class="task">
+            <div class="title">
+                Задачи
+                <a ng-click="addTaskOpen(order)"><i class="fa fa-plus"></i></a>
+            </div>
+            <div class="task-list">
+                <div ng-repeat="task in order.tasks" class="task-card animated fadeIn"
+                     ng-class="task.todos.length == 0 ? 'green-card' : '' ">
+                    <div class="card-content" ng-click="clickToOpen(task,order,$index)">
+                        <div class="content-head">
+                            <i ng-if="task.todos.length > 0" class="fa fa-check-square" aria-hidden="true"></i>
+                            <i ng-if="task.todos.length == 0" class="fa fa-align-left" aria-hidden="true"></i>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="content-bottom">
+                            <div class="date-title">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <span>{{ task.creation_date | date : "d.MM.y" }}</span>
+                            </div>
+                            <div class="bottom-title">{{ task.name }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dvi>
+</div>
+<style>
+    .dialog-title {
+        width: 100%;
+    }
+
+    .dialog-title input {
+        font-size: 18px;
+        color: white;
+        padding: 0;
+        margin: 10px 0;
+        font-weight: normal;
+        text-transform: none;
+        background: none;
+        outline: none;
+        border: none;
+        width: 100%;
+    }
+
+    .dialog-title input::-webkit-input-placeholder {
+        color: white;
+    }
+
+    .dialog-title input:focus {
+        outline: none;
+        border: none;
+    }
+
+    .dialog-title input:active {
+        outline: none;
+        border: none;
+    }
+
+    .dialog-content {
+        height: 100%;
+        background-color: white;
+        margin-left: -27px;
+        margin-right: -27px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 27px;
+        margin-bottom: -28px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px
+    }
+
+    .dialog-content .todo-list {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .dialog-content .todo-list li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        justify-content: space-between;
+    }
+
+    .dialog-content .todo-list li button {
+        border: none;
+        display: none;
+        background: none;
+        position: absolute;
+        right: 27px;
+    }
+
+    .dialog-content .todo-list li:hover button {
+        display: block;
+    }
+
+    .dialog-content .todo-list li input[type='text'] {
+        width: 100%;
+        border: none;
+        height: auto;
+        outline: none;
+
+        background: none;
+        font-size: 13px;
+    }
+
+    .dialog-content .todo-list li input:focus ~ button {
+        display: block;
+    }
+
+    .dialog-content .todo-list li input:active {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dialog-content .todo-list li input:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .todo-list-add li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        justify-content: space-between;
+    }
+
+    .dialog-content .todo-list-add {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .dialog-content .todo-list-add li input[type='text'] {
+        width: 100%;
+        border: none;
+        height: auto;
+        padding-left: 5px;
+        outline: none;
+        background: none;
+        font-size: 13px;
+    }
+
+    .dialog-content .todo-list li .complete {
+        text-decoration: line-through;
+    }
+
+    .dialog-content .todo-list-add li input:active {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dialog-content .todo-list-add li input:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dialog-content .todo-list-add li span {
+        color: #6f7e95;
+        margin-right: 10px;
+        margin-left: 3px;
+    }
+
+    .dialog-content .text-list {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .dialog-content .text-list li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .dialog-content .text-list li textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 13px;
+        min-height: 50px;
+        resize: none;
+        overflow: hidden;
+        word-wrap: break-word;
+        height: 55px;
+    }
+
+    .dialog-content .text-list li textarea:active {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dialog-content .text-list li textarea:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dialog-footer {
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+        margin-bottom: -10px;
+    }
+
+    .dialog-footer .footer-left {
+        color: #6f7e95;
+    }
+
+    .dialog-footer .footer-left ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .dialog-footer .footer-left ul li .about {
+        display: none;
+        position: absolute;
+        margin-left: -45px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+
+        font-size: 13px;
+        padding: 10px 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .dialog-footer .footer-left ul li {
+        display: inline-block;
+        margin: 0 5px;
+        font-size: 18px;
+    }
+
+    .dialog-footer .footer-left ul li:hover .about {
+        display: block;
+
+    }
+
+    .dialog-footer .footer-right button {
+        color: #6f7e95;
+        background-color: transparent;
+        text-transform: uppercase;
+        border: none;
+    }
+
+</style>
+<script type="text/ng-template" id="ngEditOrder">
+    <style ng-if="ngDialogData.task.todos.length == 0">
+        .ngdialog.ngdialog-theme-default .ngdialog-content {
+            background-color: #81C926;
+            color: white;
+        }
+
+        fieldset.module {
+            background-color: #81C926;
+        }
+    </style>
+    <fieldset id="edit" class="module aligned  module_0 initialized">
+        <div class="dialog-title" ng-click="activate()">
+            <div class="date">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                {{ ngDialogData.task.creation_date | date : "d.MM.y" }}
+            </div>
+            <input tabindex="-1"
+                   ng-blur="saveTitle(ngDialogData.task)"
+                   ng-model="ngDialogData.task.name">
+        </div>
+        <div class="dialog-content">
+            <ul class="text-list" ng-if="ngDialogData.task.description == 0 && ngDialogData.task.todos.length ==0">
+                <li>
+                    <textarea placeholder="Задача..." msd-elastic
+                              ng-blur="createNewText(ngDialogData.task.id,ngDialogData.task.description, newText)"
+                              ng-model="newText"></textarea>
+                </li>
+            </ul>
+            <ul class="text-list" ng-if="ngDialogData.task.description">
+                <li>
+                    <textarea
+                            ng-blur="updateText()"
+                            msd-elastic
+                            ng-model="ngDialogData.task.description"></textarea>
+                </li>
+            </ul>
+            <ul ng-if="ngDialogData.task.todos" class="todo-list">
+                <li ng-repeat="todo in ngDialogData.task.todos">
+                    <input type="checkbox" ng-model="todo.done" ng-click="saveChangesTodo(todo)">
+                    <input type="text" ng-model="todo.name" ng-disabled="todo.done"
+                           ng-blur="updateTodo(todo)"
+                           ng-class="todo.done ? 'complete': ''">
+                    <button ng-click="deleteTodo(ngDialogData.task.todos,$index,todo)">
+                        <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+            <ul ng-show="ngDialogData.task.todos.length>0" class="todo-list-add">
+                <li>
+                    <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+                    <input ng-keyup="$event.keyCode == 13 ? createNewTodo(ngDialogData.task.id,ngDialogData.task.todos, newTodo) : null"
+                           type="text" ng-model="newTodo" placeholder="Новый пункт">
+                </li>
+            </ul>
+            <div class="dialog-footer">
+                <div class="footer-left">
+                    <ul>
+                        <li ng-click="textTotodo()">
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            <div class="about animated fadeIn">
+                                В виде списка
+                            </div>
+                        </li>
+                        <li ng-click="todoTotext()">
+                            <i class="fa fa-align-left" aria-hidden="true"></i>
+                            <div class="about animated fadeIn">
+                                Обычный текст
+                            </div>
+                        </li>
+                        <li ng-click="deleteTask(ngDialogData.task.id,ngDialogData.index)">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <div class="about animated fadeIn">
+                                Удалить
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <button ng-click="close()">Готово</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</script>
+
+
+<script type="text/ng-template" id="ngAddTask">
+    <style ng-if="task.todos.length == 0">
+        .ngdialog.ngdialog-theme-default .ngdialog-content {
+            background-color: #81C926;
+            color: white;
+        }
+
+        fieldset.module {
+            background-color: #81C926;
+        }
+    </style>
+    <fieldset id="add" class="module aligned  module_0 initialized">
+        <div class="dialog-title" ng-click="activate()">
+            <div class="date">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                {{ task.creation_date | date : "d.MM.y" }}
+            </div>
+            <input
+                    tabindex="-1"
+                    placeholder="Название..."
+                    ng-model="task.name">
+        </div>
+        <div class="dialog-content">
+            <ul class="text-list" ng-if="task.todos.length == 0">
+                <li>
+                    <textarea
+                            placeholder="Задача..."
+                            msd-elastic
+                            ng-model="task.description"></textarea>
+                </li>
+            </ul>
+            <ul ng-if="task.todos" class="todo-list">
+                <li ng-repeat="todo in task.todos">
+                    <input type="checkbox" ng-model="todo.done" ng-click="saveChangesTodo(todo)">
+                    <input type="text" ng-model="todo.name" ng-disabled="todo.done"
+                           ng-blur="updateTodo(todo)"
+                           ng-class="todo.done ? 'complete': ''">
+                    <button ng-click="deleteTodo(task.todos,$index,todo)">
+                        <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+            <ul ng-show="task.todos.length>0" class="todo-list-add">
+                <li>
+                    <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+                    <input ng-keyup="$event.keyCode == 13 ? createNewTodo(newTodo) : null"
+                           type="text" ng-model="newTodo" placeholder="Новый пункт">
+                </li>
+            </ul>
+            <div class="dialog-footer">
+                <div class="footer-left">
+                    <ul>
+                        <li ng-click="textTotodo()">
+                            <i class="fa fa-list-ul" aria-hidden="true"></i>
+                            <div class="about animated fadeIn">
+                                В виде списка
+                            </div>
+                        </li>
+                        <li ng-click="todoTotext()">
+                            <i class="fa fa-align-left" aria-hidden="true"></i>
+                            <div class="about animated fadeIn">
+                                Обычный текст
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <div class="about animated fadeIn">
+                                Удалить
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <button ng-click="close()">Готово</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</script>

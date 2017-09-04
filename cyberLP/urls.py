@@ -1,18 +1,19 @@
-from django.conf.urls import url, include
-from django.contrib import admin
-from django.conf.urls.static import static
 from django.conf import settings
-from page_editor.sites import site as page_site
+from django.conf.urls import url, include
+from django.conf.urls.static import static
+from django.contrib import admin
 from rest_framework import routers
+
+from order import views as order
 from order.api import views as api
-from django.views.generic import TemplateView
-from jet.dashboard.dashboard_modules import google_analytics_views
-from landing import views
+from page_editor.sites import site as page_site
 
 router = routers.DefaultRouter()
 router.register(r'statusboard', api.StatusViewSet)
+router.register(r'status', api.StatusNameViewSet)
 router.register(r'orders', api.OrderViewSet)
-
+router.register(r'task', api.TaskViewSet)
+router.register(r'todo', api.TodoViewSet)
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
@@ -20,7 +21,7 @@ urlpatterns = [
     url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', admin.site.urls),
-    url(r'^admin/order_pages/', TemplateView.as_view(template_name='admin/orders.html')),
+    url(r'^admin/order_pages/', order.orders),
     url(r'^admin/page_editor/', include(page_site.urls)),
     url(r'^', include('page_editor.urls')),
 

@@ -2,12 +2,12 @@
 {% block title %}Cyber LP | CRM{% endblock %}
 {% load static  i18n %}
 {% block extrastyle %}
-    <link rel="stylesheet" href="{% static 'css/ngDialog/ngDialog.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/ngDialog/ngDialog-theme-default.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog.min.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/ng-dialog/css/ngDialog-theme-default.css' %}">
     <link rel="stylesheet" href="{% static 'css/ngActivityIndicator.min.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{% static 'libs/animate.css/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'libs/angularjs-table/dist/ap-mesa.css' %}">
-
+    <link rel="stylesheet" href="{% static 'libs/font-awesome/css/font-awesome.min.css' %}">
     <style>
 
         .simpleDemo .list-items[dnd-list] {
@@ -134,26 +134,33 @@
 {% endblock %}
 
 {% block extrahead %}
+
     <script type="text/javascript" src="{% static 'libs/angular/angular.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/angular/angular-drag-and-drop-lists.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/angular/angular-route.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/angular/angular-animate.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/angular/ngActivityIndicator.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/angular-elastic/elastic.js' %}"></script>
+    <script type="text/javascript"
+            src="{% static 'libs/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/angular-route/angular-route.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/ngActivityIndicator/ngActivityIndicator.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'libs/angular-cookies/angular-cookies.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'libs/angular-smart-table/dist/smart-table.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'libs/angular-ui-sortable/sortable.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'libs/angular-sanitize/angular-sanitize.js' %}"></script>
     <script type="text/javascript" src="{% static 'libs/angular-animate/angular-animate.js' %}"></script>
     <script type="text/javascript" src="{% static 'libs/angularjs-table/dist/ap-mesa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/ng-dialog/js/ngDialog.min.js' %}"></script>
 
-    <script type="text/javascript" src="{% static 'js/angular/angular.order.js' %}"></script>
-
+    <script type="text/javascript" src="{% static 'js/angular/app.order.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/angular/app.route.order.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/angular/app.datafactory.order.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/angular/app.filter.order.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/angular/app.controller.order.js' %}"></script>
     <script>
-     App.config(function ($httpProvider) {
+        App.config(function ($httpProvider) {
             $httpProvider.defaults.headers.common['X-CSRFToken'] = '{{ csrf_token }}';
             $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         });
     </script>
+
 {% endblock %}
 <!-- CONTENT -->
 
@@ -217,7 +224,6 @@
     </div>
     {% endverbatim %}
     <script>
-
         document.getElementsByTagName("body")[0].setAttribute("ng-app", "App");
 
     </script>

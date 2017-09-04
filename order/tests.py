@@ -29,7 +29,6 @@ class TaskModelTest(TestCase):
                                 text_comment='test',
                                 status=Status(name='Выполнено')), user=user)
         self.assertEqual(str(task.name), task.name)
-        self.assertEqual(user, task.user)
 
 
 class TodoModelTest(TestCase):
@@ -42,7 +41,6 @@ class TodoModelTest(TestCase):
                                 status=Status(name='Выполнено')), user=user)
         todo = Todo(name="Купить хлеб", done=False, user=user, task=task)
         self.assertEqual(str(todo.name), todo.name)
-        self.assertEqual(user, todo.user)
         self.assertEqual(task, todo.task)
 
 
