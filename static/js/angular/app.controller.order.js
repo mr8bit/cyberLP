@@ -1,4 +1,4 @@
-App.controller('TaskController', function ($scope, $http, ngDialog, Todo, Text, Task) {
+App.controller('TaskController', function ($scope, $http, ngDialog, Todo, Task) {
     $scope.newTodo = [];
     $scope.newText = '';
     $scope.disabler = true;
@@ -93,8 +93,9 @@ App.controller('TaskController', function ($scope, $http, ngDialog, Todo, Text, 
         ngDialog.close();
     };
 });
-
-App.controller('AddTaskController', function ($rootScope, $scope, $timeout, Task, Todo, Text, ngDialog) {
+App.controller('CommentController', function ($scope) {
+});
+App.controller('AddTaskController', function ($rootScope, $scope, $timeout, Task, Todo, ngDialog) {
     $scope.newText = ' ';
     $scope.task = {
         name: '',
@@ -199,9 +200,37 @@ App.controller('AddTaskController', function ($rootScope, $scope, $timeout, Task
     };
 
 });
-App.controller('OrderController', ['$scope', '$http', 'GetOrders', '$routeParams', '$activityIndicator', 'ngDialog',
-    function ($scope, $http, GetOrders, $routeParams, $activityIndicator, ngDialog) {
+App.controller('OrderController', ['$scope', 'FilesComment', '$cookies', '$http', 'GetOrders', '$routeParams', '$activityIndicator', 'ngDialog', 'Comment',
+    function ($scope, FilesComment, $cookies, $http, GetOrders, $routeParams, $activityIndicator, ngDialog, Comment) {
+        $scope.newComment = "";
 
+        $scope.currentId = $routeParams.id;
+        $activityIndicator.startAnimating();
+        console.log($scope.currentId);
+        $scope.files = [];
+        $scope.upload = function () {
+            var data = {
+                order: $scope.currentId,
+                description: $scope.newComment,
+                user: $cookies.get('user_id')
+            };
+            console.log(data);
+            var file = $scope.files;
+            Comment.saveNewComment(data).then(function (response) {
+                if (file.length > 0) {
+                    for (var i = 0; i < file.length; i++) {
+                        var data = new FormData();
+                        data.append("file", file[i]._file);
+                        data.append("comment", response.id);
+                        console.log(data);
+                        FilesComment.saveNewFile(data);
+                    }
+                }
+            });
+        };
+        $scope.deleteFiles = function (id) {
+            $scope.files.splice(id, 1);
+        };
         $scope.addTaskOpen = function (order) {
             ngDialog.open({
                 template: 'ngAddTask',
@@ -228,14 +257,13 @@ App.controller('OrderController', ['$scope', '$http', 'GetOrders', '$routeParams
         };
 
 
-        $scope.currentId = $routeParams.id;
-        $activityIndicator.startAnimating();
-        console.log($scope.currentId);
         GetOrders.byId($routeParams.id).then(function (response) {
             $scope.order = response;
             GetOrders.allStatus().then(function (response) {
                 $scope.status = response;
                 $activityIndicator.stopAnimating();
+
+                document.getElementById('comments').scrollTop = 99999999;
             });
         });
         $scope.setStatus = function (item) {

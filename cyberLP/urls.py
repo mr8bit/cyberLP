@@ -11,6 +11,8 @@ from page_editor.sites import site as page_site
 router = routers.DefaultRouter()
 router.register(r'statusboard', api.StatusViewSet)
 router.register(r'status', api.StatusNameViewSet)
+router.register(r'comment', api.CommentViewSet)
+router.register(r'commentfiles', api.CommentFilesViewSet)
 router.register(r'orders', api.OrderViewSet)
 router.register(r'task', api.TaskViewSet)
 router.register(r'todo', api.TodoViewSet)

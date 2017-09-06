@@ -22,24 +22,20 @@ class OrderModelTest(TestCase):
 
 class TaskModelTest(TestCase):
     def test_string_representation(self):
-        user = User.objects.create_user(
-            username='jacob', email='jacob@…', password='top_secret')
         task = Task(name='Разработка тестов',
                     order=Order(name='Василий', phone='88005553535', email='69kissmysausage@gmail.com', price=3999,
                                 text_comment='test',
-                                status=Status(name='Выполнено')), user=user)
+                                status=Status(name='Выполнено')))
         self.assertEqual(str(task.name), task.name)
 
 
 class TodoModelTest(TestCase):
     def test_string_representation(self):
-        user = User.objects.create_user(
-            username='jacob', email='jacob@…', password='top_secret')
         task = Task(name='Разработка тестов',
                     order=Order(name='Василий', phone='88005553535', email='69kissmysausage@gmail.com', price=3999,
                                 text_comment='test',
-                                status=Status(name='Выполнено')), user=user)
-        todo = Todo(name="Купить хлеб", done=False, user=user, task=task)
+                                status=Status(name='Выполнено')))
+        todo = Todo(name="Купить хлеб", done=False, task=task)
         self.assertEqual(str(todo.name), todo.name)
         self.assertEqual(task, todo.task)
 

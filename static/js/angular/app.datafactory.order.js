@@ -32,7 +32,6 @@ App.factory('GetOrders', function ($http) {
     }
 
 });
-
 App.factory('Todo', function ($http) {
     var todo = '/api/todo/';
     var json = '?format=json';
@@ -82,22 +81,36 @@ App.factory('Task', function ($http) {
     }
 });
 
-App.factory('Text', function ($http) {
-    var text = '/api/text/';
+App.factory('Comment', function ($http) {
+    var text = '/api/comment/';
     var json = '?format=json';
     return {
-        saveText: function (data) {
+        saveNewComment: function (data) {
             return $http.post(text + json, data).then(function (res) {
                 return res.data;
             });
         },
-        saveChangesText: function (id, data) {
+        saveChangesComment: function (id, data) {
             return $http.put(text + id + '/' + json, data).then(function (res) {
                 return res.data;
             });
         },
-        deleteText: function (id, data) {
+        deleteComment: function (id, data) {
             return $http.delete(text + id + '/' + json, data).then(function (res) {
+                return res.data;
+            });
+        }
+    }
+});
+App.factory('FilesComment', function ($http) {
+    var commentFiles = '/api/commentfiles/';
+    var json = '?format=json';
+    return {
+        saveNewFile: function (data) {
+            return $http.post(commentFiles, data, {
+                transformRequest: angular.identity,
+                headers: {'Content-Type': undefined}
+            }).then(function (res) {
                 return res.data;
             });
         }

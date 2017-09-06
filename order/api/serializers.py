@@ -3,10 +3,21 @@ from rest_framework import serializers
 from order.models import *
 
 
+class CommentFilesSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='get_filename')
+    size = serializers.ReadOnlyField(source='get_file_size')
+
+    class Meta:
+        model = CommentFiles
+        fields = ('id', 'file','name', 'size', 'comment', 'upload_date')
+
+
 class CommentSerializer(serializers.ModelSerializer):
+    files = CommentFilesSerializer(many=True, read_only=True)
+
     class Meta:
         model = Comment
-        fields = ('id', 'description', 'updated', 'user')
+        fields = ('id', 'description', 'updated', 'user', 'order', 'files')
 
 
 class TodoSerializer(serializers.ModelSerializer):

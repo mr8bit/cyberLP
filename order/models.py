@@ -81,3 +81,14 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.description[:10]
+
+class CommentFiles(models.Model):
+    file = models.FileField(verbose_name="Файл")
+    comment = models.ForeignKey("Comment", related_name='files')
+    upload_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+
+    def get_filename(self):
+        return self.file.name
+
+    def get_file_size(self):
+        return self.file.size

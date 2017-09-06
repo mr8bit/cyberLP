@@ -2,15 +2,15 @@
     .content-body {
         display: flex;
         width: 100%;
-        margin: 0px -20px -20px;
-
+        margin-bottom: -20px;
         justify-content: flex-start;
     }
 
     .left-bar {
         min-width: 280px;
-        background: #E2E4E6;
-        height: calc(100vh - 101px);
+        margin-left: -20px;
+        background: #d0dbe6;
+        height: calc(100vh - 103px);
         padding: 20px;
 
     }
@@ -106,6 +106,10 @@
 
         display: flex;
         padding: 0px 15px;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        flex-direction: column;
     }
 
     .main-bar .title {
@@ -243,9 +247,209 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+        <div class="comment">
+            <div class="title">
+                Комментарии
+            </div>
+            <div class="comment-list" scroll="order.comment" id="comments">
+                <div class="comment-item" ng-repeat="comment in order.comment">
+                    <div class="head">
+                        <div class="username">
+
+                        </div>
+                        <div class="date">
+                            {{ comment.updated  | date : "dd.MM.y" }}
+                        </div>
+                    </div>
+                    <div class="body">
+                        {{ comment.description }}
+
+                    </div>
+                    <div class="footer">
+                        <ul>
+                            <li ng-repeat="file in comment.files"><a target="_blank"
+                                                                     href="{{ file.file }}">{{ file.name }} {{ file.size | bytes }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-add">
+                <textarea
+                        placeholder="Напишите комметарий..."
+                        ng-model="newComment"
+                        ng-keyup="$event.keyCode == 13 ? createNewTodo(ngDialogData.task.id,ngDialogData.task.todos, newTodo) : null">
+                </textarea>
+
+                <div class="footer-area">
+
+                    <div class="files">
+                        <div class="fileContainer">
+                            <i class="fa fa-paperclip fa-lg" aria-hidden="true"></i>
+                            <input type="file" ng-file-model="files" multiple>
+                        </div>
+                        <style ng-if="files.length > 0">
+                            .file-list ul li {
+                                display: block;
+                                margin: 2px 0;
+
+                            }
+
+                            .file-list ul li i {
+                                color: #c14747;
+                                cursor: pointer;
+                            }
+
+                            .file-list ul {
+                                padding: 0px;
+                                margin: 0px;
+
+                            }
+                        </style>
+                        <style ng-if="files.length < 2">
+                            .file-list {
+                                background-color: #d0dbe6;
+                                border-radius: 5px;
+                                padding: 5px;
+                                left: 60px;
+                                position: absolute;
+                            }
+                        </style>
+                        <style ng-if="files.length > 1">
+                            .file-list {
+                                background-color: #d0dbe6;
+                                border-radius: 5px;
+                                padding: 5px;
+                                left: 60px;
+                                position: absolute;
+                                margin-top: -{{ files.length }}0px;
+                            }
+                        </style>
+                        <div class="file-list animated fadeIn" ng-if="files.length > 0">
+                            <ul>
+                                <li ng-repeat="item in files">{{ item.name }} <i class="fa fa-trash fa-lg"
+                                                                                 ng-click="deleteFiles($index)"
+                                                                                 aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button type="submit" ng-click="upload()">
+                        Отправить
+                    </button>
+
+                </div>
+
+            </div>
         </div>
     </dvi>
 </div>
+<style>
+    .footer-area {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: -45px;
+        padding: 0 15px;
+    }
+
+    .comment .comment-add .fileContainer {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .comment .comment-add .fileContainer [type=file] {
+        cursor: inherit;
+        display: block;
+        font-size: 999px;
+        filter: alpha(opacity=0);
+        min-height: 100%;
+        min-width: 100%;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        top: 0;
+    }
+
+    /* Example stylistic flourishes */
+
+    .comment .comment-add .fileContainer {
+        background: transparent;
+        border-radius: .5em;
+        float: left;
+        padding: .5em;
+    }
+
+    .comment .comment-add .fileContainer [type=file] {
+        cursor: pointer;
+    }
+
+    .comment .comment-add button {
+        position: relative;
+        display: block;
+        background-color: #47bac1;
+        color: #fff;
+        border: 0;
+        border-radius: 4px;
+        outline: 0;
+        font-size: 12px;
+        height: 32px;
+        font-weight: lighter;
+        text-align: center;
+        padding: 0 20px;
+        text-transform: uppercase;
+        transition: background .3s;
+    }
+
+    .comment .comment-add textarea {
+        background-color: transparent;
+        padding: 10px;
+        border: 2px solid #d0dbe6;
+        width: 100%;
+        min-height: 130px;
+        resize: none;
+    }
+
+    .comment > .comment-add > textarea:focus {
+        outline: none !important;
+        box-shadow: none;
+    }
+
+    .comment > .comment-add > textarea:active {
+        outline: none !important;
+        box-shadow: none;
+    }
+
+    .comment .comment-add {
+        margin-top: 10px;
+        min-height: 132px;
+    }
+
+    .comment-list {
+        width: 100%;
+        min-height: 180px;
+        height: calc(100vh - 472px);
+        overflow-y: auto;
+    }
+
+    .comment-list .comment-item .body {
+        background-color: #d0dbe6;
+        padding: 10px;
+    }
+
+    .comment-list .comment-item .head {
+        padding: 10px;
+    }
+
+    .comment {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+</style>
 <style>
     .dialog-title {
         width: 100%;
@@ -559,8 +763,6 @@
         </div>
     </fieldset>
 </script>
-
-
 <script type="text/ng-template" id="ngAddTask">
     <style ng-if="task.todos.length == 0">
         .ngdialog.ngdialog-theme-default .ngdialog-content {
@@ -639,4 +841,8 @@
             </div>
         </div>
     </fieldset>
+</script>
+
+<script>
+
 </script>
