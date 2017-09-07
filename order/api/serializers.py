@@ -9,15 +9,16 @@ class CommentFilesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CommentFiles
-        fields = ('id', 'file','name', 'size', 'comment', 'upload_date')
+        fields = ('id', 'file', 'name', 'size', 'comment', 'upload_date')
 
 
 class CommentSerializer(serializers.ModelSerializer):
     files = CommentFilesSerializer(many=True, read_only=True)
+    username = serializers.ReadOnlyField(source='get_username')
 
     class Meta:
         model = Comment
-        fields = ('id', 'description', 'updated', 'user', 'order', 'files')
+        fields = ('id', 'username', 'description', 'updated', 'user', 'order', 'files')
 
 
 class TodoSerializer(serializers.ModelSerializer):

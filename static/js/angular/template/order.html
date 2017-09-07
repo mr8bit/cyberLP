@@ -255,9 +255,13 @@
             </div>
             <div class="comment-list" scroll="order.comment" id="comments">
                 <div class="comment-item" ng-repeat="comment in order.comment">
+                    <div class="delete">
+                        <i class="fa fa-trash fa-lg" aria-hidden="true" ng-click="deleteComment($index,comment)"></i>
+
+                    </div>
                     <div class="head">
                         <div class="username">
-
+                            {{ comment.username }}
                         </div>
                         <div class="date">
                             {{ comment.updated  | date : "dd.MM.y" }}
@@ -265,15 +269,24 @@
                     </div>
                     <div class="body">
                         {{ comment.description }}
-
-                    </div>
-                    <div class="footer">
-                        <ul>
+                        <ul class="files">
                             <li ng-repeat="file in comment.files"><a target="_blank"
-                                                                     href="{{ file.file }}">{{ file.name }} {{ file.size | bytes }}</a>
+                                                                     href="{{ file.file }}">{{ file.name }} </a>
+                                ~ {{ file.size | bytes }}
                             </li>
                         </ul>
                     </div>
+                    <style>
+                        .files {
+                            padding: 0;
+                            padding-top: 10px;
+                            margin: 0px;
+                        }
+
+                        .files li {
+                            display: block;
+                        }
+                    </style>
                 </div>
             </div>
             <div class="comment-add">
@@ -434,6 +447,18 @@
         height: calc(100vh - 472px);
         overflow-y: auto;
     }
+
+    .comment-list .comment-item .delete {
+        position: relative;
+        float: right;
+        margin-right: 20px;
+        margin-top: 10px;
+        display: none;
+        color: #c14747;
+    }
+      .comment-list .comment-item:hover .delete{
+          display: block;
+      }
 
     .comment-list .comment-item .body {
         background-color: #d0dbe6;

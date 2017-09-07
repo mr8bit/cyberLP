@@ -85,6 +85,11 @@ App.factory('Comment', function ($http) {
     var text = '/api/comment/';
     var json = '?format=json';
     return {
+         byId: function (id) {
+            return $http.get(text + id + '/' + json).then(function (res) {
+                return res.data;
+            });
+        },
         saveNewComment: function (data) {
             return $http.post(text + json, data).then(function (res) {
                 return res.data;
@@ -95,8 +100,8 @@ App.factory('Comment', function ($http) {
                 return res.data;
             });
         },
-        deleteComment: function (id, data) {
-            return $http.delete(text + id + '/' + json, data).then(function (res) {
+        deleteComment: function (id) {
+            return $http.delete(text + id + '/' + json).then(function (res) {
                 return res.data;
             });
         }

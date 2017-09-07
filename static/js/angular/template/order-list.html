@@ -45,6 +45,13 @@
         white-space: normal;
     }
 
+    .identification {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #6f7e95;
+        color: #6f7e95;
+    }
 </style>
 <div class="simpleDemo animated fadeIn" ng-show="typeList == 'funnel'"
      style="position: relative;left: 0;right: 0;top: 0;bottom: 0; transition: all 0.3s">
@@ -76,9 +83,9 @@
                                         <div class="name">{{ item.name }}</div>
                                         <div class="date">{{ item.creation_date| date:'MM.dd.yyyy h:mm' }}</div>
                                     </div>
-                                    <div class="item">
-                                        <div>
-                                            {{ item.id }}
+                                    <div class="item" style="margin-top:10px;">
+                                        <div class="identification">
+                                            #{{ item.id }}
                                         </div>
                                         <div class="phone">
                                             <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
@@ -88,7 +95,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

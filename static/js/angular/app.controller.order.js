@@ -200,10 +200,15 @@ App.controller('AddTaskController', function ($rootScope, $scope, $timeout, Task
     };
 
 });
-App.controller('OrderController', ['$scope', 'FilesComment', '$cookies', '$http', 'GetOrders', '$routeParams', '$activityIndicator', 'ngDialog', 'Comment',
-    function ($scope, FilesComment, $cookies, $http, GetOrders, $routeParams, $activityIndicator, ngDialog, Comment) {
+App.controller('OrderController',
+    function ($scope, $timeout, FilesComment, $cookies, $http, GetOrders, $routeParams, $activityIndicator, ngDialog, Comment) {
         $scope.newComment = "";
 
+        $scope.deleteComment = function (index, comment) {
+            Comment.deleteComment(comment.id).then(function (response) {
+                $scope.order.comment.splice(index, 1);
+            });
+        };
         $scope.currentId = $routeParams.id;
         $activityIndicator.startAnimating();
         console.log($scope.currentId);
@@ -219,14 +224,38 @@ App.controller('OrderController', ['$scope', 'FilesComment', '$cookies', '$http'
             Comment.saveNewComment(data).then(function (response) {
                 if (file.length > 0) {
                     for (var i = 0; i < file.length; i++) {
-                        var data = new FormData();
-                        data.append("file", file[i]._file);
-                        data.append("comment", response.id);
-                        console.log(data);
-                        FilesComment.saveNewFile(data);
+
+                        if (i + 1 === file.length) {
+                            var data = new FormData();
+                            data.append("file", file[i]._file);
+                            data.append("comment", response.id);
+                            console.log(data);
+                            FilesComment.saveNewFile(data).then(function (responseFile) {
+                                $timeout(function () {
+                                    Comment.byId(response.id).then(function (responseNewComment) {
+                                        $scope.order.comment.push(responseNewComment);
+                                    });
+                                }, 100);
+                            });
+                            break;
+                        } else {
+                            var data = new FormData();
+                            data.append("file", file[i]._file);
+                            data.append("comment", response.id);
+                            console.log(data);
+                            FilesComment.saveNewFile(data);
+                        }
+
                     }
+                } else {
+                    $scope.order.comment.push(response);
+
                 }
+
+
             });
+            $scope.newComment = '';
+            $scope.files = [];
         };
         $scope.deleteFiles = function (id) {
             $scope.files.splice(id, 1);
@@ -296,7 +325,7 @@ App.controller('OrderController', ['$scope', 'FilesComment', '$cookies', '$http'
             document.getElementById("myDropdown").classList.toggle("show");
         };
 
-    }]);
+    });
 App.controller('BreadcrumbsController',
     ['$scope', '$http', '$timeout', '$cookies', 'Data', 'RemoveData',
         function ($scope, $http, $timeout, $cookies, Data, RemoveData) {
@@ -348,6 +377,7 @@ App.controller('SimpleDemoController', ['$scope', '$http',
             // By returning true from dnd-drop we signalize we already inserted the item.
             return true;
         };
+        $scope.typeList = "funnel";
         $scope.$watch(
             function () {
                 return $cookies.get('listOrderType');

@@ -79,8 +79,12 @@ class Comment(models.Model):
         verbose_name = "Комментарий"
         verbose_name_plural = "Комментарии"
 
+    def get_username(self):
+        return self.user.first_name
+
     def __str__(self):
         return self.description[:10]
+
 
 class CommentFiles(models.Model):
     file = models.FileField(verbose_name="Файл")

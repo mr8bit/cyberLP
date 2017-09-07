@@ -39,7 +39,7 @@ App.directive('scroll', function($timeout) {
       scope.$watchCollection(attr.scroll, function(newVal) {
         $timeout(function() {
          element[0].scrollTop = element[0].scrollHeight;
-        });
+        },300);
       });
     }
   }
