@@ -15,15 +15,13 @@ class PRNotesWidget(forms.widgets.Textarea):
                  'page_editor/js/jquery-ui.min.js',
                  'page_editor/js/load-image.all.min.js',
                  'page_editor/js/contentbuilder.js',
-
              ) + settings.TEMPLATE_JS
 
         css = {
             'all': (
-                       'page_editor/css/contentbuilder.css',
-
-                       'page_editor/css/icons/css/fontello.css',
-                   ) + settings.TEMPLATE_CSS
+                'page_editor/css/contentbuilder.css',
+                'page_editor/css/icons/css/fontello.css',
+            )
         }
 
     def render(self, name, value, attrs=None):
@@ -32,6 +30,7 @@ class PRNotesWidget(forms.widgets.Textarea):
         template_read = template.read()
         template.close()
         context = {
+            'css': settings.TEMPLATE_CSS,
             'template': template_read,
             'snippet': '/static/templates/selecticon.html',
             'locals': locals(),

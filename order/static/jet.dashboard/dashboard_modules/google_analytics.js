@@ -1,4 +1,6 @@
+/* MY VERSION */
 (function ($) {
+
     $.fn.extend({
         googleAnalyticsChart: function () {
             var $chart = $(this);

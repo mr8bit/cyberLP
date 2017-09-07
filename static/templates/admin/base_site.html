@@ -1,10 +1,11 @@
 {% extends "admin/base.html" %}
-{% load static i18n %}
-
+{% load i18n static jet_tags %}
 {% block branding %}
     <h1 id="site-name">
         cyber LP
     </h1>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="{% static "jet/js/build/jquery.init.js" as url %}{{ url|jet_append_version }}"></script>
 {% endblock %}
 
 

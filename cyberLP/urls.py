@@ -3,7 +3,7 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from rest_framework import routers
-
+from jet.dashboard.dashboard_modules import google_analytics_views
 from order import views as order
 from order.api import views as api
 from page_editor.sites import site as page_site

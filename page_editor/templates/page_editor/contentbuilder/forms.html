@@ -2,6 +2,10 @@
 
 
 <style>
+    html {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
     .panelCms {
         position: relative;
     }
@@ -70,7 +74,14 @@
         $(".content-static").toggleClass('content-static-view');
         $("body").toggleClass('body-stop');
         $("#panelCms").toggleClass('panelCms-open');
+        {% for file in css %}
+            $('head').append('<link rel="stylesheet" href="{{ file }}" type="text/css" />');
+        {% endfor %}
         $("#divCb").css({'display': 'block'});
+        $('link[rel=stylesheet][href~="/static/jet/css/themes/default/select2.theme.css?v=1.0.6"]').remove();
+        $('link[rel=stylesheet][href="/static/jet/css/themes/default/base.css?v=1.0.6"]').remove();
+
+
     }
 
     function close_editor(type) {
@@ -82,10 +93,17 @@
             var sHTML = $('#contentarea').data('contentbuilder').html();
             $(".id_content").val(sHTML);
         }
+        {% for file in css %}
+            $('link[rel=stylesheet][href~="{{ file }}"]').remove();
+        {% endfor %}
+        $('head').append('<link rel="stylesheet" href="/static/jet/css/themes/default/select2.theme.css?v=1.0.6" type="text/css" />');
+        $('head').append('<link rel="stylesheet" href="/static/jet/css/themes/default/base.css?v=1.0.6" type="text/css" />');
+
     }
 </script>
 <div class="submit-row">
-    <textarea name="{{ locals.name }}" id="id_content" class="id_content" style="display: none">{% if locals.value %}{{ locals.value }}{% endif %}</textarea>
+    <textarea name="{{ locals.name }}" id="id_content" class="id_content" style="display: none">{% if locals.value %}
+        {{ locals.value }}{% endif %}</textarea>
     <input type="button" class="default" onclick="open_editor()" value="Открыть редактор">
 </div>
 <div class="content-static">
@@ -93,8 +111,8 @@
     <div id="contentarea">
         {% if locals.value %}{{ locals.value|safe }}{% endif %}
     </div>
-        <br><br>
-<br><br>
+    <br><br>
+    <br><br>
     <div id="panelCms">
         <div class="submit-row">
             <input type="button" class="default" onclick="close_editor('save')" value="Сохранить">

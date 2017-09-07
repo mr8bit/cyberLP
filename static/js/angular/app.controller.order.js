@@ -36,7 +36,7 @@ App.controller('TaskController', function ($scope, $http, ngDialog, Todo, Task) 
         var data = {
             name: task.name,
             order: task.order,
-            id: task.id,
+            id: task.id
         };
         Task.saveChangesTask(task.id, data);
     };
@@ -384,8 +384,37 @@ App.controller('SimpleDemoController', ['$scope', '$http',
             },
             function (v) {
                 $activityIndicator.startAnimating();
-                $scope.typeList = v;
-                if (v === "funnel") {
+                if (v) {
+                    $scope.typeList = v;
+                    if (v === "funnel") {
+                        $http({
+                            method: 'GET',
+                            url: '/api/statusboard/?format=json'
+                        }).then(function (success) {
+                            $scope.models = {
+                                list: success.data
+                            };
+                            $activityIndicator.stopAnimating();
+                        }, function (error) {
+                            alert("Ошибка сервера: " + error);
+                        });
+                    }
+                    else {
+                        $http({
+                            method: 'GET',
+                            url: '/api/orders/?format=json'
+                        }).then(function (success) {
+                            $scope.my_table_data = success.data;
+                            $activityIndicator.stopAnimating();
+                        }, function (error) {
+                            alert("Ошибка сервера: " + error);
+                        });
+
+
+                    }
+                }
+                else {
+                    $scope.typeList = "funnel";
                     $http({
                         method: 'GET',
                         url: '/api/statusboard/?format=json'
@@ -397,18 +426,6 @@ App.controller('SimpleDemoController', ['$scope', '$http',
                     }, function (error) {
                         alert("Ошибка сервера: " + error);
                     });
-                }
-                else {
-                    $http({
-                        method: 'GET',
-                        url: '/api/orders/?format=json'
-                    }).then(function (success) {
-                        $scope.my_table_data = success.data;
-                        $activityIndicator.stopAnimating();
-                    }, function (error) {
-                        alert("Ошибка сервера: " + error);
-                    });
-
                 }
             }
         );
