@@ -201,9 +201,12 @@ App.controller('AddTaskController', function ($rootScope, $scope, $timeout, Task
 
 });
 App.controller('OrderController',
-    function ($scope, $timeout, FilesComment, $cookies, $http, GetOrders, $routeParams, $activityIndicator, ngDialog, Comment) {
+    function ($scope, $window, $timeout, FilesComment, $cookies, $http, GetOrders, $routeParams, $activityIndicator, ngDialog, Comment) {
         $scope.newComment = "";
 
+        $scope.openOrder = function () {
+            console.log('asdasda');
+        };
 
         $scope.deleteComment = function (index, comment) {
             Comment.deleteComment(comment.id).then(function (response) {
@@ -328,10 +331,16 @@ App.controller('OrderController',
 
     });
 App.controller('BreadcrumbsController',
-    ['$scope', '$http', '$timeout', '$cookies', 'Data', 'RemoveData',
-        function ($scope, $http, $timeout, $cookies, Data, RemoveData) {
+    ['$scope', '$http', '$timeout', '$cookies', 'Data', 'RemoveData', '$window',
+        function ($scope, $http, $timeout, $cookies, Data, RemoveData, $window) {
             $scope.listOrder = function (type) {
                 $cookies.put('listOrderType', type);
+                if ($window.location.hash !== '#!/') {
+                    console.log($window.location);
+                    $window.location = '#!/';
+                }
+
+
             };
             $scope.selectRow = [];
             $scope.$watchCollection(function () {
@@ -435,10 +444,11 @@ App.controller('SimpleDemoController', ['$scope', '$http',
             {id: 'id', key: 'id', label: 'ID', sort: 'number', width: 50},
             {
                 id: 'name',
+                template: '<a href="#!/order/{{row.id}}">{{ row.name }}</a>',
                 key: 'name',
                 label: 'Имя',
                 sort: 'string',
-                filter: 'like'
+                filter: 'like',
 
             }, {
                 id: 'phone',
@@ -455,6 +465,7 @@ App.controller('SimpleDemoController', ['$scope', '$http',
             }, {
                 id: 'status_name',
                 key: 'status_name',
+                template: '<span style="background-color: {{row.status_color}};border-radius: 5px;padding: 5px 10px;color: white" >{{ row.status_name }}</span>',
                 label: 'Статус',
                 sort: 'string',
                 filter: 'like'

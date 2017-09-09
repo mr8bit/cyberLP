@@ -35,15 +35,23 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'order', 'creation_date', 'todos', 'description')
 
 
+class StatusForOrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Status
+        fields = ('id', 'name', 'color')
+
+
 class OrderSerializer(serializers.ModelSerializer):
     tasks = TaskSerializer(many=True, read_only=True)
     comment = CommentSerializer(many=True, read_only=True)
     status_name = serializers.ReadOnlyField(source='get_status_name')
+    status_color = serializers.ReadOnlyField(source='get_status_color')
 
     class Meta:
         model = Order
         fields = (
-            'id', 'name', 'phone', 'email', 'price', 'text_comment', 'status', 'status_name', 'creation_date', 'tasks',
+            'id', 'name', 'phone', 'email', 'price', 'text_comment', 'status', 'status_color', 'status_name',
+            'creation_date', 'tasks',
             'comment')
 
 
@@ -52,7 +60,7 @@ class StatusSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Status
-        fields = ('id', 'name', 'orders',)
+        fields = ('id', 'name', 'color', 'orders',)
 
 
 class StatusNameSerializer(serializers.ModelSerializer):

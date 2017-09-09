@@ -28,6 +28,9 @@ class Order(models.Model):
     def get_status_name(self):
         return self.status.name
 
+    def get_status_color(self):
+        return self.status.color
+
     class Meta:
         ordering = ['-creation_date']
         verbose_name = "Заказ"

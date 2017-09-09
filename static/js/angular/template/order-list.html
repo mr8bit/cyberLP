@@ -64,6 +64,7 @@
                         <div class="panel-heading" style="padding-bottom: 5px;padding-top: 5px">
                             <h3 style="text-align: center" class="panel-title">{{ list.name }}</h3>
                             <div style="text-align: center">Заказов: {{ list.orders.length }}</div>
+                            <div style="margin-top: 8px;border: 2px solid {{ list.color }}"></div>
                         </div>
 
                         <div dnd-list="list.orders" class="list-items"
@@ -83,14 +84,16 @@
                                         <div class="name">{{ item.name }}</div>
                                         <div class="date">{{ item.creation_date| date:'MM.dd.yyyy h:mm' }}</div>
                                     </div>
-                                    <div class="item" style="margin-top:10px;">
-                                        <div class="identification">
-                                            #{{ item.id }}
+                                    <a href="#!/order/{{ item.id }}">
+                                        <div class="item" style="margin-top:10px;">
+                                            <div class="identification">
+                                                #{{ item.id }}
+                                            </div>
+                                            <div class="phone">
+                                                <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
+                                            </div>
                                         </div>
-                                        <div class="phone">
-                                            <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </a>
                             </div>
                         </div>

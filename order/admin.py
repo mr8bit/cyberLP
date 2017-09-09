@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import *
 
 # Register your models here.
@@ -8,7 +9,9 @@ admin.site.register(Todo)
 admin.site.register(Comment)
 admin.site.register(CommentFiles)
 
+
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('name', 'phone', 'email','status')
+    list_display = ('name', 'phone', 'email', 'status')
+
 
 admin.site.register(Order, OrderAdmin)
