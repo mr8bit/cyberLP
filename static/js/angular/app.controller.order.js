@@ -204,6 +204,7 @@ App.controller('OrderController',
     function ($scope, $timeout, FilesComment, $cookies, $http, GetOrders, $routeParams, $activityIndicator, ngDialog, Comment) {
         $scope.newComment = "";
 
+
         $scope.deleteComment = function (index, comment) {
             Comment.deleteComment(comment.id).then(function (response) {
                 $scope.order.comment.splice(index, 1);

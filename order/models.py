@@ -37,8 +37,12 @@ class Order(models.Model):
         return "Заказ " + str(self.id)
 
     def save(self, *args, **kwargs):
-        sendEmailViaTemplate(self.name, self.phone, self.text_comment)
-        models.Model.save(self, *args, **kwargs)
+        try:
+            Order.objects.get(id=self.id)
+            models.Model.save(self, *args, **kwargs)
+        except Order.DoesNotExist:
+            sendEmailViaTemplate(self.name, self.phone, self.text_comment)
+            models.Model.save(self, *args, **kwargs)
 
 
 class Task(models.Model):

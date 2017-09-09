@@ -17,7 +17,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
+DEBUG = True
 if 'TRAVIS' in os.environ:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
@@ -26,7 +26,6 @@ if 'TRAVIS' in os.environ:
     SMS_PASSWORD = os.environ.get('SMS_PASSWORD', '')
     DEBUG = os.environ.get('DEBUG', '')
 else:
-    DEBUG = True
     from .local_settings import *
 
 ALLOWED_HOSTS = ["*"]

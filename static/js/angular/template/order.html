@@ -102,12 +102,23 @@
         margin-top: 10px;
     }
 
+    .contacts ul li input {
+        background-color: transparent;
+        border: transparent;
+        color: #6f7e95;
+        font-size: 14px;
+    }
+
+    .contacts ul li i {
+        float: right;
+    }
+
     .main-bar {
 
         display: flex;
         padding: 0px 15px;
         width: 100%;
-        height: 100%;
+        height: calc(100vh - 70px);
         justify-content: space-between;
         flex-direction: column;
     }
@@ -210,9 +221,11 @@
                 </ul>
             </div>
         </div>
+
         <div class="contacts">
             <ul>
-                <li>Телефон: <a href="tel:{{ order.phone }}">{{ order.phone | tel }}</a></li>
+                <li>Телефон: <a href="tel:{{ order.phone }}">{{ order.phone }}</a>
+              </li>
                 <li>Email: <a href="email:{{ order.email }}">{{ order.email }}</a></li>
             </ul>
         </div>
@@ -220,7 +233,11 @@
             <span>Комментарий: </span><br/>
             {{ order.text_comment }}
         </div>
-
+        <script>
+            $(document).ready(function () {
+                $("#phone-input").inputmask("9-(999)-999-99-99");
+            });
+        </script>
     </div>
     <dvi class="main-bar">
         <div class="task">
@@ -424,6 +441,15 @@
         width: 100%;
         min-height: 130px;
         resize: none;
+        color: #6f7e95;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+    }
+
+    .comment > .comment-add > textarea::-webkit-input-placeholder {
+        color: #6f7e95;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
     }
 
     .comment > .comment-add > textarea:focus {
@@ -456,9 +482,10 @@
         display: none;
         color: #c14747;
     }
-      .comment-list .comment-item:hover .delete{
-          display: block;
-      }
+
+    .comment-list .comment-item:hover .delete {
+        display: block;
+    }
 
     .comment-list .comment-item .body {
         background-color: #d0dbe6;
@@ -747,7 +774,7 @@
                            ng-blur="updateTodo(todo)"
                            ng-class="todo.done ? 'complete': ''">
                     <button ng-click="deleteTodo(ngDialogData.task.todos,$index,todo)">
-                        <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-times-circle fa-lg" aria-hidden="true"></i>
                     </button>
                 </li>
             </ul>
@@ -826,7 +853,7 @@
                            ng-blur="updateTodo(todo)"
                            ng-class="todo.done ? 'complete': ''">
                     <button ng-click="deleteTodo(task.todos,$index,todo)">
-                        <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-times-circle fa-lg" aria-hidden="true"></i>
                     </button>
                 </li>
             </ul>
