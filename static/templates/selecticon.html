@@ -1,70 +1,189 @@
 <!-- Title -->
-{% load static %}
+{% load static  mptt_tags %}
 
-<div data-num="1" data-thumb="http://innovastudio.com/assets/minimalist-basic/thumbnails/a01.png" data-cat="1">
+<div data-num="1" data-thumb="/static/img_builder/footer.png" data-cat="1">
 
-    <div class="container">
-        <style>
-            .mySlides img {
-                width: 100%;
-            }
-        </style>
+    <div class="editorElement layer-type-block ui-droppable block-41 ui-droppable-hover ui-state-hover">
+        <div class="layout layout_center not-columned layout_center_111_id_144_0">
+            <div class="editorElement layer-type-block ui-droppable block-56">
+                <div class="widget-63 map-84 widget-type-map editorElement layer-type-widget"
+                     data-controls="searchControl" id="widgetMap84" data-center="52.73807742739386,59.41072825390622"
+                     data-zoom="4" data-type="yandex#map">
 
-        <!-- Automatic Slideshow Images -->
-        <div class="mySlides w3-display-container w3-center">
-            <img src="http://127.0.0.1:8000/static/img/la.jpg" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>Los Angeles</h3>
-                <p><b>We had the best time playing at Venice Beach!</b></p>
+                </div>
+                <div class="editorElement layer-type-block ui-droppable block-20">
+                    <div class="phones-74 widget-52 phones-block contacts-block widget-type-contacts_phone editorElement layer-type-widget">
+                        <div class="inner">
+                            <label class="cell-icon" for="tg-phones-74">
+                                <div class="icon"></div>
+                            </label>
+                            <input id="tg-phones-74" class="tgl-but" type="checkbox">
+                            <div class="block-body-drop">
+                                <div class="cell-text">
+                                    <div class="title">
+                                        <div class="align-elem">Телефон:</div>
+                                    </div>
+                                    <div class="text_body">
+                                        <div class="align-elem">
+                                            <div><a href="tel:+7 (000) 000-00-00">+7 (000) 000-00-00</a></div>
+                                            <div><a href="tel:8 (000) 000-00-00">8 (000) 000-00-00</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-52 widget-33 address-block contacts-block widget-type-contacts_address editorElement layer-type-widget">
+                        <div class="inner">
+                            <label class="cell-icon" for="tg52">
+                                <div class="icon"></div>
+                            </label>
+                            <input id="tg52" class="tgl-but" type="checkbox">
+                            <div class="block-body-drop">
+                                <div class="cell-text">
+                                    <div class="title">
+                                        <div class="align-elem">Адрес:</div>
+                                    </div>
+                                    <div class="text_body">
+                                        <div class="align-elem">Россия, Санкт-Петербург, Ленинский просп., 151, офис
+                                            711
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email-59 widget-37 email-block contacts-block widget-type-contacts_email editorElement layer-type-widget">
+                        <div class="inner">
+                            <label class="cell-icon" for="tg-email-59">
+                                <div class="icon"></div>
+                            </label>
+                            <input id="tg-email-59" class="tgl-but" type="checkbox">
+                            <div class="block-body-drop">
+                                <div class="cell-text">
+                                    <div class="title">
+                                        <div class="align-elem">Email:</div>
+                                    </div>
+                                    <div class="text_body">
+                                        <div class="align-elem"><a href="mailto:test@examle.com">test@examle.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget-85 widgetsocial-104 widget-type-social_links editorElement layer-type-widget">
+                        <div class="soc-content">
+                            <div class="soc-item fb"><a href="https://facebook.com" class="soc" target="_blank"><span
+                                    class="wg-soc-icon"></span></a></div>
+                            <div class="soc-item tw"><a href="https://twitter.com" class="soc" target="_blank"><span
+                                    class="wg-soc-icon"></span></a></div>
+                            <div class="soc-item ins"><a href="https://instagram.com" class="soc" target="_blank"><span
+                                    class="wg-soc-icon"></span></a></div>
+                        </div>
+                    </div>
+                    <div class="widget-129 search-154 wm-search widget-type-search editorElement layer-type-widget"
+                         data-setting-type="fade" data-setting-animate="0" data-setting-animate_list="0,0,0,0,0">
+                        <form class="wm-search-inner" method="get" action="/search">
+                            <input size="1" class="wm-input-default" placeholder="поиск по сайту" type="text"
+                                   name="search" value="">
+                            <button class="wm-input-default" type="submit"></button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="mySlides w3-display-container w3-center">
-            <img src="http://127.0.0.1:8000/static/img/ny.jpg" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>New York</h3>
-                <p><b>The atmosphere in New York is lorem ipsum.</b></p>
+        <div class="editorElement layer-type-block ui-droppable block-17">
+            <div class="layout layout_center not-columned layout_38_id_42">
+                <div class="editorElement layer-type-block ui-droppable block-18">
+                    <div class="layout column layout_60">
+                        <div class="editorElement layer-type-block ui-droppable block-22">
+                            <div class="site-copyright widget-22 widget-type-site_copyright editorElement layer-type-widget">
+
+                                <div class="align-elem">
+                                    Copyright &copy; 2017 <br>
+                                    Название компании
+                                </div>
+
+                            </div>
+                            <div class="mega-copyright widget-24 widget-type-mega_copyright editorElement layer-type-widget">
+                                <span style='font-size:10px;' class='copyright'><!--noindex--><a
+                                        href="http://megagroup.ru" target="_blank" rel="nofollow"><img
+                                        src="http://cp1.megagroup.ru/g/mlogo/svg/sozdanie-saitov-megagroup-ru-dark.svg"
+                                        class="copyright"></a><!--/noindex--></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layout column layout_40">
+                        <div class="site-counters widget-23 widget-type-site_counters editorElement layer-type-widget">
+
+
+                        </div>
+                    </div>
+                    <div class="layout column layout_61">
+                        <div class="up-61 widget-38 up_button widget-type-button_up editorElement layer-type-widget"
+                             data-speed="900">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="mySlides w3-display-container w3-center">
-            <img src="http://127.0.0.1:8000/static/img/chicago.jpg" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>Chicago</h3>
-                <p><b>Thank you, Chicago - A night we won't forget.</b></p>
-            </div>
-        </div>
-
-
-
-
     </div>
 </div>
 
-<div data-num="2" data-thumb="http://innovastudio.com/assets/minimalist-basic/thumbnails/a02.png" data-cat="1">
-    <div class="container">
-        <div class="container ">
-            <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-                <h2 class="w3-wide w3-center">CONTACT</h2>
-                <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-                <div class="w3-row w3-padding-32">
-                    <div class="w3-col m6 w3-large w3-margin-bottom">
-                        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-                        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-                        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+<div data-num="2" data-thumb="/static/img_builder/answer.png" data-cat="1">
+    <div class="layout layout_center not-columned layout_center_2_id_44_3">
+        <div class="editorElement layer-type-block ui-droppable block-59">
+            <div class="layout layout_center not-columned layout_151_id_101">
+                <div class="form-101 widget-84 vertical_mode widget-type-form_adaptive editorElement layer-type-widget">
+                    <div class="form__header">
+                        <div class="align-elem">Оставить заявку</div>
                     </div>
-                    <div class="w3-col m6">
-                        <form action="/action_page.php" target="_blank">
-                            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                                <div class="w3-half">
-                                    <input class="w3-input w3-border" type="text" placeholder="Name" required
-                                           name="Name">
+                    <div class="form__text">
+                        <div class="align-elem">Есть вопросы?
+                            <div>Заполните данные поля, и мы свяжемся с Вами в ближайшее время</div>
+                        </div>
+                    </div>
+                    <div class="form__body" data-api-type="form">
+                        <form method="post">
+
+                            <div class="form-table">
+                                <div class="form-tbody">
+                                    <div class="form-item-group group-text">
+                                        <div class="form-item form-text name">
+                                            <div class="form-item__body"><input class="wm-input-default"
+                                                                                placeholder="* Ваше имя: " type="text"
+                                                                                size="1" maxlength="100" value=""
+                                                                                name="d[0]" id="d[0]" required=""></div>
+                                        </div>
+                                        <div class="form-item form-text phone">
+                                            <div class="form-item__body"><input class="wm-input-default"
+                                                                                placeholder="* Телефон: " type="text"
+                                                                                size="1" maxlength="100" value=""
+                                                                                name="d[1]" id="d[1]" required=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-item-group group-textarea">
+                                        <div class="form-item form-textarea comments"><label
+                                                class="form-item__body"><textarea class="wm-input-default"
+                                                                                  placeholder=" Комментарии: " cols="1"
+                                                                                  rows="1" name="d[2]"
+                                                                                  id="d[2]"></textarea></label></div>
+                                    </div>
                                 </div>
-                                <div class="w3-half">
-                                    <input class="w3-input w3-border" type="text" placeholder="Email" required
-                                           name="Email">
+                                <div class="form-tfoot">
+                                    <div class="form-item-group group-button">
+                                        <div class="form-submit">
+                                            <div class="form-item__body">
+                                                <button class="wm-input-default" type="submit"><span class="align-elem">Отправить</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
                         </form>
                     </div>
                 </div>
@@ -73,63 +192,371 @@
     </div>
 </div>
 
-<div data-num="3" data-thumb="http://innovastudio.com/assets/minimalist-basic/thumbnails/a03.png" data-cat="1">
-    <div class="row clearfix">
-        <!-- The Band Section -->
-        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-            <h2 class="w3-wide">THE BAND</h2>
-            <p class="w3-opacity"><i>We love music</i></p>
-            <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div class="w3-row w3-padding-32">
-                <div class="w3-third">
-                    <p>Name</p>
-                    <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name"
-                         width="150">
+<div data-num="3" data-thumb="/static/img_builder/menus.png" data-cat="1">
+    <div id='dom_menu' class=" editorElement layer-type-block ui-droppable block-45">
+        <div class="layout layout_center not-columned layout_126_id_127">
+            <div class="widget-109 horizontal menu-127 wm-widget-menu widget-type-menu_horizontal editorElement layer-type-widget"
+                 data-screen-button="none" data-responsive-tl="button" data-responsive-tp="button"
+                 data-responsive-ml="columned" data-more-text="..." data-child-icons="0">
+
+                <div class="menu-button">
+                    Меню
                 </div>
-                <div class="w3-third">
-                    <p>Name</p>
-                    <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name"
-                         width="150">
+
+                <div class="menu-scroll">
+                    <ul>
+                        {% recursetree pages %}
+                            <li class="menu-item">
+                                <a href="{{ node.url }}">
+                                    <span class="menu-item-text">{{ node.title }}</span>
+                                </a>
+                            </li>
+                        {% endrecursetree %}
+                    </ul>
                 </div>
-                <div class="w3-third">
-                    <p>Name</p>
-                    <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" width="150">
-                </div>
+
             </div>
         </div>
     </div>
 </div>
 
-<div data-num="4" data-thumb="http://innovastudio.com/assets/minimalist-basic/thumbnails/a04.png" data-cat="1">
-    <div class="row clearfix">
-        <div class="column full">
-            <h1 class="size-48 is-title1-48 is-title-lite is-upper">Lorem Ipsum is simply dummy text</h1>
+<div data-num="4" data-thumb="/static/img_builder/contact.png" data-cat="1">
+    <link rel="stylesheet" href="/static/g/css/styles_articles_tpl.css">
+    <link rel="stylesheet" href="/static/d/1722959/t/v460/images/css/styles.css">
+    <div class="layout layout_center not-columned layout_center_2_id_44_1">
+        <div class="editorElement layer-type-block ui-droppable block-62">
+            <div class="widget-134 path widget-type-path editorElement layer-type-widget"><a
+                    href="/">Главная</a> \ Контакты
+            </div>
+            <h1 class="h1 widget-135 widget-type-h1 editorElement layer-type-widget">
+                Контакты
+            </h1>
+            <article class="content-162 content widget-136 widget-type-content editorElement layer-type-widget">
+
+
+                <div class="localcontacts2">
+                    <div class="localcontacts__adress">
+                        <div class="localcontacts__adress-text localcontacts__adress-text--nomar localnomargin">
+                            <div class="localcontacts__adress-inner">
+                                <b>Санкт-Петербург</b>
+                                + 7 (123) 123-45-67
+                            </div>
+                            <div class="localcontacts__adress-inner">
+                                <b>Москва</b>
+                                + 7 (123) 123-45-67
+                            </div>
+
+                            <div class="localcontacts__top-discription localcontacts__top-discription--nomar">
+                                <span>Прием звонков: с 9:00 до 20:00 (Пн-Пт)</span>
+                            </div>
+
+                            <div class="localcontacts__adress-inner">
+                                <b>Адрес</b>
+                                <p>196247, Россия, Санкт-Петербург, Ленинский просп., 151, офис 711. Местный телефон:
+                                    509</p>
+                            </div>
+                            <div class="localcontacts__adress-inner">
+                                <b>Реквизиты компании</b>
+                                ООО "Название компании"
+                                Юридический адрес: 196247, Россия, Санкт-Петербург, Ленинский просп., 151
+                                ОГРН 5130021071233
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="localmap">
+                        <div id="myMap" style="height: 200px"></div>
+                    </div>
+                </div>
+
+
+            </article>
         </div>
     </div>
 </div>
 
-<div data-num="5" data-thumb="http://innovastudio.com/assets/minimalist-basic/thumbnails/a05.png" data-cat="1">
-    <div class="row clearfix">
-        <div class="column full">
-            <h1 class="size-32 is-title1-32 is-title-lite is-upper">Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry</h1>
+<div data-num="5" data-thumb="/static/img_builder/welcome.png" data-cat="1">
+    <div class="layout layout_center not-columned layout_center_2_id_44_1">
+        <div class="editorElement layer-type-block ui-droppable block-35">
+
+
+            <div class="blocklist blocklist-113 widget-97 horizontal_mode widget-type-block_list editorElement layer-type-widget"
+                 data-slider="0,0,0,0,0" data-swipe="0,1,1,1,1" data-setting-mode="horizontal" data-setting-pause="4000"
+                 data-setting-auto="1" data-setting-controls="1,1,1,1,1" data-setting-pager="1,1,1,1,1"
+                 data-setting-pager_selector=".blocklist-113 .pager-wrap"
+                 data-setting-prev_selector=".blocklist-113 .prev" data-setting-next_selector=".blocklist-113 .next"
+                 data-setting-count="3,3,3,3,3" data-setting-columns="4,3,3,2,1" data-setting-move=""
+                 data-setting-prev_text="" data-setting-next_text=""
+                 data-setting-auto_controls_selector=".blocklist-113 .auto_controls"
+                 data-setting-auto_controls="0,0,0,0,0" data-setting-autocontrolscombine="0">
+
+                <div class="body-outer">
+                    <div class="body">
+                        <div class="swipe-shadow-left"></div>
+                        <div class="swipe-shadow-right"></div>
+                        <div class="list">
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><a href="khleba-traditsionnyye.htm"><span
+                                            class="img-convert img-cover"><img
+                                            src="\static\thumb\8b1lt3jFE2z7U5rWjZlaZg\120r-\1722959\4.png"
+                                            alt="Хлеба традиционные"></span></a></div>
+                                    <span class="title"><span class="align-elem">Хлеба традиционные</span></span>
+                                    <div class="more"><a data-wr-class="popover-wrap-113"
+                                                         href="khleba-traditsionnyye.htm"><span class="align-elem">подробнее</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><a href="bulochnyye-izdeliya.htm"><span
+                                            class="img-convert img-cover"><img
+                                            src="\static\thumb\vhdwKyb8nxeUZxKxGB0l0A\120r-\1722959\2_2.png"
+                                            alt="Булочные изделия"></span></a></div>
+                                    <span class="title"><span class="align-elem">Булочные изделия</span></span>
+                                    <div class="more"><a data-wr-class="popover-wrap-113"
+                                                         href="bulochnyye-izdeliya.htm"><span class="align-elem">подробнее</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><a href="batony-bulki.htm"><span
+                                            class="img-convert img-cover"><img
+                                            src="\static\thumb\ZQrSNIvRM6GK10vRengqkQ\120r-\1722959\3_1.png"
+                                            alt="Батоны, булки"></span></a></div>
+                                    <span class="title"><span class="align-elem">Батоны, булки</span></span>
+                                    <div class="more"><a data-wr-class="popover-wrap-113" href="batony-bulki.htm"><span
+                                            class="align-elem">подробнее</span></a></div>
+                                </div>
+                            </div>
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><a href="baranochnyye-izdeliya.htm"><span
+                                            class="img-convert img-cover"><img
+                                            src="\static\thumb\OanMTqoFBIHCs6lilr062w\120r-\1722959\1.png"
+                                            alt="Бараночные изделия"></span></a></div>
+                                    <span class="title"><span class="align-elem">Бараночные изделия</span></span>
+                                    <div class="more"><a data-wr-class="popover-wrap-113"
+                                                         href="baranochnyye-izdeliya.htm"><span class="align-elem">подробнее</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <span class="prev"></span>
+                    <span class="next"></span>
+                </div>
+
+                <div class="bx-pager-wrap">
+                    <div class="bx-auto_controls">
+                        <div class="auto_controls"></div>
+
+                        <div class="pager-wrap"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="editable_block-147 widget-124 editorElement layer-type-widget">
+                <div class="header">
+                    <div class="align-elem">Добро пожаловать на наш сайт!</div>
+                </div>
+                <div class="body">
+                    <div class="text">
+                        <div class="align-elem"><p>Мы работаем с 2007 года, и за это время накопили большой опыт,
+                            который позволит нам подобрать и поставить для Вас всё необходимое оборудование. Вы ищите
+                            надёжного и добросовесного поставщика? Мы с радостью включим Вас в список наших Партнеров и
+                            будем продолжительно и продуктивно работать вместе с Вами. Среди наших клиентов есть школы,
+                            больницы, детские сады, ведомства и службы, управляющие компании, банки, а также большое
+                            количество различных Коммерческих организаций.</p></div>
+                    </div>
+                    <div class="more"><a data-wr-class="popover-wrap-147" href="about.htm"><span class="align-elem">подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="blocklist blocklist-152 widget-127 horizontal_mode widget-type-block_list editorElement layer-type-widget"
+                 data-slider="0,0,0,0,0" data-swipe="0,1,1,1,1" data-setting-mode="horizontal" data-setting-pause="4000"
+                 data-setting-auto="1" data-setting-controls="1,1,1,1,1" data-setting-pager="1,1,1,1,1"
+                 data-setting-pager_selector=".blocklist-152 .pager-wrap"
+                 data-setting-prev_selector=".blocklist-152 .prev" data-setting-next_selector=".blocklist-152 .next"
+                 data-setting-count="3,3,3,3,3" data-setting-columns="5,4,auto,auto,auto" data-setting-move=""
+                 data-setting-prev_text="" data-setting-next_text=""
+                 data-setting-auto_controls_selector=".blocklist-152 .auto_controls"
+                 data-setting-auto_controls="0,0,0,0,0" data-setting-autocontrolscombine="0">
+
+                <div class="body-outer">
+                    <div class="body">
+                        <div class="swipe-shadow-left"></div>
+                        <div class="swipe-shadow-right"></div>
+                        <div class="list">
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><span class="img-convert img-contain"><img
+                                            src="\static\d\1722959\d\icon1.png" alt="Плиты перекрытия"></span></div>
+                                </div>
+                            </div>
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><span class="img-convert img-contain"><img
+                                            src="\static\d\1722959\d\icon2.png" alt="Железобетонные кольца"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><span class="img-convert img-contain"><img
+                                            src="\static\d\1722959\d\icon3.png" alt="Железобетонные сваи"></span></div>
+                                </div>
+                            </div>
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><span class="img-convert img-contain"><img
+                                            src="\static\d\1722959\d\icon4.png" alt="Фундаментные блоки"></span></div>
+                                </div>
+                            </div>
+                            <div class="item-outer">
+                                <div class="item">
+                                    <div class="image"><span class="img-convert img-contain"><img
+                                            src="\static\d\1722959\d\icon5.png" alt="Бетонные лотки"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <span class="prev"></span>
+                    <span class="next"></span>
+                </div>
+
+                <div class="bx-pager-wrap">
+                    <div class="bx-auto_controls">
+                        <div class="auto_controls"></div>
+
+                        <div class="pager-wrap"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>
 
-<div data-num="6" data-thumb="http://innovastudio.com/assets/minimalist-basic/thumbnails/a06.png" data-cat="1">
-    <div class="row clearfix">
-        <div class="column full">
-            <h1 class="size-96 is-title1-96 is-title-bold">Lorem Ipsum</h1>
+<div data-num="6" data-thumb="/static/img_builder/news_list.png" data-cat="1">
+
+
+    <div class="editorElement layer-type-block ui-droppable block-58">
+        <script src='/static/g/libs/jquery/1.10.2/jquery.min.js'></script>
+        <script type="text/javascript" src="/static/d/1722959/t/v460/images/js/title.js"></script>
+        <script type='text/javascript' src='{% static 'shared/flowplayer/flowplayer-3.2.9.min.js' %}'></script>
+
+
+        <div class="layout columned columns-2 layout_center layout_148_id_149">
+            <div class="layout column layout_149">
+                <div class="news-149 news-block widget-125 vertical_mode widget-type-news editorElement layer-type-widget"
+                     data-slider="1,1,1,1,1" data-swipe="0,0,0,0,0" data-setting-mode="vertical"
+                     data-setting-pause="4000" data-setting-auto="1" data-setting-controls="0,0,0,0,0"
+                     data-setting-pager="1,1,1,1,1" data-setting-pager_selector=".news-149 .pager-wrap"
+                     data-setting-prev_selector=".news-149 .prev" data-setting-next_selector=".news-149 .next"
+                     data-setting-count="1,1,1,1,1" data-setting-columns="1,1,1,1,1" data-setting-move=""
+                     data-setting-prev_text="" data-setting-next_text=""
+                     data-setting-auto_controls_selector=".news-149 .auto_controls"
+                     data-setting-auto_controls="0,0,0,0,0" data-setting-autocontrolscombine="0">
+                    <div class="news__header">
+                        <div class="news__title">
+                            <div class="align-elem">Новости</div>
+                        </div>
+                    </div>
+                    <div class="body-outer">
+                        <div class="body">
+                            <div class="swipe-shadow-left"></div>
+                            <div class="swipe-shadow-right"></div>
+                            <div class="news__list">
+                                <div class="item-outer">
+                                    <div class="item">
+                                        <div class="item__date"><span><ins>20</ins>11.16</span></div>
+                                        <div class="item__title"><a href="novosti\novogodniye-kanikuly.htm"><span
+                                                class="align-elem">Новогодние каникулы</span></a></div>
+                                        <div class="item__text">
+                                            <div class="align-elem"><p><span>В данном разделе мы рекомендуем Вам размещать новостные блоки, касающиеся работы&nbsp;Вашей компании: даты акций, графики работы в праздничные дни, пополнения, обновления и прочее. Тут Вы видите пример заполнения анонса новости. Нажав на заголовок новости, Вы можете ознакомиться с полным текстом новости&nbsp;и примером заполнения.</span>
+                                            </p></div>
+                                        </div>
+                                        <div class="item__more"><a class="item__more_link"
+                                                                   href="novosti\novogodniye-kanikuly.htm"><span
+                                                class="align-elem">подробнее</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="item-outer">
+                                    <div class="item">
+                                        <div class="item__date"><span><ins>01</ins>05.16</span></div>
+                                        <div class="item__title"><a href="novosti\nam-1-god-aktsii-skidki-.htm"><span
+                                                class="align-elem">Нам 1 год! Акции! Скидки!</span></a></div>
+                                        <div class="item__text">
+                                            <div class="align-elem"><p><span>При создании новости, помимо заголовка и содержимого, Вы можете задать еще ряд параметров. Тут Вы видите пример заполнения анонса новости. Нажав на заголовок новости, Вы можете ознакомиться с полным текстом новости&nbsp;и примером заполнения.</span>
+                                            </p></div>
+                                        </div>
+                                        <div class="item__more"><a class="item__more_link"
+                                                                   href="novosti\nam-1-god-aktsii-skidki-.htm"><span
+                                                class="align-elem">подробнее</span></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__footer">
+                        <div class="news__all"><a class="all_link" href="novosti.htm"><span class="align-elem">все новости</span></a>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <span class="prev"></span>
+                        <span class="next"></span>
+                    </div>
+
+                    <div class="bx-pager-wrap">
+                        <div class="bx-auto_controls">
+                            <div class="auto_controls"></div>
+
+                            <div class="pager-wrap"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="layout column layout_153">
+
+
+                <div class="editable_block-153 widget-128 editorElement layer-type-widget">
+                    <div class="header">
+                        <div class="align-elem">Название</div>
+                    </div>
+                    <div class="body">
+                        <div class="text">
+                            <div class="align-elem"><p>Задача организации, в особенности же сложившаяся структура
+                                организации в значительной степени обуславливает создание новых предложений. Таким
+                                образом укрепление и развитие структуры представляет собой интересный эксперимент
+                                проверки направлений прогрессивного развития.</p></div>
+                        </div>
+                        <div class="more"><a data-wr-class="popover-wrap-153" href="about.htm"><span class="align-elem">подробнее</span></a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
+
+
 </div>
 
 <div data-num="7" data-thumb="http://innovastudio.com/assets/minimalist-basic/thumbnails/a07.png" data-cat="1">

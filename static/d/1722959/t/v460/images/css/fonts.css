@@ -1,0 +1,188 @@
+﻿/* Open Sans */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-r.hxd");
+  src: url("/g/fonts/open_sans/open_sans-r.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-r-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-r.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-r-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-r.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-b.hxd");
+  src: url("/g/fonts/open_sans/open_sans-b.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-b-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-b.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-b-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-b.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-i.hxd");
+  src: url("/g/fonts/open_sans/open_sans-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-i.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-i.svg") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-b-i.hxd");
+  src: url("/g/fonts/open_sans/open_sans-b-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-b-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-b-i.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-b-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-b-i.svg") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-l.hxd");
+  src: url("/g/fonts/open_sans/open_sans-l.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-l-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-l.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-l-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-l.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-l-i.hxd");
+  src: url("/g/fonts/open_sans/open_sans-l-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-l-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-l-i.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-l-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-l-i.svg") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-s-b.hxd");
+  src: url("/g/fonts/open_sans/open_sans-s-b.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-s-b-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-s-b.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-s-b-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-s-b.svg") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-s-b-i.hxd");
+  src: url("/g/fonts/open_sans/open_sans-s-b-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-s-b-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-s-b-i.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-s-b-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-s-b-i.svg") format("svg");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-e-b.hxd");
+  src: url("/g/fonts/open_sans/open_sans-e-b.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-e-b-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-e-b.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-e-b-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-e-b.svg") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../../../g/fonts/open_sans/open_sans-e-b-i.hxd");
+  src: url("/g/fonts/open_sans/open_sans-e-b-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/open_sans/open_sans-e-b-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/open_sans/open_sans-e-b-i.woff") format("woff"), url("../../../../../../g/fonts/open_sans/open_sans-e-b-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/open_sans/open_sans-e-b-i.svg") format("svg");
+  font-weight: 800;
+  font-style: italic;
+}
+/* \Open Sans */
+/* PT Serif */
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../../../../../g/fonts/pt_serif/pt_serif-r.hxd");
+  src: url("/g/fonts/pt_serif/pt_serif-r.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/pt_serif/pt_serif-r-1.hxd") format("woff2"), url("../../../../../../g/fonts/pt_serif/pt_serif-r.woff") format("woff"), url("../../../../../../g/fonts/pt_serif/pt_serif-r-2.hxd") format("truetype"), url("../../../../../../g/fonts/pt_serif/pt_serif-r.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../../../../../g/fonts/pt_serif/pt_serif-i.hxd");
+  src: url("/g/fonts/pt_serif/pt_serif-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/pt_serif/pt_serif-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/pt_serif/pt_serif-i.woff") format("woff"), url("../../../../../../g/fonts/pt_serif/pt_serif-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/pt_serif/pt_serif-i.svg") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../../../../../g/fonts/pt_serif/pt_serif-b.hxd");
+  src: url("/g/fonts/pt_serif/pt_serif-b.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/pt_serif/pt_serif-b-1.hxd") format("woff2"), url("../../../../../../g/fonts/pt_serif/pt_serif-b.woff") format("woff"), url("../../../../../../g/fonts/pt_serif/pt_serif-b-2.hxd") format("truetype"), url("../../../../../../g/fonts/pt_serif/pt_serif-b.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../../../../../g/fonts/pt_serif/pt_serif-b-i.hxd");
+  src: url("/g/fonts/pt_serif/pt_serif-b-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/pt_serif/pt_serif-b-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/pt_serif/pt_serif-b-i.woff") format("woff"), url("../../../../../../g/fonts/pt_serif/pt_serif-b-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/pt_serif/pt_serif-b-i.svg") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+/* \PT Serif */
+/* Roboto */
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-t.hxd");
+  src: url("/g/fonts/roboto/roboto-t.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-t-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-t.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-t-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-t.svg") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-t-i.hxd");
+  src: url("/g/fonts/roboto/roboto-t-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-t-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-t-i.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-t-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-t-i.svg") format("svg");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-l.hxd");
+  src: url("/g/fonts/roboto/roboto-l.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-l-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-l.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-l-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-l.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-l-i.hxd");
+  src: url("/g/fonts/roboto/roboto-l-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-l-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-l-i.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-l-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-l-i.svg") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-r.hxd");
+  src: url("/g/fonts/roboto/roboto-r.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-r-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-r.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-r-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-r.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-i.hxd");
+  src: url("/g/fonts/roboto/roboto-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-i.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-i.svg") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-m.hxd");
+  src: url("/g/fonts/roboto/roboto-m.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-m-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-m.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-m-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-m.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-m-i.hxd");
+  src: url("/g/fonts/roboto/roboto-m-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-m-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-m-i.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-m-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-m-i.svg") format("svg");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-b.hxd");
+  src: url("/g/fonts/roboto/roboto-b.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-b-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-b.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-b-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-b.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-b-i.hxd");
+  src: url("/g/fonts/roboto/roboto-b-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-b-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-b-i.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-b-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-b-i.svg") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-bl.hxd");
+  src: url("/g/fonts/roboto/roboto-bl.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-bl-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-bl.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-bl-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-bl.svg") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../../../../g/fonts/roboto/roboto-bl-i.hxd");
+  src: url("/g/fonts/roboto/roboto-bl-i.eot?#iefix") format("embedded-opentype"), url("../../../../../../g/fonts/roboto/roboto-bl-i-1.hxd") format("woff2"), url("../../../../../../g/fonts/roboto/roboto-bl-i.woff") format("woff"), url("../../../../../../g/fonts/roboto/roboto-bl-i-2.hxd") format("truetype"), url("../../../../../../g/fonts/roboto/roboto-bl-i.svg") format("svg");
+  font-weight: 900;
+  font-style: italic;
+}
+/* \Roboto */

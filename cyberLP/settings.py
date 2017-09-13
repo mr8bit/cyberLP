@@ -48,7 +48,10 @@ INSTALLED_APPS = [
     'constance.backends.database',
     'order',
     'colorfield',
+    'ckeditor',
+    'ckeditor_uploader',
     'mptt',
+    'news',
     'landing',
     'notifications'
 ]
@@ -157,18 +160,20 @@ CONSTANCE_ADDITIONAL_FIELDS = {
 }
 
 CONSTANCE_CONFIG = {
-    'EMAIL': (' ', 'Почта для связи', 'email'),
-    'EMAIL_NOTIFICATION': (' ', 'Почта для отправки уведомлений', 'email'),
-    'PHONE': (None, 'Телефон', 'input'),
-    'PHONE_ADDITION': (None, 'Дополнительный телефон ', 'input'),
-    'PHONE_NOTIFICATION': (None, 'Номер для отправки уведомлений ', 'input'),
+    'COMPANY_NAME': ('None', 'Название компании', 'input'),
+    'EMAIL': ("None", 'Почта для связи', 'email'),
+    'NAME_SITE': ("None", 'Название сайта', 'input'),
+    'EMAIL_NOTIFICATION': ("None", 'Почта для отправки уведомлений', 'email'),
+    'PHONE': ("None", 'Телефон', 'input'),
+    'PHONE_ADDITION': ("None", 'Дополнительный телефон ', 'input'),
+    'PHONE_NOTIFICATION': ("None", 'Номер для отправки уведомлений ', 'input'),
     'SEND_TO_PHONE': (False, 'Уведомить на телефон', bool),
     'SEND_TO_EMAIL': (False, 'Уведомить на Email', bool),
     'SEND_TO_TELEGRAM': (False, 'Уведомить на Telegram', bool),
 
 }
 CONSTANCE_CONFIG_FIELDSETS = {
-    'Главные настройки': ('EMAIL', 'PHONE', 'PHONE_ADDITION',),
+    'Главные настройки': ('COMPANY_NAME','NAME_SITE', 'EMAIL', 'PHONE', 'PHONE_ADDITION',),
     'Настройки уведомлений': (
         'EMAIL_NOTIFICATION', 'PHONE_NOTIFICATION', 'SEND_TO_PHONE', 'SEND_TO_EMAIL', 'SEND_TO_TELEGRAM'),
 }
@@ -279,9 +284,13 @@ EMAIL_USE_TLS = True
 
 # TEMPLATE SETTINGS
 DEFAULT_TEMPLATE = 'front/default.html'
+SNIPPET_TEMPLATE = 'selecticon.html'
 TEMPLATE_CSS = (
-    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-    'https://www.w3schools.com/w3css/4/w3.css',
-    'https://fonts.googleapis.com/css?family=Lato',
+    '/static/d/1722959/t/v460/images/css/title.styles.css',
+    '/static/d/1722959/t/v460/images/css/designblock.scss.css',
+    '/static/d/1722959/t/v460/images/css/s3_styles.scss.css',
+    '/static/shared/highslide-4.1.13/highslide.min.css',
+    '/static/shared/s3/css/calendar.css',
+    '/static/g/libs/jquery-popover/0.0.3/jquery.popover.css',
 )
 TEMPLATE_JS = ()

@@ -7,7 +7,7 @@ from django.conf import settings
 
 
 class PRNotesWidget(forms.widgets.Textarea):
-    template_name = 'page_editor/contentbuilder/forms.html'
+    template_name = 'page_editor/contentbuilder/form.html'
 
     class Media:
         js = (
@@ -15,7 +15,7 @@ class PRNotesWidget(forms.widgets.Textarea):
                  'page_editor/js/jquery-ui.min.js',
                  'page_editor/js/load-image.all.min.js',
                  'page_editor/js/contentbuilder.js',
-             ) + settings.TEMPLATE_JS
+             )
 
         css = {
             'all': (
@@ -32,7 +32,7 @@ class PRNotesWidget(forms.widgets.Textarea):
         context = {
             'css': settings.TEMPLATE_CSS,
             'template': template_read,
-            'snippet': '/static/templates/selecticon.html',
+            'snippet': '/js/get_snippets',
             'locals': locals(),
         }
         return mark_safe(render_to_string(self.template_name, context))

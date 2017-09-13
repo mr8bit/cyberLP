@@ -1,9 +1,10 @@
 from django.db import models
+from django.urls import get_script_prefix
+from django.utils.encoding import iri_to_uri
 from django.utils.translation import ugettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey
-from django.utils.encoding import iri_to_uri
+
 from page_editor.widgets import PRNotesField
-from django.urls import get_script_prefix
 
 
 class PageBrowser(models.Model):
@@ -21,7 +22,8 @@ class Page(MPTTModel):
                             verbose_name='Родительская страница', db_index=True)
     creation_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     changed_date = models.DateTimeField(auto_now=True, null=True, blank=True)
-    is_home = models.BooleanField(verbose_name='Главная', editable=True, db_index=True, default=False)
+    dynamic = models.BooleanField(verbose_name="Динамическая", help_text="Страница с диномическим контентом", default=False)
+    html_render = models.TextField(verbose_name="Внутренние элементы", default=' ')
 
     class Meta:
         verbose_name = ("Cтраница")

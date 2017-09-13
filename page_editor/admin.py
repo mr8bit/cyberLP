@@ -32,6 +32,11 @@ from django.utils.html import format_html
 
 
 class MyDraggableMPTTAdmin(DraggableMPTTAdmin):
+    prepopulated_fields = {'url': ('title',)}
+    fieldsets = (
+        ('Основное', {'fields': ('title','url','content','parent')}),
+        ('Динамическая страница', {'fields': ('dynamic', 'html_render')}),
+    )
     def something(self, instance):
         return format_html(
             '<div style="text-indent:{}px">{}</div>',

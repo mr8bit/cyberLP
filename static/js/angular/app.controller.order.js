@@ -455,6 +455,7 @@ App.controller('SimpleDemoController', ['$scope', '$http',
                 key: 'phone',
                 label: 'Телефон',
                 sort: 'string',
+                template:'<a href="tel:{{row.phone}}">{{row.phone | tel}}</a>' ,
                 filter: 'like'
             }, {
                 id: 'email',
@@ -474,7 +475,7 @@ App.controller('SimpleDemoController', ['$scope', '$http',
         $scope.my_selected_rows = [];
         $scope.my_table_options_paginate = angular.extend({}, $scope.my_table_options, {
             pagingStrategy: 'PAGINATE',
-            rowsPerPage: 12
+            rowsPerPage: 5
         });
         var dataDfd = $q.defer();
         $scope.my_table_options = {

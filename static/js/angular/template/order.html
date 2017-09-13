@@ -224,7 +224,7 @@
 
         <div class="contacts">
             <ul>
-                <li>Телефон: <a href="tel:{{ order.phone }}">{{ order.phone }}</a>
+                <li>Телефон: <a href="tel:{{ order.phone }}">{{ order.phone | tel }}</a>
               </li>
                 <li>Email: <a href="email:{{ order.email }}">{{ order.email }}</a></li>
             </ul>
