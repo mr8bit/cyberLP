@@ -176,17 +176,25 @@
 
                                         {% recursetree pages %}
                                             <li class="menu-item">
-                                                <a href="{{ node.url }}">
-                                                    <span class="menu-item-text">{{ node.title }}</span>
+                                                {% if node.show_in_menu %}
 
-                                                </a>
-                                                {% if not node.is_leaf_node %}
-                                                    <ul class="level-2">
+                                                    <a href="{{ node.url }}">
+                                                        <span class="menu-item-text">{{ node.title }}</span>
+                                                    </a>
 
-                                                        {{ children.title |safe }}
+                                                    {% if not node.is_leaf_node %}
 
-                                                        <li class="delimiter"></li>
-                                                    </ul>
+                                                        {% if children.show_in_menu %}
+                                                            <ul class="level-2">
+
+                                                                {{ children.title |safe }}
+
+                                                                <li class="delimiter"></li>
+                                                            </ul>
+                                                        {% endif %}
+
+                                                    {% endif %}
+
                                                 {% endif %}
                                             </li>
                                             <li class="delimiter"></li>
@@ -216,94 +224,8 @@
         </div>
     </div>
     {{ flatpage.content }}
-    <div class="editorElement layer-type-block ui-droppable block-58">
-        <script type="text/javascript" src="/static/d/1722959/t/v460/images/js/title.js"></script>
-        <div class="layout columned columns-2 layout_center layout_148_id_149">
-            <div class="layout column layout_149">
-                <div class="news-149 news-block widget-125 vertical_mode widget-type-news editorElement layer-type-widget"
-                     data-slider="1,1,1,1,1" data-swipe="0,0,0,0,0" data-setting-mode="vertical"
-                     data-setting-pause="4000" data-setting-auto="1" data-setting-controls="0,0,0,0,0"
-                     data-setting-pager="1,1,1,1,1" data-setting-pager_selector=".news-149 .pager-wrap"
-                     data-setting-prev_selector=".news-149 .prev" data-setting-next_selector=".news-149 .next"
-                     data-setting-count="1,1,1,1,1" data-setting-columns="1,1,1,1,1" data-setting-move=""
-                     data-setting-prev_text="" data-setting-next_text=""
-                     data-setting-auto_controls_selector=".news-149 .auto_controls"
-                     data-setting-auto_controls="0,0,0,0,0" data-setting-autocontrolscombine="0">
-                    <div class="news__header">
-                        <div class="news__title">
-                            <div class="align-elem">Новости</div>
-                        </div>
-                    </div>
-                    <div class="body-outer">
-                        <div class="body">
-                            <div class="swipe-shadow-left"></div>
-                            <div class="swipe-shadow-right"></div>
-                            <div class="news__list">
-                                {% for item in news %}
-                                    <div class="item-outer">
-                                        <div class="item">
-                                            <div class="item__date"><span><ins>{{ item.datetime_create | date:"d" }}</ins>
-                                                {{ item.datetime_create | date:'m.y' }}</span></div>
-                                            <div class="item__title"><a href="/article/{{ item.slug }}"><span
-                                                    class="align-elem">{{ item.title }}</span></a></div>
-                                            <div class="item__text">
-                                                <div class="align-elem"><p><span>{{ item.short_description }}</span>
-                                                </p></div>
-                                            </div>
-                                            <div class="item__more"><a class="item__more_link"
-                                                                       href="/article/{{ item.slug }}"><span
-                                                    class="align-elem">подробнее</span></a></div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news__footer">
-                        <div class="news__all"><a class="all_link" href="novosti.htm"><span class="align-elem">все новости</span></a>
-                        </div>
-                    </div>
-                    <div class="controls">
-                        <span class="prev"></span>
-                        <span class="next"></span>
-                    </div>
-
-                    <div class="bx-pager-wrap">
-                        <div class="bx-auto_controls">
-                            <div class="auto_controls"></div>
-
-                            <div class="pager-wrap"></div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="layout column layout_153">
-
-
-                <div class="editable_block-153 widget-128 editorElement layer-type-widget">
-                    <div class="header">
-                        <div class="align-elem">Название</div>
-                    </div>
-                    <div class="body">
-                        <div class="text">
-                            <div class="align-elem"><p>Задача организации, в особенности же сложившаяся структура
-                                организации в значительной степени обуславливает создание новых предложений. Таким
-                                образом укрепление и развитие структуры представляет собой интересный эксперимент
-                                проверки направлений прогрессивного развития.</p></div>
-                        </div>
-                        <div class="more"><a data-wr-class="popover-wrap-153" href="about.htm"><span class="align-elem">подробнее</span></a>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
+    {% block news %}
+    {% endblock %}
     <div class="editorElement layer-type-block ui-droppable block-41 ui-droppable-hover ui-state-hover">
         <div class="layout layout_center not-columned layout_center_111_id_144_0">
             <div class="editorElement layer-type-block ui-droppable block-56">

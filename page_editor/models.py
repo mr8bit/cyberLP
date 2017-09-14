@@ -22,8 +22,11 @@ class Page(MPTTModel):
                             verbose_name='Родительская страница', db_index=True)
     creation_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     changed_date = models.DateTimeField(auto_now=True, null=True, blank=True)
-    dynamic = models.BooleanField(verbose_name="Динамическая", help_text="Страница с диномическим контентом", default=False)
-    html_render = models.TextField(verbose_name="Внутренние элементы", default=' ')
+    show_in_menu = models.BooleanField(verbose_name="Показывать в меню",
+                                       help_text="Показывать данную страницу в меню сайта", default=True)
+    dynamic = models.BooleanField(verbose_name="Динамическая", help_text="Страница с диномическим контентом",
+                                  default=False)
+    html_render = models.TextField(verbose_name="Внутренние элементы", null=True, blank=True)
 
     class Meta:
         verbose_name = ("Cтраница")

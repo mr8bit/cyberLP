@@ -12,7 +12,8 @@ DEFAULT_TEMPLATE = settings.DEFAULT_TEMPLATE
 
 from constance import config
 
-def item(request,url,slug):
+
+def item(request, url, slug):
     if not url.startswith('/'):
         url = '/' + url
     try:
@@ -42,7 +43,7 @@ def item(request,url,slug):
          'PHONE_ADDITION': config.PHONE_ADDITION,
          'EMAIL': config.EMAIL,
          'COMPANY_NAME': config.COMPANY_NAME,
-         'pages': Page.objects.all(),
+         'pages': Page.objects.all().filter(show_in_menu=True),
          'news': Article.objects.all(),
          }, request))
     return response
@@ -70,14 +71,20 @@ from news.models import *
 @csrf_protect
 def render_flatpage(request, f):
     template = loader.get_template(DEFAULT_TEMPLATE)
-    if (f.dynamic):
+    if f.dynamic and not f.content:
         tem = Template(f.html_render)
         con = Context({'pages': Page.objects.all(),
                        'news': Article.objects.all()
                        })
         menu_html = tem.render(con)
         f.content = menu_html
-
+    if f.dynamic and f.content:
+        tem = Template(f.html_render)
+        con = Context({'pages': Page.objects.all(),
+                       'news': Article.objects.all()
+                       })
+        menu_html = tem.render(con)
+        f.content += menu_html
     # You can print html content using "html" method of HtmlNodeList object
     f.title = mark_safe(f.title)
     f.content = mark_safe(f.content)
