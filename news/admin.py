@@ -12,6 +12,8 @@ class ArticleAdmin(admin.ModelAdmin):
         'description',
         'datetime_create'
     )
+    list_display = ('title', 'datetime_create')
+
 
 
 admin.site.register(Article, ArticleAdmin)

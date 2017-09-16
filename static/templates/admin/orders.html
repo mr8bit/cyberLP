@@ -132,6 +132,43 @@
             display: inline-block;
             margin: 3px 10px;
         }
+
+        @media only screen and (max-width: 480px) {
+            .content-body {
+                flex-direction: column;
+            }
+
+            .content-body .left-bar {
+                margin-left: 0px;
+                padding: 20px;
+                height: 100%;
+            }
+
+            #content {
+                padding: 0px;
+            }
+
+            .content-body .main-bar {
+                margin-left: 0px;
+                padding: 0px;
+                height: 100%;
+            }
+
+            .main-bar .task {
+                padding: 20px;
+                padding-right: 0px;
+            }
+
+            .main-bar .comment {
+                padding: 20px;
+            }
+
+            .comment .comment-list {
+                width: 100%;
+                min-height: 180px;
+                height: 270px;
+            }
+        }
     </style>
 {% endblock %}
 

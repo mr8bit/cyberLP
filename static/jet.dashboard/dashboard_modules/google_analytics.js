@@ -1,4 +1,3 @@
-/* MY VERSION */
 (function ($) {
 
     $.fn.extend({

@@ -50,7 +50,7 @@ class Page(MPTTModel, ModelMeta):
     }
 
     def get_keywords(self):
-        return self.seo_keywords.strip().split(' ')
+        return self.seo_keywords.strip().split(',')
 
     def get_seo_title(self):
         return self.title + ' | ' + config.NAME_SITE

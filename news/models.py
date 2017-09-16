@@ -16,3 +16,10 @@ class Article(models.Model):
         self.slug = slugify(unidecode(self.title))
         print(self.slug)
         super(Article, self).save(*args, **kwargs)
+    class Meta:
+        verbose_name = "Статья"
+        verbose_name_plural = "Новости"
+        ordering = ['-datetime_create']
+
+    def __str__(self):
+        return self.title

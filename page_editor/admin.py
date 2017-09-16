@@ -47,7 +47,7 @@ class MyDraggableMPTTAdmin(DraggableMPTTAdmin):
 
     something.short_description = ('something nice')
 
-    search_fields = ('url', 'title')
+    search_fields = ('url', 'title', 'dynamic','static')
 
 
 admin.site.register(Page, MyDraggableMPTTAdmin)

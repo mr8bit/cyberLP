@@ -203,11 +203,9 @@ App.controller('AddTaskController', function ($rootScope, $scope, $timeout, Task
 App.controller('OrderController',
     function ($scope, $window, $timeout, FilesComment, $cookies, $http, GetOrders, $routeParams, $activityIndicator, ngDialog, Comment) {
         $scope.newComment = "";
-
         $scope.openOrder = function () {
             console.log('asdasda');
         };
-
         $scope.deleteComment = function (index, comment) {
             Comment.deleteComment(comment.id).then(function (response) {
                 $scope.order.comment.splice(index, 1);
@@ -273,8 +271,6 @@ App.controller('OrderController',
                 data: order
             });
         };
-
-
         $scope.clickToOpen = function (task, order, index) {
             ngDialog.open({
                 template: 'ngEditOrder',
@@ -455,7 +451,7 @@ App.controller('SimpleDemoController', ['$scope', '$http',
                 key: 'phone',
                 label: 'Телефон',
                 sort: 'string',
-                template:'<a href="tel:{{row.phone}}">{{row.phone | tel}}</a>' ,
+                template: '<a href="tel:{{row.phone}}">{{row.phone | tel}}</a>',
                 filter: 'like'
             }, {
                 id: 'email',

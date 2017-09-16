@@ -92,16 +92,16 @@ def render_flatpage(request, f):
     f.content = mark_safe(f.content)
     response = HttpResponse(template.render(
         {
-         'meta':   f.as_meta(request),
-         'flatpage': f,
-         'NAME_SITE': config.NAME_SITE,
-         'PHONE': config.PHONE,
-         'PHONE_ADDITION': config.PHONE_ADDITION,
-         'EMAIL': config.EMAIL,
-         'COMPANY_NAME': config.COMPANY_NAME,
-         'pages': Page.objects.all(),
-         'news': Article.objects.all(),
-         }, request))
+            'meta': f.as_meta(request),
+            'flatpage': f,
+            'NAME_SITE': config.NAME_SITE,
+            'PHONE': config.PHONE,
+            'PHONE_ADDITION': config.PHONE_ADDITION,
+            'EMAIL': config.EMAIL,
+            'COMPANY_NAME': config.COMPANY_NAME,
+            'pages': Page.objects.all(),
+            'news': Article.objects.all(),
+        }, request))
     return response
 
 

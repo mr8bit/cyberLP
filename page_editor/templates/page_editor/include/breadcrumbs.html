@@ -6,9 +6,9 @@
     {% endif %}
 
     {% if breadcrumbs or breadcrumbs_title %}
-        <a href="{% url 'page_editor:fb_browse' %}{% query_string "" "q,dir,filename,p" %}">{% trans 'FileBrowser' %}</a> &rsaquo;
+        <a href="{% url 'page_editor:fb_browse' %}{% query_string "" "q,dir,filename,p" %}">Редактор файлов</a> &rsaquo;
     {% else %}
-        {% trans 'FileBrowser' %}
+       Редактор файлов
     {% endif %}
 
     {% for item in breadcrumbs %}
@@ -17,7 +17,6 @@
             <span class="icon-arrow-right breadcrumbs-separator"></span>
 
         {% else %}
-
 
             {% if breadcrumbs_title %}
 
