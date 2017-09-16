@@ -1,17 +1,13 @@
-{% load staticfiles   mptt_tags %}
+{% load staticfiles mptt_tags %}
 <!doctype html>
-<html lang="ru">
-<head>
+{% load sekizai_tags meta %}
 
-    <meta charset="utf-8">
-
+<html {% render_block 'html_extra' %}>
+<head {% meta_namespaces %}>
+    {% include "meta/meta.html" %}
     <meta name="robots" content="all">
-    <title>{{ flatpage.title }}</title>
-    <meta name="description"
-          content="Компания «Megagroup.ru» рекомендует купить адаптивный сайт для хлебобулочных изделий, который разработан с учетом требований и потребностей.">
+    <meta charset="UTF-8">
 
-    <meta name="keywords"
-          content="купить адаптивный сайт для хлебобулочных изделий, создать адаптивный сайт для хлебобулочных изделий, разработать адаптивный сайт для хлебобулочных изделий, открыть адаптивный сайт хлебобулочных изделий.">
 
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta name="viewport"
@@ -226,6 +222,7 @@
     {{ flatpage.content }}
     {% block news %}
     {% endblock %}
+
     <div class="editorElement layer-type-block ui-droppable block-41 ui-droppable-hover ui-state-hover">
         <div class="layout layout_center not-columned layout_center_111_id_144_0">
             <div class="editorElement layer-type-block ui-droppable block-56">

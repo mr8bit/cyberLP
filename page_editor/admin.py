@@ -34,8 +34,9 @@ from django.utils.html import format_html
 class MyDraggableMPTTAdmin(DraggableMPTTAdmin):
     prepopulated_fields = {'url': ('title',)}
     fieldsets = (
-        ('Основное', {'fields': ('title','url','show_in_menu','content','parent')}),
+        ('Основное', {'fields': ('title','url','show_in_menu','static','content','parent')}),
         ('Динамическая страница', {'fields': ('dynamic', 'html_render')}),
+        ('SEO', {'fields': ('seo_description', 'seo_keywords')}),
     )
     def something(self, instance):
         return format_html(

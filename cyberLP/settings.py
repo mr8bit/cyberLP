@@ -29,7 +29,7 @@ else:
     from .local_settings import *
 
 ALLOWED_HOSTS = ["*"]
-
+SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'jet',
     'rest_framework',
     'page_editor',
+    'meta',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'constance',
     'constance.backends.database',
     'order',
@@ -53,7 +55,9 @@ INSTALLED_APPS = [
     'mptt',
     'news',
     'landing',
-    'notifications'
+    'notifications',
+    'sekizai',
+    'taggit'
 ]
 
 THUMBNAIL_PROCESSORS = (
@@ -88,6 +92,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'sekizai.context_processors.sekizai',
             ],
         },
     },
@@ -173,7 +178,7 @@ CONSTANCE_CONFIG = {
 
 }
 CONSTANCE_CONFIG_FIELDSETS = {
-    'Главные настройки': ('COMPANY_NAME','NAME_SITE', 'EMAIL', 'PHONE', 'PHONE_ADDITION',),
+    'Главные настройки': ('COMPANY_NAME', 'NAME_SITE', 'EMAIL', 'PHONE', 'PHONE_ADDITION',),
     'Настройки уведомлений': (
         'EMAIL_NOTIFICATION', 'PHONE_NOTIFICATION', 'SEND_TO_PHONE', 'SEND_TO_EMAIL', 'SEND_TO_TELEGRAM'),
 }
@@ -294,3 +299,6 @@ TEMPLATE_CSS = (
     '/static/g/libs/jquery-popover/0.0.3/jquery.popover.css',
 )
 TEMPLATE_JS = ()
+# Meta SEO
+META_SITE_PROTOCOL = 'http'
+META_SITE_DOMAIN = '127.0.0.1:8000'

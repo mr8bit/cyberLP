@@ -30,6 +30,7 @@ def item(request, url, slug):
         con = Context({'pages': Page.objects.all(),
                        'news': Article.objects.all(),
                        'article': Article.objects.get(slug=slug),
+                       'meta': f.as_meta(request),
                        })
         menu_html = tem.render(con)
         f.title = mark_safe(Article.objects.get(slug=slug).title)
@@ -45,6 +46,7 @@ def item(request, url, slug):
          'COMPANY_NAME': config.COMPANY_NAME,
          'pages': Page.objects.all().filter(show_in_menu=True),
          'news': Article.objects.all(),
+         'meta': f.as_meta(request),
          }, request))
     return response
 
@@ -71,14 +73,14 @@ from news.models import *
 @csrf_protect
 def render_flatpage(request, f):
     template = loader.get_template(DEFAULT_TEMPLATE)
-    if f.dynamic and not f.content:
+    if f.dynamic and not f.static:
         tem = Template(f.html_render)
         con = Context({'pages': Page.objects.all(),
                        'news': Article.objects.all()
                        })
         menu_html = tem.render(con)
         f.content = menu_html
-    if f.dynamic and f.content:
+    if f.dynamic and f.static:
         tem = Template(f.html_render)
         con = Context({'pages': Page.objects.all(),
                        'news': Article.objects.all()
@@ -88,9 +90,10 @@ def render_flatpage(request, f):
     # You can print html content using "html" method of HtmlNodeList object
     f.title = mark_safe(f.title)
     f.content = mark_safe(f.content)
-
     response = HttpResponse(template.render(
-        {'flatpage': f,
+        {
+         'meta':   f.as_meta(request),
+         'flatpage': f,
          'NAME_SITE': config.NAME_SITE,
          'PHONE': config.PHONE,
          'PHONE_ADDITION': config.PHONE_ADDITION,
