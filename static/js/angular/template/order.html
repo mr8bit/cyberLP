@@ -226,10 +226,10 @@
             <ul>
                 <li>Телефон: <a href="tel:{{ order.phone }}">{{ order.phone | tel }}</a>
               </li>
-                <li>Email: <a href="email:{{ order.email }}">{{ order.email }}</a></li>
+                <li ng-if="order.email">Email: <a href="email:{{ order.email }}">{{ order.email }}</a></li>
             </ul>
         </div>
-        <div class="text-comment">
+        <div  ng-if="order.text_comment" class="text-comment">
             <span>Комментарий: </span><br/>
             {{ order.text_comment }}
         </div>

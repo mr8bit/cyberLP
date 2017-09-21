@@ -5,38 +5,25 @@
 <html {% render_block 'html_extra' %}>
 <head {% meta_namespaces %}>
     {% include "meta/meta.html" %}
-    <meta name="robots" content="all">
-    <meta charset="UTF-8">
-
-
-    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
-    <meta name="viewport"
-          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <meta name="format-detection" content="telephone=no">
-
-    <meta http-equiv="x-rim-auto-match" content="none">
-    <!--  -->
-    <link rel="stylesheet" href="{% static 'g/css/styles_articles_tpl.css' %}">
-
-    <link rel="stylesheet" href="{% static 'd/1722959/t/v460/images/css/styles.css' %}">
-
-    <link rel="stylesheet" href="{% static 'd/1722959/t/v460/images/css/title.styles.css' %}">
-
-    <link rel="stylesheet" href="{% static 'd/1722959/t/v460/images/css/designblock.scss.css' %}">
-
-    <link rel="stylesheet" href="{% static 'd/1722959/t/v460/images/css/s3_styles.scss.css' %}">
-
-    <script src="{% static 'g/libs/jquery/1.10.2/jquery.min.js' %}"></script>
-
-    <script src="{% static 'g/s3/misc/adaptiveimage/1.0.0/adaptiveimage.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/libs/jquery/1.10.2/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'g/s3/lp/css/global_styles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'g/s3/lp/css/slick.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'g/s3/lp/css/lp3.css' %}" type="text/css">
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/lp_global_plugins.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/timer.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/one.line.menu.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/libs/jquery-bxslider/4.1.1/jquery.bxslider.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/jquery.columnizer.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/lg-video.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/lp3.js' %}"></script>
+    <!-- LP requires -->
     <link rel='stylesheet' type='text/css' href='{% static 'shared/highslide-4.1.13/highslide.min.css' %}'>
 
     <script type='text/javascript' src='{% static 'shared/highslide-4.1.13/highslide-full.packed.js' %}'></script>
     <script type='text/javascript'>
-        hs.graphicsDir = '/shared/highslide-4.1.13/graphics/';
+        hs.graphicsDir = 'static/shared/highslide-4.1.13/graphics/';
         hs.outlineType = null;
         hs.showCredits = false;
         hs.lang = {
@@ -62,301 +49,187 @@
             number: 'Изображение %1/%2',
             restoreTitle: 'Нажмите чтобы посмотреть картинку, используйте мышь для перетаскивания. Используйте клавиши вперёд и назад'
         };</script>
-    <script type='text/javascript' src='{% static 'shared/flowplayer/flowplayer-3.2.9.min.js' %}'></script>
-    <!-- 46b9544ffa2e5e73c3c971fe2ede35a5 -->
     <link rel='stylesheet' type='text/css' href='{% static 'shared/s3/css/calendar.css' %}'>
     <script type='text/javascript' src='{% static 'shared/s3/js/lang/ru.js' %}'></script>
     <script type='text/javascript' src='{% static 'shared/s3/js/cookie.js' %}'></script>
     <script type='text/javascript' src='{% static 'shared/s3/js/widgets.js' %}'></script>
     <script type='text/javascript' src='{% static 'shared/s3/js/calendar.packed.js' %}'></script>
 
-
-    <link rel="stylesheet" href="{% static 'g/libs/jquery-popover/0.0.3/jquery.popover.css' %}">
-
-    <script src="{% static 'g/libs/jquery-popover/0.0.3/jquery.popover.min.js' %}" type="text/javascript"></script>
-
-    <script src="{% static 'g/s3/misc/form/1.0.0/s3.form.js' %}" type="text/javascript"></script>
-
-    <script src="{% static 'g/libs/jquery-bxslider/4.1.2/jquery.bxslider.min.js' %}" type="text/javascript"></script>
+    <!--s3_require-->
+    <script type="text/javascript" src="{% static 'g/s3/lp/js/lp.core.js' %}"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDcmOwlMpHCyHSOca66rCjXMHNaeha4qIk"></script>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru"></script>
+    <!--/s3_require-->
 
 
-    <script type="text/javascript" src="{% static 'd/1722959/t/v460/images/js/animations.js' %}"></script>
-
+	<script type="text/javascript">
+		$(function() {
+			s3LP.init({"is_cms":false});
+		});
+	</script>
 
 </head>
-
 <body>
-<div class="wrapper editorElement layer-type-wrapper">
-    <div class="side-panel side-panel-43 widget-type-side_panel editorElement layer-type-widget widget-25"
-         data-layers="['widget-3':['tablet-landscape':'inSide','tablet-portrait':'inSide','mobile-landscape':'inSide','mobile-portrait':'inSide'],'widget-39':['tablet-landscape':'inSide','tablet-portrait':'inSide','mobile-landscape':'inSide','mobile-portrait':'inSide'],'widget-47':['tablet-landscape':'inSide','tablet-portrait':'inSide','mobile-landscape':'inSide','mobile-portrait':'inSide'],'widget-59':['tablet-landscape':'onTop','tablet-portrait':'onTop','mobile-landscape':'onTop','mobile-portrait':'onTop'],'widget-70':['tablet-landscape':'inSide','tablet-portrait':'inSide','mobile-landscape':'inSide','mobile-portrait':'inSide'],'widget-109':['tablet-landscape':'inSide','tablet-portrait':'inSide','mobile-landscape':'inSide','mobile-portrait':'inSide'],'widget-90':['tablet-landscape':'inSide','tablet-portrait':'inSide','mobile-landscape':'inSide','mobile-portrait':'inSide'],'widget-133':['tablet-landscape':'inSide','tablet-portrait':'inSide','mobile-landscape':'inSide','mobile-portrait':'inSide'],'widget-2':['tablet-landscape':'onTop','tablet-portrait':'onTop','mobile-landscape':'onTop','mobile-portrait':'onTop'],'widget-31':['tablet-landscape':'onTop','tablet-portrait':'onTop','mobile-landscape':'inSide','mobile-portrait':'inSide']]"
-         data-phantom="0" data-position="left">
-        <div class="side-panel-top">
-            <div class="side-panel-button">
-			<span class="side-panel-button-icon">
-				<span class="side-panel-button-icon-line"></span>
-				<span class="side-panel-button-icon-line"></span>
-				<span class="side-panel-button-icon-line"></span>
-			</span>
-            </div>
-            <div class="side-panel-top-inner"></div>
-        </div>
-        <div class="side-panel-mask"></div>
-        <div class="side-panel-content">
-            <div class="side-panel-close"></div>
-            <div class="side-panel-content-inner"></div>
-        </div>
-    </div>
-    <div class="editorElement layer-type-block ui-droppable block-19">
-        <div class="layout layout_center not-columned layout_44_id_133">
-            <div class="editorElement layer-type-block ui-droppable block-51">
-                <div class="layout column layout_5">
-                    <div class="site-name widget-2 widget-type-site_name editorElement layer-type-widget">
-                        <a href="/">
-                            <div class="sn-wrap">
-                                <div class="sn-logo">
-                                    <img src="{% static 'd/1722959/d/logo.png' %}" alt="">
-                                </div>
-                                <div class="sn-text">
-                                    <div class="align-elem">
-                                        {% if COMPANY_NAME != "None" %}
-                                            {{ COMPANY_NAME }}
-                                        {% endif %}
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="layout column layout_155">
-                    <div class="editorElement layer-type-block ui-droppable block-61">
-                        <div class="layout column layout_50">
-                            <div class="phones-50 widget-31 phones-block contacts-block widget-type-contacts_phone editorElement layer-type-widget">
-                                <div class="inner">
-                                    <label class="cell-icon" for="tg-phones-50">
-                                        <div class="icon"></div>
-                                    </label>
-                                    <input id="tg-phones-50" class="tgl-but" type="checkbox">
-                                    <div class="block-body-drop">
-                                        <div class="cell-text">
-                                            <div class="title">
-                                                <div class="align-elem">Телефон:</div>
-                                            </div>
-                                            <div class="text_body">
-                                                <div class="align-elem">
-                                                    {% if PHONE != "None" %}
-                                                        <div><a href="tel:{{ PHONE }}">{{ PHONE }}</a></div>
-                                                    {% endif %}
-                                                    {% if PHONE_ADDITION != "None" %}
-                                                        <div><a href="tel:{{ PHONE_ADDITION }}">{{ PHONE_ADDITION }}</a>
-                                                        </div>
-                                                    {% endif %}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="layout column layout_156">
-                            <div class="widget-133 horizontal menu-156 wm-widget-menu widget-type-menu_horizontal editorElement layer-type-widget"
-                                 data-screen-button="more" data-responsive-tl="button" data-responsive-tp="button"
-                                 data-responsive-ml="columned" data-more-text="" data-child-icons="0">
-
-                                <div class="menu-button">
-                                    Меню
-                                </div>
-
-                                <div class="menu-scroll">
-                                    <ul>
-
-                                        {% recursetree pages %}
-                                            <li class="menu-item">
-                                                {% if node.show_in_menu %}
-
-                                                    <a href="{{ node.url }}">
-                                                        <span class="menu-item-text">{{ node.title }}</span>
-                                                    </a>
-
-                                                    {% if not node.is_leaf_node %}
-
-                                                        {% if children.show_in_menu %}
-                                                            <ul class="level-2">
-
-                                                                {{ children.title |safe }}
-
-                                                                <li class="delimiter"></li>
-                                                            </ul>
-                                                        {% endif %}
-
-                                                    {% endif %}
-
-                                                {% endif %}
-                                            </li>
-                                            <li class="delimiter"></li>
-                                        {% endrecursetree %}
-
-
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="site-description widget-26 widget-type-site_description editorElement layer-type-widget">
-
-                <div class="align-elem">
-
-                    {% if NAME_SITE != "None" %}
-                        {{ NAME_SITE }}
-                    {% endif %}
-                </div>
-
-            </div>
-
-
-        </div>
-    </div>
-    {{ flatpage.content }}
-    {% block news %}
-    {% endblock %}
-
-    <div class="editorElement layer-type-block ui-droppable block-41 ui-droppable-hover ui-state-hover">
-        <div class="layout layout_center not-columned layout_center_111_id_144_0">
-            <div class="editorElement layer-type-block ui-droppable block-56">
-                <div class="editorElement layer-type-block ui-droppable block-20">
-                    <div class="phones-74 widget-52 phones-block contacts-block widget-type-contacts_phone editorElement layer-type-widget">
-                        <div class="inner">
-                            <label class="cell-icon" for="tg-phones-74">
-                                <div class="icon"></div>
-                            </label>
-                            <input id="tg-phones-74" class="tgl-but" type="checkbox">
-                            <div class="block-body-drop">
-                                <div class="cell-text">
-                                    <div class="title">
-                                        <div class="align-elem">Телефон:</div>
-                                    </div>
-                                    <div class="text_body">
-                                        <div class="align-elem">
-                                            {% if PHONE != "None" %}
-                                                <div><a href="tel:{{ PHONE }}">{{ PHONE }}</a></div>
-                                            {% endif %}
-                                            {% if PHONE_ADDITION != "None" %}
-                                                <div><a href="tel:{{ PHONE_ADDITION }}">{{ PHONE_ADDITION }}</a></div>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="address-52 widget-33 address-block contacts-block widget-type-contacts_address editorElement layer-type-widget">
-                        <div class="inner">
-                            <label class="cell-icon" for="tg52">
-                                <div class="icon"></div>
-                            </label>
-                            <input id="tg52" class="tgl-but" type="checkbox">
-                            <div class="block-body-drop">
-                                <div class="cell-text">
-                                    <div class="title">
-                                        <div class="align-elem">Адрес:</div>
-                                    </div>
-                                    <div class="text_body">
-                                        <div class="align-elem">Россия, Санкт-Петербург, Ленинский просп., 151, офис
-                                            711
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="email-59 widget-37 email-block contacts-block widget-type-contacts_email editorElement layer-type-widget">
-                        <div class="inner">
-                            <label class="cell-icon" for="tg-email-59">
-                                <div class="icon"></div>
-                            </label>
-                            <input id="tg-email-59" class="tgl-but" type="checkbox">
-                            <div class="block-body-drop">
-                                <div class="cell-text">
-                                    <div class="title">
-                                        <div class="align-elem">Email:</div>
-                                    </div>
-                                    <div class="text_body">
-                                        <div class="align-elem"><a href="mailto:{{ EMAIL }}">{{ EMAIL }}</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="widget-85 widgetsocial-104 widget-type-social_links editorElement layer-type-widget">
-                        <div class="soc-content">
-                            <div class="soc-item fb"><a href="https://facebook.com" class="soc" target="_blank"><span
-                                    class="wg-soc-icon"></span></a></div>
-                            <div class="soc-item tw"><a href="https://twitter.com" class="soc" target="_blank"><span
-                                    class="wg-soc-icon"></span></a></div>
-                            <div class="soc-item ins"><a href="https://instagram.com" class="soc" target="_blank"><span
-                                    class="wg-soc-icon"></span></a></div>
-                        </div>
-                    </div>
-                    <div class="widget-129 search-154 wm-search widget-type-search editorElement layer-type-widget"
-                         data-setting-type="fade" data-setting-animate="0" data-setting-animate_list="0,0,0,0,0">
-                        <form class="wm-search-inner" method="get" action="/search">
-                            <input size="1" class="wm-input-default" placeholder="поиск по сайту" type="text"
-                                   name="search" value="">
-                            <button class="wm-input-default" type="submit"></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="editorElement layer-type-block ui-droppable block-17">
-            <div class="layout layout_center not-columned layout_38_id_42">
-                <div class="editorElement layer-type-block ui-droppable block-18">
-                    <div class="layout column layout_60">
-                        <div class="editorElement layer-type-block ui-droppable block-22">
-                            <div class="site-copyright widget-22 widget-type-site_copyright editorElement layer-type-widget">
-
-                                <div class="align-elem">
-                                    Copyright &copy; 2017 <br>
-                                    Название компании
-                                </div>
-
-                            </div>
-                            <div class="mega-copyright widget-24 widget-type-mega_copyright editorElement layer-type-widget">
-                                <span style='font-size:10px;' class='copyright'><!--noindex--><a
-                                        href="http://megagroup.ru" target="_blank" rel="nofollow"><img
-                                        src="http://cp1.megagroup.ru/g/mlogo/svg/sozdanie-saitov-megagroup-ru-dark.svg"
-                                        class="copyright"></a><!--/noindex--></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="layout column layout_40">
-                        <div class="site-counters widget-23 widget-type-site_counters editorElement layer-type-widget">
-
-
-                        </div>
-                    </div>
-                    <div class="layout column layout_61">
-                        <div class="up-61 widget-38 up_button widget-type-button_up editorElement layer-type-widget"
-                             data-speed="900">
-                            <div class="icon"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+{{ flatpage.content }}
 </body>
-
 </html>
-<script src="{% static 'g/templates/solutions/all/panel/2.3.2/panel.js' %}"></script>
-<script src="{% static 'g/libs/lodash/2.4.1/lodash.min.js' %}"></script>
+
+
+<!-- site_plan_id: 1, 7950 -->
+
+
+<style>
+    .s3solution-themes--showed {
+        -webkit-transform: none !important;
+        transform: none !important;
+    }
+</style>
+<script src="http://design.megagroup.ru/static/reDesign_ru/js/substitution.js?_=1505755467"></script>
+
+
+
+
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-11492465-3', 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq)return;
+        n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '988628981268881'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+</script>
+
+
+
+
+<script>
+    (function setRoistat() {
+        var roistatGet = getParam('roistat_visit');
+
+        function getParam(param_name) {
+            var getStr = document.location.search;
+            var result;
+
+            if (getStr) {
+                getStr = getStr.split('&');
+                getStr.forEach(function (param) {
+                    if (param.match(param_name)) {
+                        result = param.split('=')[1];
+                    }
+                });
+
+                return result;
+            }
+        }
+
+        function replaceParams(str, param_name, param_value) {
+            var lastChar, hrefParams, isReplaced, replacedParams;
+
+            lastChar = str.slice(-1);
+            if (lastChar === '?') {
+                str = str.replace('?', '');
+            }
+
+            hrefParams = str.split('&');
+            isReplaced = false;
+            replacedParams = hrefParams.map(function (param) {
+                if (param.indexOf(param_name) !== -1) {
+                    var arr = param.split('=');
+                    arr[1] = param_value;
+                    isReplaced = true;
+                    return arr.join('=');
+                } else {
+                    return param;
+                }
+            });
+
+            replacedParams = replacedParams.join('&');
+
+            if (!isReplaced) {
+                replacedParams += (str.indexOf('?') === -1 ? '?' : '&') + param_name + '=' + param_value;
+            }
+
+            return replacedParams;
+        }
+
+        window.onRoistatModuleLoaded = function () {
+            roistat.registerOnVisitProcessedCallback(function () {
+                $(document).ready(function () {
+                    var $roistat;
+                    var $links = $('.s3solution-panel__btn--order, .s3solution-panel__link');
+                    var $megaLinks = $('a[href*=megagroup]:not(.s3solution-panel a), a[href*=конструктор-сайтов]:not(.s3solution-panel a)');
+                    var $megaDynamicLinks = $('a[onclick*=конструктор-сайтов], a[onclick*=megagroup]');
+
+                    if (roistat.visit) {
+                        $links = $links.add($megaLinks);
+                        $roistat = roistat.visit;
+                    } else {
+                        $links = $megaLinks;
+                        $roistat = roistatGet;
+                    }
+
+                    $links.each(function () {
+                        var $this = $(this);
+                        var href = $this.attr('href');
+                        href = replaceParams(href, 'roistat_visit', encodeURIComponent($roistat));
+                        $this.attr('href', href);
+                    });
+
+                    $megaDynamicLinks.each(function () {
+                        var $this = $(this);
+                        var href = $this.attr('onclick').slice(0, -2);
+                        href += '?roistat_visit=' + encodeURIComponent($roistat) + '\'';
+                        $this.attr('onclick', href);
+                    });
+                });
+            });
+        };
+    })();
+</script>
+
+<script src="{% static 'g/templates/solutions/all/panel/3.0.0/panel.js' %}"></script>
+
+<script src="{% static 'my/s3/js/site.min.js' %}" type="text/javascript"></script>
+
+
+<link rel="stylesheet" href="{% static 'g/templates/solutions/all/hotlink/1.0.0/hotlink.css' %}">
+<script src="{% static 'g/templates/solutions/all/hotlink/1.0.0/hotlink.js' %}"></script>
+
 
 
