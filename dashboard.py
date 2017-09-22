@@ -3,7 +3,7 @@ from jet.dashboard import modules
 from jet.dashboard.dashboard import Dashboard
 from jet.dashboard.dashboard_modules import google_analytics
 
-from order.dashboard_modules import RecentTickets,CTR_ChartBar,CTR_ChartFunnel,CTR_Num
+from order.dashboard_modules import RecentTickets,CTR_ChartBar,CTR_Num
 
 
 class CustomIndexDashboard(Dashboard):
@@ -18,7 +18,6 @@ class CustomIndexDashboard(Dashboard):
         self.available_children.append(RecentTickets)
         self.available_children.append(CTR_ChartBar)
         self.available_children.append(CTR_Num)
-        self.available_children.append(CTR_ChartFunnel)
         self.children.append(modules.LinkList(
             _('Support'),
             children=[
