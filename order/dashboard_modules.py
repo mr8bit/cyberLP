@@ -43,7 +43,7 @@ class CTR_ChartBar(GoogleAnalyticsBase):
             except KeyError:
                 self.error = _('Bad server response')
 
-
+from django.utils.timezone import make_aware
 class CTR_Num(GoogleAnalyticsBase):
     title = 'Просмотры/Заказы'
     template = 'order/dashboard_modules/ctr_num.html'

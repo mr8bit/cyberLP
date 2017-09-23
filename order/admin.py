@@ -12,7 +12,7 @@ class StatusAdmin(admin.ModelAdmin):
 
 admin.site.register(Status, StatusAdmin)
 
-
+admin.site.register(Task)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('name', 'phone', 'email', 'status')
     search_fields = ('name', 'phone', 'email', 'text_comment')

@@ -39,12 +39,6 @@ class CustomIndexDashboard(Dashboard):
             ],
 
         ))
-        # append an app list module for "Applications"
-        self.children.append(modules.AppList(
-            _('Applications'),
-            exclude=('auth.*',),
-
-        ))
         # append a recent actions module
         self.children.append(modules.RecentActions(
             _('Recent Actions'),
