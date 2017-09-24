@@ -19,11 +19,11 @@ class Status(models.Model):
 class Order(models.Model):
     name = models.CharField(verbose_name="Имя", max_length=300)
     phone = models.CharField(verbose_name="Телефон", max_length=100)
-    email = models.EmailField(verbose_name="Почта")
+    email = models.EmailField(verbose_name="Почта", null=True, blank=True)
     price = models.IntegerField(verbose_name="Цена", null=True, blank=True)
-    text_comment = models.TextField(verbose_name="Комментарий")
+    text_comment = models.TextField(verbose_name="Комментарий", null=True, blank=True)
     creation_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
-    status = models.ForeignKey('Status', related_name='orders')
+    status = models.ForeignKey('Status', related_name='orders', default=1, verbose_name="Статус")
 
     def get_status_name(self):
         return self.status.name

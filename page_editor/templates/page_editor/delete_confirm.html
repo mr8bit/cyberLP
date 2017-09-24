@@ -12,7 +12,8 @@
     {% if query.pop %}
         {% include "page_editor/include/breadcrumbs.html" %}
     {% endif %}
-    <p>{% blocktrans with fileobject.filename as escaped_object %}Are you sure you want to delete the {{ object_name }} "{{ escaped_object }}"? All of the following related items will be deleted:{% endblocktrans %}</p>
+    <p>{% blocktrans with fileobject.filename as escaped_object %}Are you sure you want to delete the {{ object_name }}
+        "{{ escaped_object }}"? All of the following related items will be deleted:{% endblocktrans %}</p>
 
     <ul>
         <li>{{ fileobject.filename }}</li>
@@ -20,21 +21,22 @@
 
     {% if filelisting %}
         <ul>
-            {% for item in filelisting %}
-                <li>{{ item.path_relative_directory }}</li>
-            {% endfor %}
+        {% for item in filelisting %}
+            <li>{{ item.path_relative_directory }}</li>
+        {% endfor %}
         <ul>
     {% endif %}
     {% if additional_files %}
         <ul>
-            <li>{% blocktrans with additional_files as escaped_object %}... and {{ escaped_object }} more Files.{% endblocktrans %}</li>
+            <li>{% blocktrans with additional_files as escaped_object %}... and {{ escaped_object }} more
+                Files.{% endblocktrans %}</li>
         </ul>
     {% endif %}
 
     <form action="{% url 'page_editor:fb_delete' %}{% query_string %}" method="post">
-    {% csrf_token %}
-    <div>
-    <input type="submit" value="{% trans "Yes, I'm sure" %}" />
-    </div>
+        {% csrf_token %}
+        <div>
+            <input type="submit" value="{% trans "Yes, I'm sure" %}"/>
+        </div>
     </form>
 {% endblock %}

@@ -1,0 +1,648 @@
+@media (min-width: 750px) { html .header--theme5 .top-menu-wrapper { background-color: rgb(255, 255, 255); } }
+html .header--theme5 .menu-button { background-color: rgb(244, 0, 101); }
+html .header--theme5 .menu-button::before { background-image: url("./89e22cbd822719ee886a80bff893774e.svg"); }
+html .header--theme5 .top-menu li.dropdown-wrap { background-image: url("./c0594cc1168779d110466326066bcf7b.svg"); }
+html .header--theme5 .top-menu li.dropdown-wrap { background-color: rgb(241, 245, 248); }
+html .header--theme5 .top-menu li.dropdown-wrap.active { background-color: rgb(241, 245, 248); }
+html .header--theme5 .top-menu li.dropdown-wrap ul a:hover { background-color: rgb(241, 24, 99); }
+html .header--theme5.inverse .top-menu li.dropdown-wrap ul a:hover { background-color: rgb(38, 48, 101); }
+html .header--theme5 .top-menu li a { color: rgb(36, 36, 36); }
+html .header--theme5.inverse .top-menu li a:hover { background-color: rgb(38, 48, 101); }
+@media (min-width: 750px) { html .header--theme5 .top-menu li a:hover { background-color: rgb(241, 24, 99); } }
+html .header--theme5 .header-wrapper { background-color: rgb(23, 29, 63); }
+html .header--theme5 .name-wrapper .name { color: rgb(255, 255, 255); }
+html .header--theme5 .name-wrapper .site-activity { color: rgb(54, 193, 104); }
+html .header--theme5 .right-part .right-part-inner { background-color: rgb(54, 193, 104); }
+html .header--theme5 .right-part .mail { color: rgb(18, 178, 239); }
+html .header--theme5.inverse .right-part .mail { color: rgb(37, 36, 40); }
+html .header--theme5 .right-part .button a { background-color: rgb(241, 0, 85); }
+@media (min-width: 620px) { html .header--theme5 .right-part .work-time { color: rgb(18, 178, 239); } }
+@media (min-width: 620px) { html .header--theme5 .right-part .work-time { background-image: url("./ae3318feb6bd0a277c1aacc422353577.svg"); } }
+@media (min-width: 620px) { html .header--theme5 .right-part .phones { color: rgb(255, 255, 255); } }
+html .header--theme5.inverse .top-menu-wrapper { background-color: rgb(54, 193, 104); }
+html .header--theme5.inverse .top-menu li a { color: rgb(255, 255, 255); }
+html .header--theme5 .top-menu li.dropdown-wrap.active { background-image: url("./c0594cc1168779d110466326066bcf7b.svg"); }
+html .header--theme5.inverse .top-menu li.dropdown-wrap { background-image: url("./3f630639c4abed91aa981cc85f0ff781.svg"); }
+html .header--theme5.inverse .top-menu li.dropdown-wrap { background-color: rgb(255, 255, 255); }
+html .header--theme5.inverse .top-menu li.dropdown-wrap.active { background-color: rgb(255, 255, 255); }
+html .header--theme5.inverse .header-wrapper { background-color: rgb(255, 255, 255); }
+html .header--theme5.inverse .name-wrapper .name { color: rgb(37, 36, 40); }
+html .header--theme5.inverse .name-wrapper .site-activity { color: rgb(54, 193, 104); }
+html .header--theme5.inverse .right-part .work-time { color: rgb(37, 36, 40); }
+html .header--theme5.inverse .right-part .work-time { background-image: url("./af729a493c56367798942d4636177d54.svg"); }
+@media (min-width: 620px) { html .header--theme5.inverse .right-part .phones { color: rgb(37, 36, 40); } }
+html .header--theme5.inverse .right-part .button a { background-color: rgb(242, 0, 86); }
+html .sale-block--theme5 .sale-block-wrapper::before { background-color: rgba(54, 193, 104, 0.8); }
+html .sale-block--theme5 .bottom-part .text-part .icon { background-color: rgb(241, 0, 83); }
+html .sale-block--theme5 .bottom-part .text-part .text { color: rgb(195, 200, 203); }
+html .sale-block--theme5 .bottom-part .text-part .text .title { color: rgb(36, 36, 36); }
+html .sale-block--theme5 .bottom-part .timer-part .title { color: rgb(36, 36, 36); }
+html .sale-block--theme5 .bottom-part .timer-part .countdown3 .item .time { border-top-color: rgb(38, 48, 101); }
+html .sale-block--theme5 .bottom-part .timer-part .countdown3 .item .time { border-right-color: rgb(38, 48, 101); }
+html .sale-block--theme5 .bottom-part .timer-part .countdown3 .item .time { border-bottom-color: rgb(38, 48, 101); }
+html .sale-block--theme5 .bottom-part .timer-part .countdown3 .item .time { border-left-color: rgb(38, 48, 101); }
+html .sale-block--theme5 .bottom-part .timer-part .countdown3 .item .time { background-color: rgb(38, 48, 101); }
+html .sale-block--theme5 .bottom-part .timer-part .countdown3 .item .time { color: rgb(255, 255, 255); }
+html .sale-block--theme5 .bottom-part .timer-part .countdown3 .item .time::before { color: rgb(241, 245, 248); }
+html .sale-block--theme5 .bottom-part .timer-part .countdown3 .item ins { color: rgb(195, 200, 203); }
+html .sale-block--theme5 .bottom-part .form-part .button-wrap a { color: rgb(255, 255, 255); }
+html .sale-block--theme5 .bottom-part .form-part .button-wrap a { background-color: rgb(244, 0, 101); }
+@media (min-width: 750px) { html .sale-block--theme5 .bottom-part .form-part .tpl-anketa { background-color: rgb(241, 245, 248); } }
+html .sale-block--theme5 .bottom-part .form-part .tpl-anketa .form-text-after-button { color: rgb(128, 128, 128); }
+html .sale-block--theme5 .bottom-part .form-part .tpl-anketa .form-text-after-button { background-image: url("./07136321da75b4139c79e054845d35b6.svg"); }
+html .sale-block--theme5 .bottom-part .form-part .tpl-anketa .btn button { color: rgb(255, 255, 255); }
+html .sale-block--theme5 .bottom-part .form-part .tpl-anketa .btn button { background-color: rgb(241, 0, 84); }
+html .sale-block--theme5 .bottom-part .form-part .tpl-anketa .btn button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); background-image: linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); }
+html .sale-block--theme5.inverse .sale-block-wrapper::before { background-color: rgba(255, 255, 255, 0.901961); }
+html .sale-block--theme5.inverse .bottom-part { background-color: rgb(54, 193, 104); }
+html .sale-block--theme5.inverse .bottom-part .text-part .text { color: rgb(255, 255, 255); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa { background-color: rgb(241, 245, 248); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa { border-top-color: rgb(241, 245, 248); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa { border-right-color: rgb(241, 245, 248); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa { border-bottom-color: rgb(241, 245, 248); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa { border-left-color: rgb(241, 245, 248); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa .form-text-after-button { color: rgb(128, 128, 128); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa .form-text-after-button { background-image: url("./07136321da75b4139c79e054845d35b6.svg"); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa .btn button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(247, 0, 120)); background-image: linear-gradient(rgb(247, 0, 120), rgb(247, 0, 120)); }
+html .sale-block--theme5.inverse .bottom-part .form-part .tpl-anketa .btn button { background-color: rgb(247, 0, 120); }
+html .sale-block--theme5.inverse .bottom-part .timer-part .countdown3 .item .time { border-top-color: rgb(38, 48, 101); }
+html .sale-block--theme5.inverse .bottom-part .timer-part .countdown3 .item .time { border-right-color: rgb(38, 48, 101); }
+html .sale-block--theme5.inverse .bottom-part .timer-part .countdown3 .item .time { border-bottom-color: rgb(38, 48, 101); }
+html .sale-block--theme5.inverse .bottom-part .timer-part .countdown3 .item .time { border-left-color: rgb(38, 48, 101); }
+html .sale-block--theme5.inverse .bottom-part .timer-part .countdown3 .item .time { background-color: rgb(38, 48, 101); }
+html .sale-block--theme5.inverse .bottom-part .timer-part .countdown3 .item .time { color: rgb(255, 255, 255); }
+html .sale-block--theme5.inverse .bottom-part .timer-part .countdown3 .item ins { color: rgb(241, 245, 248); }
+html .sale-block--theme5.inverse .bottom-part .text-part .icon { background-color: rgb(255, 255, 255); }
+html .sale-block--theme5.inverse .bottom-part .text-part .icon svg path { fill: rgb(241, 0, 83); }
+html .m_text_wrapper.inverse { background-color: rgb(38, 48, 101); }
+html .m_text_wrapper .text_blocks .title { color: rgb(20, 14, 19); }
+html .m_text_wrapper.inverse .text_blocks .title { color: rgb(255, 255, 255); }
+html .text--theme5.inverse .text-wrapper { background-color: rgb(38, 48, 101); }
+html .text--theme5.inverse .left-part .block-title { color: rgb(255, 255, 255); }
+html .text--theme5.inverse .right-part .block-title { color: rgb(255, 255, 255); }
+html .how-we-work--theme5 .how-we-work-wrapper::before { background-color: rgba(38, 48, 101, 0.901961); }
+html .how-we-work--theme5 .item:last-child .num { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .how-we-work--theme5 .item:last-child .text .title { color: rgb(54, 193, 104); }
+html .how-we-work--theme5.inverse .item:last-child .text .title { color: rgb(54, 193, 104); }
+html .how-we-work--theme5 .item .num { background-color: rgb(54, 193, 104); }
+html .how-we-work--theme5 .item .num { background-image: -webkit-linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); background-image: linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); }
+html .how-we-work--theme5 .item .num { color: rgb(255, 255, 255); }
+html .how-we-work--theme5 .item .num::after { background-image: url("./3d9234b4e1fe05b264db164254c625b1.svg"); }
+html .how-we-work--theme5 .item .text .title { color: rgb(54, 193, 104); }
+html .how-we-work--theme5.inverse .item .text .text-inner { color: rgb(0, 0, 0); }
+html .how-we-work--theme5.inverse .item .num::before { background-color: rgba(255, 255, 255, 0.298039); }
+html .how-we-work--theme5.inverse .item .text .title { color: rgb(54, 193, 104); }
+html .how-we-work--theme5.inverse .item .num { background-color: rgb(255, 255, 255); }
+html .how-we-work--theme5.inverse .item .num { background-image: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)); background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)); }
+html .how-we-work--theme5.inverse .item .num::after { background-image: url("./3d9234b4e1fe05b264db164254c625b1.svg"); }
+html .how-we-work--theme5.inverse .item:last-child .num { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .advantages--theme5 .advantages-wrapper { background-color: rgb(243, 247, 250); }
+html .advantages--theme5 .advantage { border-top-color: rgb(188, 188, 188); }
+html .advantages--theme5 .advantage svg path { fill: rgb(241, 0, 83); }
+html .advantages--theme5 .advantage .title { color: rgb(37, 36, 40); }
+html .advantages--theme5.inverse .advantages-wrapper { background-color: rgb(38, 48, 101); }
+html .advantages--theme5.inverse .block-title { color: rgb(255, 255, 255); }
+html .advantages--theme5.inverse .advantage { border-top-color: rgb(68, 76, 118); }
+html .advantages--theme5.inverse .advantage { border-right-color: rgb(68, 76, 118); }
+html .advantages--theme5.inverse .advantage { border-bottom-color: rgb(68, 76, 118); }
+html .advantages--theme5.inverse .advantage { border-left-color: rgb(68, 76, 118); }
+html .advantages--theme5.inverse .advantage svg path { fill: rgb(54, 193, 104); }
+html .advantages--theme5.inverse .advantage .title { color: rgb(255, 255, 255); }
+html .products--theme5 .products-wrapper::before { background-color: rgba(38, 48, 101, 0.901961); }
+html .products--theme5 .text-part .price { color: rgb(54, 193, 104); }
+html .products--theme5 .text-part .button-wrap a { color: rgb(255, 255, 255); }
+html .products--theme5 .text-part .button-wrap a { background-color: rgb(241, 0, 83); }
+html .products--theme5 .text-part .button-wrap a { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .products--theme5 .text-part .button-wrap a:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .products--theme5 .text-part .button-wrap a:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .products--theme5 .owl-nav div { background-image: url("./15c48262b08dc5c9c6e45b4b58a545c8.svg"); }
+html .products--theme5.inverse .products-wrapper::before { background-color: rgba(241, 245, 248, 0.8); }
+html .products--theme5.inverse .text-part { background-color: rgb(54, 193, 104); }
+html .products--theme5.inverse .text-part { border-top-color: rgb(54, 193, 104); }
+html .products--theme5.inverse .text-part { border-right-color: rgb(54, 193, 104); }
+html .products--theme5.inverse .text-part { border-bottom-color: rgb(54, 193, 104); }
+html .products--theme5.inverse .text-part { border-left-color: rgb(54, 193, 104); }
+html .products--theme5.inverse .text-part .price { color: rgb(37, 36, 40); }
+html .products--theme5.inverse .button-wrap a { color: rgb(37, 36, 40); }
+html .products--theme5.inverse .button-wrap a { background-color: rgb(241, 245, 248); }
+html .products--theme5.inverse .button-wrap a { background-image: -webkit-linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); background-image: linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); }
+html .products--theme5.inverse .button-wrap a:hover { background-image: -webkit-linear-gradient(rgb(241, 245, 248), rgb(223, 224, 225)); background-image: linear-gradient(rgb(241, 245, 248), rgb(223, 224, 225)); }
+html .products--theme5.inverse .button-wrap a:active { background-image: -webkit-linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); background-image: linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); }
+html .double-list--theme5 .block-title { background-color: rgb(241, 245, 248); }
+html .double-list--theme5 .block-title::before { background-color: rgb(54, 193, 104); }
+html .double-list--theme5 .title-left { background-color: rgb(241, 245, 248); }
+html .double-list--theme5 .title-right { background-color: rgb(54, 193, 104); }
+html .double-list--theme5 .title-left { color: rgb(36, 36, 36); }
+html .double-list--theme5 .left-part ul li { background-image: url("./d9c05254cbf16ec748a5e4f3bbaca5df.svg"); }
+html .double-list--theme5 .right-part ul li { background-image: url("./4784304ffeb3b65a34ba795124c86260.svg"); }
+html .double-list--theme5.inverse .right-part ul li { background-image: url("./4784304ffeb3b65a34ba795124c86260.svg"); }
+html .double-list--theme5.inverse .block-title { background-color: rgb(241, 0, 83); }
+html .double-list--theme5.inverse .title-left { background-color: rgb(241, 0, 83); }
+html .double-list--theme5.inverse .block-title::before { background-color: rgb(54, 193, 104); }
+html .double-list--theme5.inverse .title-right { background-color: rgb(54, 193, 104); }
+html .double-list--theme5.inverse .double-list-wrapper { background-color: rgb(38, 48, 101); }
+html .double-list--theme5.inverse .right-part ul li { color: rgb(248, 244, 244); }
+html .clients--theme5 .block-title { background-color: rgb(23, 29, 63); }
+html .clients--theme5 .block-title-inner { color: rgb(255, 255, 255); }
+html .clients--theme5 .owl-nav div { background-image: url("./15c48262b08dc5c9c6e45b4b58a545c8.svg"); }
+html .clients--theme5 .all a { background-color: rgb(54, 193, 104); }
+html .clients--theme5 .all a { background-image: -webkit-linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); background-image: linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); }
+html .clients--theme5 .all a:hover { background-image: -webkit-linear-gradient(rgb(71, 236, 130), rgb(54, 193, 104)); background-image: linear-gradient(rgb(71, 236, 130), rgb(54, 193, 104)); }
+html .clients--theme5 .all a:active { background-image: -webkit-linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); background-image: linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); }
+html .clients--theme5.inverse .block-title { background-color: rgb(241, 245, 248); }
+html .clients--theme5.inverse .block-title-inner { color: rgb(37, 36, 40); }
+html .clients--theme5.inverse .clients-wrapper { background-color: rgb(255, 255, 255); }
+html .clients--theme5.inverse .all a { background-color: rgb(54, 193, 104); }
+html .clients--theme5.inverse .all a { background-image: -webkit-linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); background-image: linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); }
+html .clients--theme5.inverse .all a:hover { background-image: -webkit-linear-gradient(rgb(71, 236, 130), rgb(54, 193, 104)); background-image: linear-gradient(rgb(71, 236, 130), rgb(54, 193, 104)); }
+html .clients--theme5.inverse .all a:active { background-image: -webkit-linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); background-image: linear-gradient(rgb(54, 193, 104), rgb(54, 193, 104)); }
+html .reviews--theme5 .reviews-wrapper::before { background-color: rgba(38, 48, 101, 0.901961); }
+html .reviews--theme5 .item .photo { border-top-color: rgb(54, 193, 104); }
+html .reviews--theme5 .item .photo { border-right-color: rgb(54, 193, 104); }
+html .reviews--theme5 .item .photo { border-bottom-color: rgb(54, 193, 104); }
+html .reviews--theme5 .item .photo { border-left-color: rgb(54, 193, 104); }
+html .reviews--theme5 .item .text-part .name-wrapper .name { color: rgb(54, 193, 104); }
+html .reviews--theme5 .owl-nav div { background-image: url("./15c48262b08dc5c9c6e45b4b58a545c8.svg"); }
+html .reviews--theme5.inverse .reviews-wrapper::before { background-color: rgba(241, 245, 248, 0.8); }
+html .reviews--theme5.inverse .item .text-part { background-color: rgb(38, 48, 101); }
+html .reviews--theme5.inverse .item .photo { border-top-color: rgb(54, 193, 104); }
+html .reviews--theme5.inverse .item .photo { border-right-color: rgb(54, 193, 104); }
+html .reviews--theme5.inverse .item .photo { border-bottom-color: rgb(54, 193, 104); }
+html .reviews--theme5.inverse .item .photo { border-left-color: rgb(54, 193, 104); }
+html .reviews--theme5.inverse .item .text-part .name-wrapper .name { color: rgb(54, 193, 104); }
+html .reviews--theme5.inverse .item .text-part .name-wrapper .position { color: rgb(255, 255, 255); }
+html .reviews--theme5.inverse .item .text-part .date { color: rgb(255, 255, 255); }
+html .form-middle--theme5 .form-middle-wrapper { background-color: rgb(54, 193, 104); }
+html .form-middle--theme5 .frm-input input[type="text"] { border-top-color: rgb(240, 240, 240); }
+html .form-middle--theme5 .frm-input input[type="text"] { border-right-color: rgb(240, 240, 240); }
+html .form-middle--theme5 .frm-input input[type="text"] { border-bottom-color: rgb(240, 240, 240); }
+html .form-middle--theme5 .frm-input input[type="text"] { border-left-color: rgb(240, 240, 240); }
+html .form-middle--theme5 .btn input[type="submit"] { color: rgb(0, 0, 0); }
+html .form-middle--theme5 .btn input[type="submit"] { background-color: rgb(244, 247, 249); }
+html .form-middle--theme5 .btn input[type="submit"] { background-image: -webkit-linear-gradient(rgb(244, 247, 249), rgb(241, 245, 248)); background-image: linear-gradient(rgb(244, 247, 249), rgb(241, 245, 248)); }
+html .form-middle--theme5.inverse .btn input[type="submit"] { color: rgb(255, 255, 255); }
+html .form-middle--theme5.inverse .btn input[type="submit"] { background-color: rgb(241, 0, 83); }
+html .form-middle--theme5.inverse .btn input[type="submit"] { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .form-middle--theme5 .btn input[type="submit"]:hover { background-image: -webkit-linear-gradient(rgb(232, 232, 232), rgb(214, 214, 214)); background-image: linear-gradient(rgb(232, 232, 232), rgb(214, 214, 214)); }
+html .form-middle--theme5.inverse .btn input[type="submit"]:hover { background-image: -webkit-linear-gradient(rgb(248, 31, 106), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 31, 106), rgb(241, 0, 83)); }
+html .form-middle--theme5 .btn input[type="submit"]:active { background-image: -webkit-linear-gradient(rgb(244, 247, 249), rgb(244, 247, 249)); background-image: linear-gradient(rgb(244, 247, 249), rgb(244, 247, 249)); }
+html .form-middle--theme5.inverse .btn input[type="submit"]:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .form-middle--theme5.inverse .form-middle-wrapper { background-color: rgb(243, 247, 250); }
+html .form-middle--theme5.inverse .block-title { color: rgb(37, 36, 40); }
+html .form-middle--theme5.inverse .frm-input input[type="text"] { background-color: rgb(255, 255, 255); }
+html .form-middle--theme5.inverse .frm-input input[type="text"] { border-top-color: rgb(227, 227, 227); }
+html .form-middle--theme5.inverse .frm-input input[type="text"] { border-right-color: rgb(227, 227, 227); }
+html .form-middle--theme5.inverse .frm-input input[type="text"] { border-bottom-color: rgb(227, 227, 227); }
+html .form-middle--theme5.inverse .frm-input input[type="text"] { border-left-color: rgb(227, 227, 227); }
+html .personal--theme5.inverse .block-title { color: rgb(255, 255, 255); }
+html .personal--theme5 .item .pic-part { border-top-color: rgb(241, 0, 83); }
+html .personal--theme5 .item .pic-part { border-right-color: rgb(241, 0, 83); }
+html .personal--theme5 .item .pic-part { border-bottom-color: rgb(241, 0, 83); }
+html .personal--theme5 .item .pic-part { border-left-color: rgb(241, 0, 83); }
+html .personal--theme5 .item .text-part .name { color: rgb(37, 36, 40); }
+html .personal--theme5 .item .text-part .position { color: rgb(241, 0, 83); }
+html .personal--theme5.inverse .personal-wrapper { background-color: rgb(38, 48, 101); }
+html .personal--theme5.inverse .item .pic-part { border-top-color: rgb(195, 247, 204); }
+html .personal--theme5.inverse .item .pic-part { border-right-color: rgb(195, 247, 204); }
+html .personal--theme5.inverse .item .pic-part { border-bottom-color: rgb(195, 247, 204); }
+html .personal--theme5.inverse .item .pic-part { border-left-color: rgb(195, 247, 204); }
+html .personal--theme5.inverse .item .text-part .position { color: rgb(54, 193, 104); }
+html .personal--theme5.inverse .item { border-top-color: rgb(233, 233, 233); }
+html .personal--theme5.inverse .item { border-right-color: rgb(233, 233, 233); }
+html .personal--theme5.inverse .item { border-bottom-color: rgb(233, 233, 233); }
+html .personal--theme5.inverse .item { border-left-color: rgb(233, 233, 233); }
+html .sertificats--theme5 .sertificats-wrapper::before { background-color: rgba(38, 48, 101, 0.901961); }
+html .sertificats--theme5 .owl-nav div { background-image: url("./15c48262b08dc5c9c6e45b4b58a545c8.svg"); }
+html .sertificats--theme5.inverse .owl-nav div { background-image: url("./15c48262b08dc5c9c6e45b4b58a545c8.svg"); }
+html .sale-block-two--theme5 .sale-block-two-wrapper { background-color: rgb(255, 255, 255); }
+html .sale-block-two--theme5 .text-part .icon { background-color: rgb(255, 255, 255); }
+html .sale-block-two--theme5 .text-part .icon svg path { fill: rgb(241, 0, 83); }
+html .sale-block-two--theme5 .text-part .text { color: rgb(166, 166, 166); }
+html .sale-block-two--theme5 .text-part .text .title { color: rgb(241, 0, 83); }
+html .sale-block-two--theme5 .timer-part .title { color: rgb(166, 166, 166); }
+html .sale-block-two--theme5 .timer-part .countdown3 .item .time { border-top-color: rgb(54, 193, 104); }
+html .sale-block-two--theme5 .timer-part .countdown3 .item .time { border-right-color: rgb(54, 193, 104); }
+html .sale-block-two--theme5 .timer-part .countdown3 .item .time { border-bottom-color: rgb(54, 193, 104); }
+html .sale-block-two--theme5 .timer-part .countdown3 .item .time { border-left-color: rgb(54, 193, 104); }
+html .sale-block-two--theme5 .timer-part .countdown3 .item .time { background-color: rgb(54, 193, 104); }
+html .sale-block-two--theme5 .timer-part .countdown3 .item .time { color: rgb(255, 255, 255); }
+html .sale-block-two--theme5 .timer-part .countdown3 .item .time::before { color: rgb(166, 166, 166); }
+html .sale-block-two--theme5 .timer-part .countdown3 .item ins { color: rgb(166, 166, 166); }
+html .sale-block-two--theme5 .form-part .button-wrap a { color: rgb(255, 255, 255); }
+html .sale-block-two--theme5 .form-part .button-wrap a { background-color: rgb(241, 0, 83); }
+html .sale-block-two--theme5 .form-part .tpl-anketa .form-text-after-button { color: rgb(103, 103, 103); }
+html .sale-block-two--theme5 .form-part .tpl-anketa .btn button { color: rgb(255, 255, 255); }
+html .sale-block-two--theme5 .form-part .tpl-anketa .btn button { background-color: rgb(241, 0, 83); }
+html .sale-block-two--theme5 .form-part .tpl-anketa .btn button { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .sale-block-two--theme5 .form-part .tpl-anketa .btn button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .sale-block-two--theme5 .form-part .tpl-anketa .btn button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .sale-block-two--theme5.inverse .sale-block-two-wrapper { background-color: rgb(54, 193, 104); }
+html .sale-block-two--theme5.inverse .text-part .text .title { color: rgb(37, 36, 40); }
+html .sale-block-two--theme5.inverse .timer-part .title { color: rgb(255, 255, 255); }
+html .sale-block-two--theme5.inverse .timer-part .countdown3 .item .time { border-top-color: rgb(255, 255, 255); }
+html .sale-block-two--theme5.inverse .timer-part .countdown3 .item .time { border-right-color: rgb(255, 255, 255); }
+html .sale-block-two--theme5.inverse .timer-part .countdown3 .item .time { border-bottom-color: rgb(255, 255, 255); }
+html .sale-block-two--theme5.inverse .timer-part .countdown3 .item .time { border-left-color: rgb(255, 255, 255); }
+html .sale-block-two--theme5.inverse .timer-part .countdown3 .item .time::before { color: rgb(253, 253, 253); }
+html .sale-block-two--theme5.inverse .form-part .tpl-anketa { background-color: rgb(249, 249, 249); }
+html .sale-block-two--theme5.inverse .form-part .tpl-anketa { border-top-color: rgb(249, 249, 249); }
+html .sale-block-two--theme5.inverse .form-part .tpl-anketa { border-right-color: rgb(249, 249, 249); }
+html .sale-block-two--theme5.inverse .form-part .tpl-anketa { border-bottom-color: rgb(249, 249, 249); }
+html .sale-block-two--theme5.inverse .form-part .tpl-anketa { border-left-color: rgb(249, 249, 249); }
+html .sale-block-two--theme5.inverse .form-part .tpl-anketa .form-text-after-button { color: rgb(103, 103, 103); }
+html .our-works--theme5 .our-works-wrapper { background-color: rgb(54, 193, 104); }
+html .our-works--theme5 .block-title { color: rgb(255, 255, 255); }
+html .our-works--theme5 .item .title { color: rgb(255, 255, 255); }
+html .our-works--theme5 .owl-nav div { background-image: url("./6710d5cae9f641df2c2583c8655d5678.svg"); }
+html .our-works--theme5.inverse .our-works-wrapper { background-color: rgb(255, 255, 255); }
+html .our-works--theme5.inverse .block-title { color: rgb(37, 36, 40); }
+html .our-works--theme5.inverse .item .title { color: rgb(54, 193, 104); }
+html .our-works--theme5.inverse .owl-nav div { background-image: url("./15c48262b08dc5c9c6e45b4b58a545c8.svg"); }
+html .numbers-block--theme5 .numbers-block-wrapper::before { background-color: rgba(38, 48, 101, 0.901961); }
+html .numbers-block--theme5 .item { color: rgb(54, 193, 104); }
+html .numbers-block--theme5 .item .num { border-bottom-color: rgb(255, 255, 255); }
+html .numbers-block--theme5 .item .title { color: rgb(255, 255, 255); }
+html .numbers-block--theme5.inverse .item { color: rgb(54, 193, 104); }
+html .numbers-block--theme5.inverse .item .num { border-bottom-color: rgb(37, 36, 40); }
+html .numbers-block--theme5.inverse .item .title { color: rgb(37, 36, 40); }
+html .contacts-block--theme5 .phone { background-image: url("./875989dd439c9794abea350f8d83910e.svg"); }
+html .contacts-block--theme5 .address-block .block-title { background-color: rgb(241, 0, 83); }
+html .contacts-block--theme5.inverse .top-part { background-color: rgb(38, 48, 101); }
+html .contacts-block--theme5.inverse .top-part-inner .block-title { color: rgb(255, 255, 255); }
+html .contacts-block--theme5.inverse .phone { background-image: url("./05b5c8c70e8c41b60b31179a42f126f4.svg"); }
+html .contacts-block--theme5.inverse .address-block .block-title { background-color: rgb(54, 193, 104); }
+html .timer-popup--theme5 .block-title-wrapper { background-color: rgb(38, 48, 101); }
+html .timer-popup--theme5 .timer-wrapper { background-color: rgb(255, 255, 255); }
+html .timer-popup--theme5 .popup-button a { color: rgb(255, 255, 255); }
+html .timer-popup--theme5 .popup-button a { background-color: rgb(241, 0, 83); }
+html .timer-popup--theme5 .popup-button a { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .timer-popup--theme5 .popup-button a:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .timer-popup--theme5 .popup-button a:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .timer-popup--theme5.inverse .block-title-wrapper { background-color: rgb(255, 255, 255); }
+html .timer-popup--theme5.inverse .block-title { color: rgb(37, 36, 40); }
+html .timer-popup--theme5.inverse .timer-wrapper { background-color: rgb(54, 193, 104); }
+html .timer-popup--theme5.inverse .popup-button a { background-color: rgb(241, 245, 248); }
+html .timer-popup--theme5.inverse .popup-button a { color: rgb(37, 36, 40); }
+html .timer-popup--theme5.inverse .popup-button a { background-image: -webkit-linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); background-image: linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); }
+html .timer-popup--theme5.inverse .popup-button a:hover { background-image: -webkit-linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); background-image: linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); }
+html .timer-popup--theme5.inverse .popup-button a:active { background-image: -webkit-linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); background-image: linear-gradient(rgb(241, 245, 248), rgb(241, 245, 248)); }
+html .timer-popup--theme5.inverse .countdown3 .item .time { border-top-color: rgb(54, 193, 104); }
+html .timer-popup--theme5.inverse .countdown3 .item .time { border-right-color: rgb(54, 193, 104); }
+html .timer-popup--theme5.inverse .countdown3 .item .time { border-bottom-color: rgb(54, 193, 104); }
+html .timer-popup--theme5.inverse .countdown3 .item .time { border-left-color: rgb(54, 193, 104); }
+html .footer--theme5 .footer-wrapper { background-color: rgb(23, 29, 63); }
+html .footer--theme5 .site-name-bottom { color: rgb(161, 161, 161); }
+html .footer--theme5.inverse .footer-wrapper { background-color: rgb(255, 255, 255); }
+html .footer--theme5.inverse .footer-inner > div { color: rgb(161, 161, 161); }
+html .popover-wrap .popover-body { background-color: rgb(255, 255, 255); }
+html .popover-wrap .btn button { color: rgb(255, 255, 255); }
+html .popover-wrap .btn button { background-color: rgb(241, 0, 83); }
+html .popover-wrap .btn button { text-shadow: rgb(250, 79, 138) 0px 1px 0px; }
+html .popover-wrap .btn button { background-image: -webkit-linear-gradient(rgb(246, 52, 119), rgb(241, 0, 83)); background-image: linear-gradient(rgb(246, 52, 119), rgb(241, 0, 83)); }
+html .popover-wrap .btn button:hover { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(246, 52, 119)); background-image: linear-gradient(rgb(241, 0, 83), rgb(246, 52, 119)); }
+html .popover-wrap .btn button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(246, 52, 119)); background-image: linear-gradient(rgb(241, 0, 83), rgb(246, 52, 119)); }
+html .header-one--theme9 .header-one-wrapper { background-color: rgb(23, 29, 63); }
+html .header-one--theme9 .site-name { color: rgb(255, 255, 255); }
+html .header-one--theme9.inverse .header-one-wrapper { background-color: rgb(255, 255, 255); }
+html .header-one--theme9.inverse .site-name { color: rgb(37, 36, 40); }
+html .header-two--theme9 .header-two-wrapper { background-color: rgb(23, 29, 63); }
+html .header-two--theme9 .left-part .site-name { color: rgb(255, 255, 255); }
+html .header-two--theme9 .left-part .site-activity { color: rgb(54, 193, 104); }
+html .header-two--theme9 .right-part .work-time { color: rgb(255, 255, 255); }
+html .header-two--theme9 .right-part .phone { color: rgb(255, 255, 255); }
+html .header-two--theme9 .right-part .address { color: rgb(255, 255, 255); }
+html .header-two--theme9.inverse .header-two-wrapper { background-color: rgb(255, 255, 255); }
+html .header-two--theme9.inverse .site-name { color: rgb(37, 36, 40); }
+html .header-two--theme9.inverse .left-part .site-activity { color: rgb(54, 193, 104); }
+html .header-two--theme9.inverse .right-part .work-time { color: rgb(37, 36, 40); }
+html .header-two--theme9.inverse .right-part .phone { color: rgb(37, 36, 40); }
+html .header-two--theme9.inverse .right-part .address { color: rgb(37, 36, 40); }
+html .header-four--theme9 .header-four-wrapper { background-color: rgb(23, 29, 63); }
+html .header-four--theme9 .site-activity { color: rgb(54, 193, 104); }
+html .header-four--theme9 .site-name-wrapper .site-name { color: rgb(255, 255, 255); }
+html .header-four--theme9 .right-part .phones { color: rgb(255, 255, 255); }
+html .header-four--theme9 .right-part .button-wrap a { background-color: rgb(241, 0, 85); }
+html .header-four--theme9 .right-part .button-wrap a { background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.168627) 0%, transparent 100%); background-image: linear-gradient(rgba(255, 255, 255, 0.168627) 0%, transparent 100%); }
+html .header-four--theme9.inverse .header-four-wrapper { background-color: rgb(255, 255, 255); }
+html .header-four--theme9.inverse .site-activity { color: rgb(54, 193, 104); }
+html .header-four--theme9.inverse .site-name-wrapper .site-name { color: rgb(37, 36, 40); }
+html .header-four--theme9.inverse .right-part .phones { color: rgb(37, 36, 40); }
+html .header-four--theme9.inverse .right-part .button-wrap a { background-color: rgb(242, 0, 86); }
+html .header-four--theme9.inverse .right-part .button-wrap a { background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.188235) 0%, transparent 100%); background-image: linear-gradient(rgba(255, 255, 255, 0.188235) 0%, transparent 100%); }
+html .header-six--theme9 .header-six-wrapper { background-color: rgb(23, 29, 63); }
+html .header-six--theme9 .left-part .site-name { color: rgb(255, 255, 255); }
+html .header-six--theme9 .left-part .site-activity { color: rgb(54, 193, 104); }
+html .header-six--theme9 .right-part .phones-part .work-time { color: rgb(255, 255, 255); }
+html .header-six--theme9 .right-part .phones-part .phones div { color: rgb(255, 255, 255); }
+html .header-six--theme9 .right-part .button a { background-color: rgb(241, 0, 85); }
+html .header-six--theme9 .right-part .button a { background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.180392) 0%, transparent 100%); background-image: linear-gradient(rgba(255, 255, 255, 0.180392) 0%, transparent 100%); }
+html .header-six--theme9.inverse .header-six-wrapper { background-color: rgb(255, 255, 255); }
+html .header-six--theme9.inverse .left-part .site-name { color: rgb(37, 36, 40); }
+html .header-six--theme9.inverse .left-part .site-activity { color: rgb(54, 193, 104); }
+html .header-six--theme9.inverse .right-part .phones-part .work-time { color: rgb(37, 36, 40); }
+html .header-six--theme9.inverse .right-part .phones-part .phones div { color: rgb(37, 36, 40); }
+html .header-six--theme9.inverse .right-part .button a { background-color: rgb(242, 0, 86); }
+html .header-six--theme9.inverse .right-part .button a { background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.180392) 0%, transparent 100%); background-image: linear-gradient(rgba(255, 255, 255, 0.180392) 0%, transparent 100%); }
+html .header-seven--theme9 .header-seven-wrapper { background-color: rgb(23, 29, 63); }
+html .header-seven--theme9 .left-part .site-name { color: rgb(255, 255, 255); }
+html .header-seven--theme9 .left-part .site-activity { color: rgb(54, 193, 104); }
+html .header-seven--theme9 .right-part .phones div { color: rgb(255, 255, 255); }
+html .header-seven--theme9 .right-part .button a { background-color: rgb(241, 0, 85); }
+html .header-seven--theme9 .right-part .button a { background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.188235) 0%, transparent 100%); background-image: linear-gradient(rgba(255, 255, 255, 0.188235) 0%, transparent 100%); }
+html .header-seven--theme9.inverse .header-seven-wrapper { background-color: rgb(255, 255, 255); }
+html .header-seven--theme9.inverse .left-part .site-name { color: rgb(37, 36, 40); }
+html .header-seven--theme9.inverse .left-part .site-activity { color: rgb(54, 193, 104); }
+html .header-seven--theme9.inverse .right-part .phones div { color: rgb(37, 36, 40); }
+html .header-seven--theme9.inverse .right-part .button a { background-color: rgb(242, 0, 86); }
+html .header-seven--theme9.inverse .right-part .button a { background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.188235) 0%, transparent 100%); background-image: linear-gradient(rgba(255, 255, 255, 0.188235) 0%, transparent 100%); }
+html .products-with-pic--theme9 .product .bottom-part .button a { background-color: rgb(54, 193, 104); }
+html .products-with-pic--theme9 .product-inner { background-color: rgba(38, 48, 101, 0.117647); }
+html .products--theme9 .product .top-part { background-color: rgb(38, 48, 101); }
+html .products--theme9 .product .bottom-part .button a { background-color: rgb(241, 0, 83); }
+html .products--theme9 .product-inner { background-color: rgba(38, 48, 101, 0.117647); }
+html .multi-text-no-pic { background-color: rgba(38, 48, 101, 0.117647); }
+html .multi-text-no-pic .text-block .title { color: rgb(38, 48, 101); }
+html .text-with-pic--theme9 .text-with-pic-wrapper { background-color: rgba(38, 48, 101, 0.117647); }
+html .reviews--theme9 .reviews-wrapper { background-color: rgba(38, 48, 101, 0.117647); }
+html .reviews--theme9 .review .position { color: rgb(113, 113, 113); }
+html .one-good-wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .one-good-wrapper.inverse .good-desc-block .good-title { color: rgb(255, 255, 255); }
+html .one-good-wrapper.inverse .good-desc-block .good-desc { color: rgb(255, 255, 255); }
+html .one-good-wrapper.inverse .good-desc-block .good-price-title { color: rgb(255, 255, 255); }
+html .one-good-wrapper.inverse .good-desc-block .good-price { color: rgb(255, 255, 255); }
+html .one-good-wrapper.inverse .good-desc-block .good-price span { color: rgb(232, 220, 220); }
+html .one-good-wrapper.inverse .good-desc-block .buy-good { background-color: rgb(243, 7, 88); }
+html .one-good-wrapper { background-color: rgb(229, 230, 237); }
+html .one-good-wrapper .good-desc-block .buy-good { background-color: rgb(241, 0, 83); }
+html .one-good-icon__wrapper { background-color: rgb(229, 230, 237); }
+html .one-good-icon__wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .one-good-icon__wrapper.inverse .one-good-icon__title { color: rgb(255, 255, 255); }
+html .one-good-icon__wrapper.inverse .one-good-icon__list .list-items .item .text { color: rgb(255, 255, 255); }
+html .one-good-icon__wrapper.inverse .one-good-icon__list .list-items .item svg path { fill: rgb(255, 255, 255); }
+html .one-good-icon__wrapper.inverse .one-good-icon__list .one-good-icon__price-title { color: rgb(255, 255, 255); }
+html .one-good-icon__wrapper.inverse .one-good-icon__list .one-good-icon__price { color: rgb(255, 255, 255); }
+html .one-good-icon__wrapper.inverse .one-good-icon__list .one-good-icon__price span { color: rgb(232, 220, 220); }
+html .one-good-icon__wrapper.inverse .one-good-icon__list .one-good-icon__buy { background-color: rgb(243, 7, 88); }
+html .one-good-icon__wrapper .one-good-icon__list .one-good-icon__buy { background-color: rgb(241, 0, 83); }
+html .one-good-horizontal__bg-wrapper { background-color: rgb(229, 230, 237); }
+html .one-good-horizontal__bg-wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .one-good-horizontal__bg-wrapper.inverse .one-good-horizontal__wrapper .good-title { color: rgb(255, 255, 255); }
+html .one-good-horizontal__bg-wrapper.inverse .one-good-horizontal__wrapper .good-desc { color: rgb(255, 255, 255); }
+html .one-good-horizontal__bg-wrapper.inverse .one-good-horizontal__wrapper .old-price { color: rgb(232, 220, 220); }
+html .one-good-horizontal__bg-wrapper.inverse .one-good-horizontal__wrapper .price { color: rgb(255, 255, 255); }
+html .one-good-horizontal__bg-wrapper.inverse .one-good-horizontal__wrapper .buy-good { background-color: rgb(243, 7, 88); }
+html .one-good-horizontal__bg-wrapper .one-good-horizontal__wrapper .buy-good { background-color: rgb(241, 0, 83); }
+html .only-one-product { background-color: rgb(229, 230, 237); }
+html .only-one-product.inverse { background-color: rgb(56, 63, 105); }
+html .only-one-product.inverse .text-part .button a { background-color: rgb(243, 7, 88); }
+html .only-one-product .text-part .button a { background-color: rgb(241, 0, 83); }
+html .sale-block1.inverse .color-background { background-color: rgba(255, 255, 255, 0.901961); }
+html .sale-block1.inverse .right-part { background-color: rgb(241, 245, 248); }
+html .sale-block1.inverse .right-part { border-top-color: rgb(217, 207, 192); }
+html .sale-block1.inverse .right-part { border-right-color: rgb(217, 207, 192); }
+html .sale-block1.inverse .right-part { border-bottom-color: rgb(217, 207, 192); }
+html .sale-block1.inverse .right-part { border-left-color: rgb(217, 207, 192); }
+html .sale-block1.inverse .right-part { color: rgb(71, 80, 85); }
+html .sale-block1.inverse .right-part .title { color: rgb(71, 80, 85); }
+html .sale-block1.inverse .right-part form label { color: rgb(72, 72, 72); }
+html .sale-block1.inverse .right-part button { background-color: rgb(241, 0, 83); }
+html .sale-block1.inverse .right-part button { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .sale-block1.inverse .right-part button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .sale-block1.inverse .right-part button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .sale-block1 .color-background { background-color: rgba(54, 193, 104, 0.8); }
+html .sale-block1 .right-part { background-color: rgb(241, 245, 248); }
+html .sale-block1 .right-part button { color: rgb(255, 255, 255); }
+html .sale-block1 .right-part button { background-color: rgb(241, 0, 84); }
+html .sale-block1 .right-part button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); background-image: linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); }
+html .sale-block1 .right-part button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .sale-block1 .right-part button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .sale-block-two.inverse .color-background { background-color: rgba(255, 255, 255, 0.901961); }
+html .sale-block-two.inverse .button a { background-color: rgb(247, 0, 120); }
+html .sale-block-two.inverse .button a { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(247, 0, 120)); background-image: linear-gradient(rgb(247, 0, 120), rgb(247, 0, 120)); }
+html .sale-block-two .color-background { background-color: rgba(54, 193, 104, 0.8); }
+html .sale-block-two .button a { color: rgb(255, 255, 255); }
+html .sale-block-two .button a { background-color: rgb(241, 0, 84); }
+html .sale-block-two .button a { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); background-image: linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part { background-color: rgb(241, 245, 248); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part { color: rgb(71, 80, 85); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part { border-top-color: rgb(217, 207, 192); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part { border-right-color: rgb(217, 207, 192); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part { border-bottom-color: rgb(217, 207, 192); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part { border-left-color: rgb(217, 207, 192); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part .title { color: rgb(71, 80, 85); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part form label { color: rgb(71, 80, 85); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part button { background-color: rgb(247, 0, 120); }
+html .sale-block-three.inverse .sale-block-wrapper .bottom-part button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(247, 0, 120)); background-image: linear-gradient(rgb(247, 0, 120), rgb(247, 0, 120)); }
+html .sale-block-three .sale-block-wrapper .color-background { background-color: rgba(54, 193, 104, 0.8); }
+html .sale-block-three .sale-block-wrapper .bottom-part { background-color: rgb(241, 245, 248); }
+html .sale-block-three .sale-block-wrapper .bottom-part button { color: rgb(255, 255, 255); }
+html .sale-block-three .sale-block-wrapper .bottom-part button { background-color: rgb(241, 0, 84); }
+html .sale-block-three .sale-block-wrapper .bottom-part button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); background-image: linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); }
+html .tariff-blocks_wrapper { background-color: rgb(229, 230, 237); }
+html .tariff-blocks_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .tariff-blocks_wrapper.inverse .block { border-top-color: rgba(255, 255, 255, 0.298039); }
+html .tariff-blocks_wrapper.inverse .block { border-right-color: rgba(255, 255, 255, 0.298039); }
+html .tariff-blocks_wrapper.inverse .block { border-bottom-color: rgba(255, 255, 255, 0.298039); }
+html .tariff-blocks_wrapper.inverse .block { border-left-color: rgba(255, 255, 255, 0.298039); }
+html .tariff-blocks_wrapper.inverse .block { background-color: rgb(56, 63, 105); }
+html .tariff-blocks_wrapper.inverse .block:hover { border-top-color: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block:hover { border-right-color: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block:hover { border-bottom-color: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block:hover { border-left-color: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block span svg path { fill: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block .tariff-name { color: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block .tariff-rate { color: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block .tariff-currency { color: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block .note { color: rgb(255, 255, 255); }
+html .tariff-blocks_wrapper.inverse .block .button { background-color: rgb(243, 7, 88); }
+html .tariff-blocks_wrapper .block .button { background-color: rgb(241, 0, 83); }
+html .icon-plus-text { background-color: rgb(229, 230, 237); }
+html .icon-plus-text.inverse { background-color: rgb(56, 63, 105); }
+html .faq_ver1 { background-color: rgb(229, 230, 237); }
+html .faq_ver1.inverse { background-color: rgb(56, 63, 105); }
+html .faq_ver1.inverse .faq_ver1_wrapper .button-wrap .button { background-color: rgb(243, 7, 88); }
+html .faq_ver1 .faq_ver1_wrapper .button-wrap .button { background-color: rgb(241, 0, 83); }
+html .faq_ver2 { background-color: rgb(229, 230, 237); }
+html .faq_ver2.inverse { background-color: rgb(56, 63, 105); }
+html .faq_ver2.inverse .faq_ver2_wrapper .button-wrap .button { background-color: rgb(243, 7, 88); }
+html .faq_ver2 .faq_ver2_wrapper .button-wrap .button { background-color: rgb(241, 0, 83); }
+html .roundpic_wrapper { background-color: rgb(229, 230, 237); }
+html .roundpic_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .steps-ver1_wrapper { background-color: rgb(229, 230, 237); }
+html .steps-ver1_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .title { color: rgb(255, 255, 255); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step:last-child .number { background-color: rgb(243, 7, 88); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step:last-child .number { color: rgb(255, 255, 255); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step .number { color: rgb(255, 255, 255); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step .number { background-color: rgb(56, 63, 105); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step .number { border-top-color: rgb(243, 7, 88); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step .number { border-right-color: rgb(243, 7, 88); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step .number { border-bottom-color: rgb(243, 7, 88); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step .number { border-left-color: rgb(243, 7, 88); }
+html .steps-ver1_wrapper.inverse .steps-ver1_inner .step .desc { color: rgb(255, 255, 255); }
+html .steps-ver1_wrapper .steps-ver1_inner .step:last-child .number { background-color: rgb(241, 0, 83); }
+html .steps-ver1_wrapper .steps-ver1_inner .step .number { background-color: rgb(229, 230, 237); }
+html .steps-ver1_wrapper .steps-ver1_inner .step .number { border-top-color: rgb(241, 0, 83); }
+html .steps-ver1_wrapper .steps-ver1_inner .step .number { border-right-color: rgb(241, 0, 83); }
+html .steps-ver1_wrapper .steps-ver1_inner .step .number { border-bottom-color: rgb(241, 0, 83); }
+html .steps-ver1_wrapper .steps-ver1_inner .step .number { border-left-color: rgb(241, 0, 83); }
+html .steps-ver2_wrapper { background-color: rgb(229, 230, 237); }
+html .steps-ver2_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .steps-ver2_wrapper.inverse .steps-ver2_inner .steps-ver2_item .pic-part .number { background-color: rgb(243, 7, 88); }
+html .steps-ver2_wrapper .steps-ver2_inner .steps-ver2_item .pic-part .number { background-color: rgb(241, 0, 83); }
+html .horizontal-gallery_wrapper { background-color: rgb(229, 230, 237); }
+html .horizontal-gallery_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .vertical-gallery_wrapper { background-color: rgb(229, 230, 237); }
+html .vertical-gallery_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .comments-cackle { background-color: rgb(229, 230, 237); }
+html .comments-vk { background-color: rgb(229, 230, 237); }
+html .comments-cackle.inverse { background-color: rgb(38, 48, 101); }
+html .comments-vk.inverse { background-color: rgb(38, 48, 101); }
+html .faq_ver3 { background-color: rgb(229, 230, 237); }
+html .faq_ver3.inverse { background-color: rgb(56, 63, 105); }
+html .faq_ver3.inverse .faq_ver3_wrapper .button-wrap .button { background-color: rgb(243, 7, 88); }
+html .faq_ver3 .faq_ver3_wrapper .button-wrap .button { background-color: rgb(241, 0, 83); }
+html .mirrored-products_wrapper { background-color: rgb(229, 230, 237); }
+html .mirrored-products_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .mirrored-products_wrapper.inverse .mirrored-products_inner .mirrored-products_item .text-part .button { background-color: rgb(243, 7, 88); }
+html .mirrored-products_wrapper .mirrored-products_inner .mirrored-products_item .text-part .button { background-color: rgb(241, 0, 83); }
+html .reviews-and-feedback { background-color: rgb(229, 230, 237); }
+html .reviews-and-feedback.inverse { background-color: rgb(56, 63, 105); }
+html .reviews-and-feedback.inverse .reviews-and-feedback_wrapper .reviews-and-feedback_inner .reviews-and-feedback-item .review { background-color: rgb(56, 63, 105); }
+html .reviews-and-feedback.inverse .reviews-and-feedback_wrapper .owl-next { background-color: rgb(56, 63, 105); }
+html .reviews-and-feedback.inverse .reviews-and-feedback_wrapper .owl-next:hover { background-color: rgb(56, 63, 105); }
+html .reviews-and-feedback.inverse .reviews-and-feedback_wrapper .owl-prev { background-color: rgb(56, 63, 105); }
+html .reviews-and-feedback.inverse .reviews-and-feedback_wrapper .owl-prev:hover { background-color: rgb(56, 63, 105); }
+html .reviews-and-feedback.inverse .reviews-and-feedback_wrapper .button-wrap .button { background-color: rgb(243, 7, 88); }
+html .reviews-and-feedback .reviews-and-feedback_wrapper .reviews-and-feedback_inner .reviews-and-feedback-item .review { background-color: rgb(229, 230, 237); }
+html .reviews-and-feedback .reviews-and-feedback_wrapper .owl-next { background-color: rgb(229, 230, 237); }
+html .reviews-and-feedback .reviews-and-feedback_wrapper .owl-next:hover { background-color: rgb(229, 230, 237); }
+html .reviews-and-feedback .reviews-and-feedback_wrapper .owl-prev { background-color: rgb(229, 230, 237); }
+html .reviews-and-feedback .reviews-and-feedback_wrapper .owl-prev:hover { background-color: rgb(229, 230, 237); }
+html .reviews-and-feedback .reviews-and-feedback_wrapper .button-wrap .button { background-color: rgb(241, 0, 83); }
+html .one-good-form2 { background-color: rgb(229, 230, 237); }
+html .one-good-form2.inverse { background-color: rgb(56, 63, 105); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .button { background-color: rgb(241, 0, 83); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .button { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap { background-color: rgb(241, 245, 248); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap { border-top-color: rgb(217, 207, 192); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap { border-right-color: rgb(217, 207, 192); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap { border-bottom-color: rgb(217, 207, 192); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap { border-left-color: rgb(217, 207, 192); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button { background-color: rgb(241, 0, 83); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .one-good-form2.inverse .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .button { background-color: rgb(241, 0, 84); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .button { color: rgb(255, 255, 255); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); background-image: linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap { background-color: rgb(80, 192, 124); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button { color: rgb(255, 255, 255); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button { background-color: rgb(241, 0, 84); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); background-image: linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form2 .one-good-form2_wrapper .one-good-form2_inner .form-part .tpl-anketa_wrap .form-desc { color: rgb(0, 0, 0); }
+html .popup_video_block.inverse .button { background-color: rgb(247, 0, 120); }
+html .popup_video_block .shadow { background-color: rgba(54, 193, 104, 0.8); }
+html .popup_video_block .button { background-color: rgb(241, 0, 84); }
+html .background_video_block.inverse .button { background-color: rgb(247, 0, 120); }
+html .background_video_block .shadow { background-color: rgba(54, 193, 104, 0.8); }
+html .background_video_block .button { background-color: rgb(241, 0, 84); }
+html .horizontal_blocks { background-color: rgb(229, 230, 237); }
+html .horizontal_blocks.inverse { background-color: rgb(56, 63, 105); }
+html .horizontal_blocks.inverse .horizontal_blocks_wrapper .horizontal_blocks_inner .service-item .service-desc-block .order { background-color: rgb(243, 7, 88); }
+html .horizontal_blocks .horizontal_blocks_wrapper .horizontal_blocks_inner .service-item .service-desc-block .order { background-color: rgb(241, 0, 83); }
+html .multy_blocks { background-color: rgb(229, 230, 237); }
+html .multy_blocks.inverse { background-color: rgb(56, 63, 105); }
+html .multy_blocks.inverse .multy_blocks_wrapper .multy_blocks_inner .service-item { background-color: rgb(56, 63, 105); }
+html .multy_blocks.inverse .multy_blocks_wrapper .multy_blocks_inner .service-item .service-desc-block .buy-button { background-color: rgb(243, 7, 88); }
+html .multy_blocks .multy_blocks_wrapper .multy_blocks_inner .service-item .service-desc-block .buy-button { background-color: rgb(241, 0, 83); }
+html .multy_offices { background-color: rgb(229, 230, 237); }
+html .multy_offices.inverse { background-color: rgb(56, 63, 105); }
+html .multy_offices.inverse .multy_offices_wrap .single-office_wrap .single-office_inner .top-contacts .multy_offices_map_button { background-color: rgb(243, 7, 88); }
+html .multy_offices .single-office_wrap .single-office_inner .top-contacts .multy_offices_map_button { background-color: rgb(241, 0, 83); }
+html .social-links_wrap { background-color: rgb(229, 230, 237); }
+html .social-links_wrap.inverse { background-color: rgb(56, 63, 105); }
+html .gallery-with-preview { background-color: rgb(229, 230, 237); }
+html .gallery-with-preview.inverse { background-color: rgb(56, 63, 105); }
+html .square-photo-blocks_wrapper { background-color: rgb(229, 230, 237); }
+html .square-photo-blocks_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .tabs-block_wrap { background-color: rgb(215, 219, 250); }
+html .tabs-block_wrap.inverse { background-color: rgb(94, 100, 135); }
+html .tabs-block_wrap.inverse .tabs_block .tabs li.opened { background-color: rgb(56, 63, 105); }
+html .tabs-block_wrap.inverse .tabs_block .box { background-color: rgb(56, 63, 105); }
+html .tabs-block_wrap.inverse .tabs_block .slick-prev { background-color: rgb(56, 63, 105); }
+html .tabs-block_wrap.inverse .tabs_block .slick-next { background-color: rgb(56, 63, 105); }
+html .tabs-block_wrap .tabs_block .tabs li { color: rgb(241, 0, 83); }
+html .tabs-block_wrap .tabs_block .tabs li span { border-bottom-color: rgb(241, 0, 83); }
+html .tabs-block_wrap .tabs_block .tabs li.opened { background-color: rgb(229, 230, 237); }
+html .tabs-block_wrap .tabs_block .box { background-color: rgb(229, 230, 237); }
+html .tabs-block_wrap .tabs_block .slick-prev { background-color: rgb(229, 230, 237); }
+html .tabs-block_wrap .tabs_block .slick-next { background-color: rgb(229, 230, 237); }
+html .one-good-form { background-color: rgb(229, 230, 237); }
+html .one-good-form.inverse { background-color: rgb(56, 63, 105); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .price { background-color: rgb(241, 245, 248); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .price { border-top-color: rgb(217, 207, 192); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .price { border-right-color: rgb(217, 207, 192); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .price { border-bottom-color: rgb(217, 207, 192); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .price { border-left-color: rgb(217, 207, 192); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .price .button { background-color: rgb(241, 0, 83); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .price .button { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .price .button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap { background-color: rgb(241, 245, 248); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap { border-top-color: rgb(217, 207, 192); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap { border-right-color: rgb(217, 207, 192); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap { border-bottom-color: rgb(217, 207, 192); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap { border-left-color: rgb(217, 207, 192); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button { background-color: rgb(241, 0, 83); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form.inverse .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap .form-desc { color: rgb(0, 0, 0); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .pic-part .slider-wrap2 .slick-prev { background-color: rgb(229, 230, 237); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .pic-part .slider-wrap2 .slick-prev { box-shadow: rgba(255, 255, 255, 0) 0px 0px 10px 5px; }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .pic-part .slider-wrap2 .slick-prev:hover { background-color: rgb(229, 230, 237); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .pic-part .slider-wrap2 .slick-next { background-color: rgb(229, 230, 237); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .pic-part .slider-wrap2 .slick-next { box-shadow: rgba(255, 255, 255, 0) 0px 0px 10px 5px; }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .pic-part .slider-wrap2 .slick-next:hover { background-color: rgb(229, 230, 237); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .price { background-color: rgb(80, 192, 124); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .price .button { background-color: rgb(241, 0, 84); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .price .button { color: rgb(255, 255, 255); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .price .button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); background-image: linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .price .button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap { background-color: rgb(80, 192, 124); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button { color: rgb(255, 255, 255); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button { background-color: rgb(241, 0, 84); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button { background-image: -webkit-linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); background-image: linear-gradient(rgb(247, 0, 120), rgb(241, 0, 85)); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button:hover { background-image: -webkit-linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); background-image: linear-gradient(rgb(248, 82, 139), rgb(241, 0, 83)); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap button:active { background-image: -webkit-linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); background-image: linear-gradient(rgb(241, 0, 83), rgb(241, 0, 83)); }
+html .one-good-form .one-good-form_wrapper .one-good-form_inner .form-part .tpl-anketa_wrap .form-desc { color: rgb(0, 0, 0); }
+html .txt_bl3_wrapper { background-color: rgb(229, 230, 237); }
+html .txt_bl3_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .txt_bl3_wrapper .txt_bl3_item .txt_item_title { color: rgb(241, 0, 83); }
+html .txt_bl3_wrapper.inverse .txt-block_button { background-color: rgb(243, 7, 88); }
+html .txt_bl3_wrapper .txt-block_button { background-color: rgb(241, 0, 83); }
+html .how-we-work_wrapper { background-color: rgb(229, 230, 237); }
+html .how-we-work_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .how-we-work_wrapper.inverse .content-item .number { border-top-color: rgb(56, 63, 105); }
+html .how-we-work_wrapper.inverse .content-item .number { border-right-color: rgb(56, 63, 105); }
+html .how-we-work_wrapper.inverse .content-item .number { border-bottom-color: rgb(56, 63, 105); }
+html .how-we-work_wrapper.inverse .content-item .number { border-left-color: rgb(56, 63, 105); }
+@media screen and (min-width: 650px) { html .how-we-work_wrapper .content-item.right .content-item_real { border-left-color: rgb(241, 0, 83); } }
+html .how-we-work_wrapper .content-item .number { background-color: rgb(241, 0, 83); }
+html .how-we-work_wrapper .content-item .number { border-top-color: rgb(229, 230, 237); }
+html .how-we-work_wrapper .content-item .number { border-right-color: rgb(229, 230, 237); }
+html .how-we-work_wrapper .content-item .number { border-bottom-color: rgb(229, 230, 237); }
+html .how-we-work_wrapper .content-item .number { border-left-color: rgb(229, 230, 237); }
+html .how-we-work_wrapper .content-item .content-item_real { border-right-color: rgb(241, 0, 83); }
+@media screen and (max-width: 650px) { html .how-we-work_wrapper .content-item .content-item_real { border-left-color: rgb(241, 0, 83); } }
+html .form-with-phone_wrapper { background-color: rgb(229, 230, 237); }
+html .form-with-phone_wrapper.inverse { background-color: rgb(56, 63, 105); }
+html .form-with-phone_wrapper.inverse button { background-color: rgb(243, 7, 88); }
+html .form-with-phone_wrapper .form-with-phone_inner { background-color: rgb(255, 255, 255); }
+html .form-with-phone_wrapper button { background-color: rgb(241, 0, 83); }

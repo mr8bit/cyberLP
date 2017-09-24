@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'mptt',
-    'news',
     'landing',
     'notifications',
     'sekizai',
@@ -133,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -265,7 +264,7 @@ PATH_TEMPLATES = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-# STATIC_ROOT = (os.path.join(BASE_DIR, 'static'))
+#STATIC_ROOT = (os.path.join(BASE_DIR, 'static'))
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -291,12 +290,11 @@ EMAIL_USE_TLS = True
 DEFAULT_TEMPLATE = 'front/default.html'
 SNIPPET_TEMPLATE = 'selecticon.html'
 TEMPLATE_CSS = (
-    '/static/d/1722959/t/v460/images/css/title.styles.css',
-    '/static/d/1722959/t/v460/images/css/designblock.scss.css',
-    '/static/d/1722959/t/v460/images/css/s3_styles.scss.css',
+    '/static/g/s3/lp/css/global_styles.css',
+    '/static/g/s3/lp/css/slick.css',
+    '/static/g/s3/lp/css/lp3.css',
     '/static/shared/highslide-4.1.13/highslide.min.css',
     '/static/shared/s3/css/calendar.css',
-    '/static/g/libs/jquery-popover/0.0.3/jquery.popover.css',
 )
 TEMPLATE_JS = ()
 # Meta SEO

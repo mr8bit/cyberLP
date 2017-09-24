@@ -1,5 +1,3 @@
-
-
 import datetime
 import mimetypes
 import os
@@ -8,13 +6,14 @@ import tempfile
 import time
 
 from django.core.files import File
-from django.utils.encoding import python_2_unicode_compatible, force_text
-from django.utils.six import string_types
+from django.utils.encoding import force_text
 from django.utils.functional import cached_property
+from django.utils.six import string_types
 
-from page_editor.settings import EXTENSIONS, VERSIONS, ADMIN_VERSIONS, VERSIONS_BASEDIR, VERSION_QUALITY, STRICT_PIL, IMAGE_MAXBLOCK, DEFAULT_PERMISSIONS
-from page_editor.utils import path_strip, process_image
 from page_editor.namers import get_namer
+from page_editor.settings import EXTENSIONS, VERSIONS, ADMIN_VERSIONS, VERSIONS_BASEDIR, VERSION_QUALITY, STRICT_PIL, \
+    IMAGE_MAXBLOCK, DEFAULT_PERMISSIONS
+from page_editor.utils import path_strip, process_image
 
 if STRICT_PIL:
     from PIL import Image
@@ -27,8 +26,9 @@ else:
         import Image
         import ImageFile
 
-
 ImageFile.MAXBLOCK = IMAGE_MAXBLOCK  # default is 64k
+
+
 class FileListing():
     """
     The FileListing represents a group of FileObjects/FileDirObjects.
@@ -70,7 +70,7 @@ class FileListing():
         """
         from operator import attrgetter
         if isinstance(attr, string_types):  # Backward compatibility hack
-            attr = (attr, )
+            attr = (attr,)
         return sorted(seq, key=attrgetter(*attr))
 
     @cached_property
@@ -498,7 +498,8 @@ class FileObject():
 
         # save version
         try:
-            version.save(tmpfile, format=Image.EXTENSION[ext.lower()], quality=VERSION_QUALITY, optimize=(os.path.splitext(version_path)[1] != '.gif'))
+            version.save(tmpfile, format=Image.EXTENSION[ext.lower()], quality=VERSION_QUALITY,
+                         optimize=(os.path.splitext(version_path)[1] != '.gif'))
         except IOError:
             version.save(tmpfile, format=Image.EXTENSION[ext.lower()], quality=VERSION_QUALITY)
         # remove old version, if any
@@ -523,7 +524,6 @@ class FileObject():
             self.site.storage.delete(self.path)
 
     def delete_versions(self):
-        "Delete versions"
         for version in self.versions():
             try:
                 self.site.storage.delete(version)

@@ -372,7 +372,7 @@ class FileBrowserSite(object):
                                                             name=form.cleaned_data['name'], site=self)
                     messages.add_message(request, messages.SUCCESS,
                                          _('The Folder %s was successfully created.') % form.cleaned_data['name'])
-                    redirect_url = reverse("filebrowser:fb_browse", current_app=self.name) + query_helper(query,
+                    redirect_url = reverse("page_editor:fb_browse", current_app=self.name) + query_helper(query,
                                                                                                           "ot=desc,o=date",
                                                                                                           "ot,o,filter_type,filter_date,q,p")
                     return HttpResponseRedirect(redirect_url)
@@ -464,11 +464,11 @@ class FileBrowserSite(object):
 
         if request.GET:
             try:
-                signals.filebrowser_pre_delete.send(sender=request, path=fileobject.path, name=fileobject.filename,
+                signals.page_editor_pre_delete.send(sender=request, path=fileobject.path, name=fileobject.filename,
                                                     site=self)
                 fileobject.delete_versions()
                 fileobject.delete()
-                signals.filebrowser_post_delete.send(sender=request, path=fileobject.path, name=fileobject.filename,
+                signals.page_editor_post_delete.send(sender=request, path=fileobject.path, name=fileobject.filename,
                                                      site=self)
                 messages.add_message(request, messages.SUCCESS, _('Successfully deleted %s') % fileobject.filename)
             except OSError:
@@ -493,7 +493,7 @@ class FileBrowserSite(object):
             form = FileForm(request.POST, path=path_file_open, filebrowser_site=self)
             if form.is_valid():
                 new_name = form.cleaned_data['name']
-                new_text = form.cleaned_data["text_comment"]
+                new_text = form.cleaned_data["text"]
                 path_file_open = path_file_open + "/" + new_name
                 F = open(path_file_open, 'w')
                 F.write(new_text)

@@ -7,7 +7,7 @@
 {% block extrastyle %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />
-    <link rel="stylesheet" type="text/css" href="{% static "filebrowser/css/filebrowser.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "page_editor/css/page_editor.css" %}" />
 {% endblock %}
 
 <!-- JAVASCRIPTS -->
@@ -113,7 +113,7 @@
             </div>
             <div class="form-row" id="back-button">
                 {% with breadcrumbs|last as last_breadcrumb %}
-                    <a class="ui button" href="{% url 'page_editor:fb_browse' %}{% query_string "" "q,dir,filename,p" %}&amp;dir={{ last_breadcrumb.1|urlencode }}">{% trans 'Return to uploads' %}</a>
+                    <a class="ui button" href="{% url 'page_editor:fb_browse' %}{% query_string "" "q,dir,filename,p" %}&amp;dir={{ last_breadcrumb.1|urlencode }}">Вернуться</a>
                 {% endwith %}
             </div>
             </fieldset>

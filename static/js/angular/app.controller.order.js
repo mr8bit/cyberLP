@@ -471,7 +471,7 @@ App.controller('SimpleDemoController', ['$scope', '$http',
         $scope.my_selected_rows = [];
         $scope.my_table_options_paginate = angular.extend({}, $scope.my_table_options, {
             pagingStrategy: 'PAGINATE',
-            rowsPerPage: 5
+            rowsPerPage: 15
         });
         var dataDfd = $q.defer();
         $scope.my_table_options = {
