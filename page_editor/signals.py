@@ -21,8 +21,8 @@ filebrowser_post_createdir = Signal(providing_args=["path", "name", "site"])
 # path: Absolute server path to the file/folder
 # name: Name of the file/folder
 # site: Current FileBrowserSite instance
-filebrowser_pre_delete = Signal(providing_args=["path", "name", "site"])
-filebrowser_post_delete = Signal(providing_args=["path", "name", "site"])
+page_editor_pre_delete = Signal(providing_args=["path", "name", "site"])
+page_editor_post_delete = Signal(providing_args=["path", "name", "site"])
 
 # rename signals
 # path: Absolute server path to the file/folder

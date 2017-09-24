@@ -1,16 +1,15 @@
 # coding: utf-8
 
-from django.conf import settings
-from django.utils.translation import ugettext_lazy as _
-import re
 import os
+import re
 
 from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
 
 # Main FileBrowser Directory. Relative to site.storage.location.
 # DO NOT USE A SLASH AT THE BEGINNING, DO NOT FORGET THE TRAILING SLASH AT THE END.
 DIRECTORY = getattr(settings, "FILEBROWSER_DIRECTORY", '')
-DEFAULT_TEMPLATE = getattr(settings,"TEMPLATE_DEFAULT",'/templates/front/default.html')
+DEFAULT_TEMPLATE = getattr(settings, "TEMPLATE_DEFAULT", '/templates/front/default.html')
 # EXTENSIONS AND FORMATS
 # Allowed Extensions for File Upload. Lower case is important.
 EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
@@ -19,7 +18,7 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
     'Video': ['.mov', '.mp4', '.m4v', '.webm', '.wmv', '.mpeg', '.mpg', '.avi', '.rm'],
     'Audio': ['.mp3', '.wav', '.aiff', '.midi', '.m4p'],
     'Template': ['.html'],
-    'JS Script': ['.js'],
+    'JS': ['.js'],
     'CSS': ['.css', '.sass', '.less', '.scss'],
     'Font': ['.eot', '.ttf', '.woff']
 })
@@ -28,12 +27,12 @@ PATH_EDIT = getattr(settings, "PATH_FOR_EDITOR", os.path.join(settings.BASE_DIR,
 # This has to be a subset of EXTENSIONS.
 # e.g., add ?type=image to the browse-URL ...
 SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
-    'file': ['Image', 'Document', 'Video', 'Audio'],
+    'file': ['Image', 'Document', 'Video', 'Audio', 'Template', 'JS', 'CSS', 'Font'],
     'image': ['Image'],
     'document': ['Document'],
     'media': ['Video', 'Audio'],
 })
-NAME_APP  = getattr(settings,'NEW_NAME_PAGE_EDITOR', _('page_editor'))
+NAME_APP = getattr(settings, 'NEW_NAME_PAGE_EDITOR', _('page_editor'))
 # VERSIONS
 
 # Directory to Save Image Versions (and Thumbnails). Relative to site.storage.location.
@@ -59,7 +58,7 @@ ADMIN_THUMBNAIL = getattr(settings, 'FILEBROWSER_ADMIN_THUMBNAIL', 'admin_thumbn
 VERSION_PROCESSORS = getattr(settings, 'FILEBROWSER_VERSION_PROCESSORS', [
     'filebrowser.utils.scale_and_crop',
 ])
-VERSION_NAMER = getattr(settings, 'FILEBROWSER_VERSION_NAMER', 'filebrowser.namers.VersionNamer')
+VERSION_NAMER = getattr(settings, 'FILEBROWSER_VERSION_NAMER', 'page_editor.namers.VersionNamer')
 
 # PLACEHOLDER
 
