@@ -1,6 +1,6 @@
 from django.utils.translation import ugettext_lazy as _
 from jet.dashboard import modules
-from jet.dashboard.dashboard import Dashboard
+from jet.dashboard.dashboard import Dashboard, AppIndexDashboard
 from jet.dashboard.dashboard_modules import google_analytics
 
 from order.dashboard_modules import RecentTickets,CTR_ChartBar,CTR_Num
@@ -44,4 +44,21 @@ class CustomIndexDashboard(Dashboard):
             _('Recent Actions'),
             10,
 
+        ))
+
+
+class CustomAppIndexDashboard(AppIndexDashboard):
+    def init_with_context(self, context):
+        self.available_children.append(modules.LinkList)
+
+        self.children.append(modules.ModelList(
+            title=_('Application models'),
+            models=self.models(),
+            column=0,
+            order=0
+        ))
+        self.children.append(modules.RecentActions(
+            include_list=self.get_app_content_types(),
+            column=1,
+            order=0
         ))
