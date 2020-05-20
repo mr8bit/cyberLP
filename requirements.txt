@@ -19,7 +19,7 @@ django-sekizai==0.10.0
 django-taggit==0.22.1
 djangorestframework==3.6.3
 google-api-python-client==1.4.1
-httplib2==0.10.3
+httplib2==0.18.0
 idna==2.5
 mock==2.0.0
 oauth2client==2.2.0
